@@ -17,6 +17,7 @@ class IndexController extends Controller {
                 'src' => 'http://106.184.7.12:8002/Public/test3.jpg'
             ]
         ];
+        header("Access-Control-Allow-Origin: *");
         $this->ajaxReturn($data);
     }
 
@@ -35,7 +36,7 @@ class IndexController extends Controller {
                 'name' => '约炮'
             ]
         ];
-
+        header("Access-Control-Allow-Origin: *");
         $this->ajaxReturn($data);
     }
 
@@ -97,7 +98,7 @@ class IndexController extends Controller {
                 'username' => 'lcl'
             ]
         ];
-
+        header("Access-Control-Allow-Origin: *");
         $this->ajaxReturn($data);
     }
 }
