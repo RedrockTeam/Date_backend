@@ -4,8 +4,18 @@ use Think\Controller;
 class IndexController extends Controller {
     public function pic () {
         $data = [
-            'url' => 'https://www.baidu.com',
-            'src' => 'http://106.184.7.12:8002/Public/test.jpg'
+            [
+                'url' => 'https://www.baidu.com',
+                'src' => 'http://106.184.7.12:8002/Public/test.jpg'
+            ],
+            [
+                'url' => 'http://www.pornhub.com',
+                'src' => 'http://106.184.7.12:8002/Public/test1.jpg'
+            ],
+            [
+                'url' => 'http://www.taobao.com',
+                'src' => 'http://106.184.7.12:8002/Public/test3.jpg'
+            ]
         ];
         $this->ajaxReturn($data);
     }
