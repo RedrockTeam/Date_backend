@@ -1,10 +1,9 @@
 <?php
 return array(
 	//'配置项'=>'配置值'
-    //'SHOW_PAGE_TRACE' =>true,
     'URL_MODEL'=>1,
     //显示调试日志
-	//'SHOW_PAGE_TRACE'=>true,
+	'SHOW_PAGE_TRACE'=>true,
     //路由对大小写不敏感
     'URL_CASE_INSENSITIVE'=>true,
 
