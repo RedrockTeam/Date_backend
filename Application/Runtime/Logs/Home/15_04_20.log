@@ -1,0 +1,1140 @@
+[ 2015-04-20T21:09:50+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+ERR: 无法加载控制器:Index
+
+[ 2015-04-20T21:10:07+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000180s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002942s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005164s ]
+ERR: 无法加载控制器:Index
+
+[ 2015-04-20T21:11:08+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001245s ]
+
+[ 2015-04-20T21:11:20+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000943s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001184s ]
+
+[ 2015-04-20T21:11:33+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+
+[ 2015-04-20T21:11:47+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+
+[ 2015-04-20T21:12:09+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+
+[ 2015-04-20T21:12:55+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000934s ]
+
+[ 2015-04-20T21:14:24+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+
+[ 2015-04-20T21:14:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+
+[ 2015-04-20T21:14:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+
+[ 2015-04-20T21:14:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+
+[ 2015-04-20T21:14:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+
+[ 2015-04-20T21:14:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+
+[ 2015-04-20T21:14:26+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+
+[ 2015-04-20T21:14:26+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+
+[ 2015-04-20T21:14:26+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+
+[ 2015-04-20T21:14:26+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+
+[ 2015-04-20T21:14:26+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+
+[ 2015-04-20T21:15:29+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+
+[ 2015-04-20T21:15:39+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+
+[ 2015-04-20T21:18:24+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+
+[ 2015-04-20T21:18:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+
+[ 2015-04-20T21:20:56+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+
+[ 2015-04-20T21:22:49+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001762s ]
+
+[ 2015-04-20T21:22:57+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:23:10+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001659s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:23:24+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:24:46+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001436s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:24:47+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000110s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:25:58+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:25:58+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:25:59+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001988s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:25:59+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:25:59+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002534s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:26:00+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001181s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'date.advertise_model' doesn't exist
+
+[ 2015-04-20T21:26:16+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0278s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:26:27+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001732s ]
+
+[ 2015-04-20T21:26:43+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002382s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0055s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:28:18+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001750s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0178s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:28:45+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0245s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:29:12+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0041s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:29:12+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0092s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:31:12+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000110s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+
+[ 2015-04-20T21:31:21+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+
+[ 2015-04-20T21:31:35+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002162s ]
+
+[ 2015-04-20T21:31:37+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+
+[ 2015-04-20T21:36:08+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001937s ]
+
+[ 2015-04-20T21:36:50+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+
+[ 2015-04-20T21:37:38+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000782s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001939s ]
+
+[ 2015-04-20T21:37:53+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000191s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001622s ]
+
+[ 2015-04-20T21:41:06+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0058s ]
+
+[ 2015-04-20T21:41:18+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0027s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:41:30+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0029s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:41:31+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001669s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0073s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:41:32+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001353s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0047s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:41:44+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000951s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0021s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:41:44+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001184s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001425s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0027s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:41:45+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002987s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0024s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:41:45+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001675s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0047s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:41:45+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000958s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002354s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0053s ]
+ERR: Think\Model:getBanner方法不存在！
+
+[ 2015-04-20T21:43:02+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000933s ]
+
+[ 2015-04-20T21:43:16+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-04-20T21:43:17+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001828s ]
+
+[ 2015-04-20T21:43:21+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+
+[ 2015-04-20T21:43:27+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+
+[ 2015-04-20T21:43:53+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+
+[ 2015-04-20T21:43:54+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+
+[ 2015-04-20T21:44:02+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000112s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001743s ]
+
+[ 2015-04-20T21:44:03+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+
+[ 2015-04-20T21:44:57+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001666s ]
+
+[ 2015-04-20T21:45:24+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001048s ]
+
+[ 2015-04-20T21:45:24+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001224s ]
+
+[ 2015-04-20T21:45:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001326s ]
+
+[ 2015-04-20T21:45:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+
+[ 2015-04-20T21:45:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+
+[ 2015-04-20T21:45:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+
+[ 2015-04-20T21:45:25+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000194s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001066s ]
+
+[ 2015-04-20T21:46:35+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000935s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003041s ]
+
+[ 2015-04-20T21:46:35+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+
+[ 2015-04-20T21:46:44+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002030s ]
+
+[ 2015-04-20T21:47:09+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002277s ]
+
+[ 2015-04-20T21:47:09+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+
+[ 2015-04-20T21:47:09+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+
+[ 2015-04-20T21:47:10+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001228s ]
+
+[ 2015-04-20T21:47:10+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+
+[ 2015-04-20T21:47:39+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+
+[ 2015-04-20T21:47:39+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000941s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+
+[ 2015-04-20T21:47:40+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001979s ]
+
+[ 2015-04-20T21:47:40+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+
+[ 2015-04-20T21:47:41+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+
+[ 2015-04-20T21:47:55+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001407s ]
+
+[ 2015-04-20T21:47:58+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000972s ]
+
+[ 2015-04-20T21:48:53+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+
+[ 2015-04-20T21:48:55+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000107s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001615s ]
+
+[ 2015-04-20T21:50:03+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002533s ]
+
+[ 2015-04-20T21:50:04+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000132s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+
+[ 2015-04-20T21:50:04+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+
+[ 2015-04-20T21:50:04+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000909s ]
+
+[ 2015-04-20T21:50:04+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001729s ]
+
+[ 2015-04-20T21:50:04+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001593s ]
+
+[ 2015-04-20T21:50:04+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+
+[ 2015-04-20T21:51:46+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+
+[ 2015-04-20T21:51:46+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+
+[ 2015-04-20T21:51:53+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002316s ]
+
+[ 2015-04-20T21:51:53+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002763s ]
+
+[ 2015-04-20T21:51:54+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002134s ]
+
+[ 2015-04-20T21:52:15+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001842s ]
+
+[ 2015-04-20T21:52:15+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001828s ]
+
+[ 2015-04-20T21:53:42+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005214s ]
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 10 行.
+
+[ 2015-04-20T21:54:40+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001662s ]
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+
+[ 2015-04-20T21:54:41+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+
+[ 2015-04-20T21:54:41+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001145s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001662s ]
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+
+[ 2015-04-20T21:54:42+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001375s ]
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+
+[ 2015-04-20T21:54:42+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+
+[ 2015-04-20T21:54:52+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+
+[ 2015-04-20T21:55:11+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+
+[ 2015-04-20T21:55:17+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001885s ]
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+
+[ 2015-04-20T21:55:24+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+NOTIC: [2048] Non-static method Home\Model\AdvertiseModel::getBanner() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Controller\BannerController.class.php 第 7 行.
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+NOTIC: [8] Indirect modification of overloaded property Home\Controller\BannerController::$options has no effect D:\wamp\www\Date_backend\ThinkPHP\Library\Think\Model.class.php 第 1796 行.
+ERR: Think\Controller:field方法不存在！
+
+[ 2015-04-20T21:56:28+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+NOTIC: [2048] Non-static method Home\Model\AdvertiseModel::getBanner() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Controller\BannerController.class.php 第 7 行.
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+NOTIC: [8] Indirect modification of overloaded property Home\Controller\BannerController::$options has no effect D:\wamp\www\Date_backend\ThinkPHP\Library\Think\Model.class.php 第 1796 行.
+ERR: Think\Controller:field方法不存在！
+
+[ 2015-04-20T21:56:35+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+NOTIC: [2048] Non-static method Home\Model\AdvertiseModel::getBanner() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Controller\BannerController.class.php 第 7 行.
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+NOTIC: [8] Indirect modification of overloaded property Home\Controller\BannerController::$options has no effect D:\wamp\www\Date_backend\ThinkPHP\Library\Think\Model.class.php 第 1796 行.
+ERR: Think\Controller:field方法不存在！
+
+[ 2015-04-20T21:56:56+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000853s ]
+NOTIC: [2048] Non-static method Home\Model\AdvertiseModel::getBanner() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Controller\BannerController.class.php 第 7 行.
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+NOTIC: [8] Indirect modification of overloaded property Home\Controller\BannerController::$options has no effect D:\wamp\www\Date_backend\ThinkPHP\Library\Think\Model.class.php 第 1796 行.
+ERR: Think\Controller:limit方法不存在！
+
+[ 2015-04-20T21:57:00+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001438s ]
+NOTIC: [2048] Non-static method Home\Model\AdvertiseModel::getBanner() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Controller\BannerController.class.php 第 7 行.
+NOTIC: [2048] Non-static method Think\Model::where() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Model\AdvertiseModel.class.php 第 9 行.
+NOTIC: [8] Indirect modification of overloaded property Home\Controller\BannerController::$options has no effect D:\wamp\www\Date_backend\ThinkPHP\Library\Think\Model.class.php 第 1796 行.
+ERR: Think\Controller:select方法不存在！
+
+[ 2015-04-20T21:58:00+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001757s ]
+NOTIC: [2048] Non-static method Home\Model\AdvertiseModel::getBanner() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Controller\BannerController.class.php 第 7 行.
+ERR: Think\Controller:where方法不存在！
+
+[ 2015-04-20T21:58:53+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001864s ]
+NOTIC: [2048] Non-static method Home\Model\AdvertiseModel::getBanner() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Controller\BannerController.class.php 第 7 行.
+ERR: Think\Controller:field方法不存在！
+
+[ 2015-04-20T22:02:00+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002665s ]
+NOTIC: [2048] Non-static method Home\Model\AdvertiseModel::getBanner() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Controller\BannerController.class.php 第 7 行.
+ERR: Think\Controller:select方法不存在！
+
+[ 2015-04-20T22:02:41+08:00 ] ::1 /Date_backend/index.php/home/Banner/Banner
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002692s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0049s ]
+SQL: SELECT `url`,`src` FROM `advertise` WHERE ( status = 1 ) LIMIT 3   [ RunTime:0.0160s ]
+
+[ 2015-04-20T22:03:40+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0200s ]
+SQL: SELECT `url`,`src` FROM `advertise` WHERE ( status = 1 ) LIMIT 3   [ RunTime:0.0009s ]
+
+[ 2015-04-20T22:03:53+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0040s ]
+SQL: SELECT `url`,`src` FROM `advertise` WHERE ( status = 1 ) LIMIT 3   [ RunTime:0.0013s ]
+
+[ 2015-04-20T22:04:33+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000127s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001716s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0030s ]
+NOTIC: [2048] Non-static method Home\Model\AdvertiseModel::getBanner() should not be called statically, assuming $this from incompatible context D:\wamp\www\Date_backend\Application\Home\Controller\BannerController.class.php 第 8 行.
+ERR: Think\Controller:where方法不存在！
+
+[ 2015-04-20T22:05:28+08:00 ] ::1 /Date_backend/index.php/home/index/pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `advertise` [ RunTime:0.0030s ]
+SQL: SELECT `url`,`src` FROM `advertise` WHERE ( status = 1 ) LIMIT 3   [ RunTime:0.0004s ]
+
+[ 2015-04-20T22:13:11+08:00 ] ::1 /Date_backend/index.php/home/index/category
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001868s ]
+SQL: SHOW COLUMNS FROM `date_type` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `date_type`  [ RunTime:0.0003s ]
+
