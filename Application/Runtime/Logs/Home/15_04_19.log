@@ -47,3 +47,11 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001232s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001650s ]
 
+[ 2015-04-19T21:21:12+08:00 ] ::1 /Date_backend/index.php/home/index/showBox
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001499s ]
+
