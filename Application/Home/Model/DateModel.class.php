@@ -14,7 +14,6 @@ class DateModel extends Model {
         $b = $this->table($a.'as a')
             ->join("JOIN users ON a.user_id = users.id")
             ->buildSql();
-//        return $b;
         $c = $this->table($b.'as b')
             ->join("JOIN date_type ON b.date_type = date_type.id")
             ->field('showbox_id, user_id, created_at, date_at, place, title, date_type, date_type.id as category_id, gender_limit')
