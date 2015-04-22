@@ -7,6 +7,7 @@ return array(
 	'DEFAULT_CHARSET'    =>  'utf-8',
 	'COOKIE_EXPIRE'         =>  5,    // Cookie有效期
 	'SESSION_PREFIX'        =>  '', // session 前缀
+	'LAYOUT_ON'=>true,
 	/*
 	** mysql
 	*/
