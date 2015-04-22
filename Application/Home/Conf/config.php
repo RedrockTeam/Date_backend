@@ -23,6 +23,7 @@ return array(
 	 * 允许模块列表
 	 */
 		'DEFAULT_MODULE'       =>    'Home',  // 默认模块
+		'DEFAULT_CONTROLLER'       =>    'Management',  // 默认模块
 		
 	/*
 	 * 自定义参数

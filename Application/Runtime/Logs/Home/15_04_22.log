@@ -3626,3 +3626,1756 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000600s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000654s ]
 
+[ 2015-04-22T15:38:55+08:00 ] ::1 /Project/Date/index.php?s=/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000416s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000627s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002742s ]
+
+[ 2015-04-22T15:39:55+08:00 ] ::1 /Project/Date/index.php?s=/Home/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002099s ]
+ERR: 无法加载控制器:Admin
+
+[ 2015-04-22T15:39:55+08:00 ] ::1 /Project/Date/index.php?s=/Home/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002603s ]
+ERR: 无法加载控制器:Admin
+
+[ 2015-04-22T15:40:10+08:00 ] ::1 /Project/Date/index.php?s=/Home/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+ERR: 无法加载控制器:Admin
+
+[ 2015-04-22T15:40:10+08:00 ] ::1 /Project/Date/index.php?s=/Home/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+ERR: 无法加载控制器:Admin
+
+[ 2015-04-22T15:40:12+08:00 ] ::1 /Project/Date/index.php?s=/Home/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+ERR: 无法加载控制器:Admin
+
+[ 2015-04-22T15:40:12+08:00 ] ::1 /Project/Date/index.php?s=/Home/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004826s ]
+ERR: 无法加载控制器:Admin
+
+[ 2015-04-22T15:40:42+08:00 ] ::1 /Project/Date/index.php?s=/Home/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\c506a66e5fd5c20a850e05056283aa1e.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\c506a66e5fd5c20a850e05056283aa1e.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000826s ]
+
+[ 2015-04-22T15:42:06+08:00 ] ::1 /Project/Date/index.php?s=/Home/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+ERR: 无法加载控制器:Admin
+
+[ 2015-04-22T15:42:07+08:00 ] ::1 /Project/Date/index.php?s=/Home/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001840s ]
+ERR: 无法加载控制器:Admin
+
+[ 2015-04-22T15:42:18+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001177s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025046s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025127s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001336s ]
+
+[ 2015-04-22T15:49:34+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000477s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000565s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023390s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001469s ]
+
+[ 2015-04-22T15:49:45+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2015-04-22T15:49:46+08:00 ] ::1 /Project/Date/index.php?s=/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+ERR: 无法加载控制器:Index
+
+[ 2015-04-22T15:49:46+08:00 ] ::1 /Project/Date/index.php?s=/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+ERR: 无法加载控制器:Index
+
+[ 2015-04-22T15:51:00+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000344s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000459s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001107s ]
+
+[ 2015-04-22T15:51:01+08:00 ] ::1 /Project/Date/index.php?s=/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000339s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000434s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2015-04-22T15:51:03+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000303s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000392s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2015-04-22T15:54:13+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000380s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000524s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030280s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030487s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001235s ]
+
+[ 2015-04-22T16:04:51+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+
+[ 2015-04-22T16:04:52+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002256s ]
+
+[ 2015-04-22T16:05:17+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+
+[ 2015-04-22T16:05:17+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+
+[ 2015-04-22T16:05:36+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+
+[ 2015-04-22T16:05:36+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+
+[ 2015-04-22T16:05:50+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+
+[ 2015-04-22T16:05:50+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001955s ]
+
+[ 2015-04-22T16:06:10+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+
+[ 2015-04-22T16:06:11+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+
+[ 2015-04-22T16:07:01+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+
+[ 2015-04-22T16:07:01+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+
+[ 2015-04-22T16:07:12+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+
+[ 2015-04-22T16:07:12+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+
+[ 2015-04-22T16:07:34+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2015-04-22T16:08:17+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000348s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000434s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000695s ]
+
+[ 2015-04-22T16:08:42+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+
+[ 2015-04-22T16:08:42+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002531s ]
+
+[ 2015-04-22T16:08:53+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000257s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000322s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2015-04-22T16:09:06+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+
+[ 2015-04-22T16:09:06+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+
+[ 2015-04-22T16:10:23+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002429s ]
+
+[ 2015-04-22T16:10:23+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001913s ]
+
+[ 2015-04-22T16:10:33+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+
+[ 2015-04-22T16:10:33+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+
+[ 2015-04-22T16:11:35+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001595s ]
+
+[ 2015-04-22T16:11:36+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001062s ]
+
+[ 2015-04-22T16:11:46+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+
+[ 2015-04-22T16:11:46+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+
+[ 2015-04-22T16:11:55+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+
+[ 2015-04-22T16:11:55+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001555s ]
+
+[ 2015-04-22T16:11:56+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+
+[ 2015-04-22T16:11:56+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+
+[ 2015-04-22T16:12:09+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+
+[ 2015-04-22T16:12:09+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+
+[ 2015-04-22T16:12:20+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+
+[ 2015-04-22T16:12:20+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+
+[ 2015-04-22T16:12:29+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+
+[ 2015-04-22T16:12:29+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001204s ]
+
+[ 2015-04-22T16:12:39+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+
+[ 2015-04-22T16:12:39+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+
+[ 2015-04-22T16:15:26+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+
+[ 2015-04-22T16:15:26+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000952s ]
+
+[ 2015-04-22T16:15:37+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000282s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019902s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2015-04-22T16:16:30+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000881s ]
+
+[ 2015-04-22T16:18:56+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+
+[ 2015-04-22T16:18:56+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+
+[ 2015-04-22T16:19:00+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000280s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029225s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2015-04-22T16:21:06+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000398s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000486s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028866s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2015-04-22T16:21:24+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001157s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000341s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000432s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2015-04-22T16:22:13+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000399s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000477s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2015-04-22T16:22:20+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000291s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000368s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029542s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000675s ]
+
+[ 2015-04-22T16:22:57+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000386s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000462s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000953s ]
+
+[ 2015-04-22T16:23:23+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019084s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019140s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2015-04-22T16:23:38+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000307s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000383s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000681s ]
+
+[ 2015-04-22T16:24:08+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000383s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000460s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 741 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000623s ]
+
+[ 2015-04-22T16:24:49+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 645 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 645 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000603s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2015-04-22T16:25:22+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000346s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 573 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 573 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000774s ]
+
+[ 2015-04-22T16:25:42+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000256s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 488 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 488 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027962s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2015-04-22T16:26:04+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001399s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000301s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000400s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 478 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 478 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028995s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001406s ]
+
+[ 2015-04-22T16:27:29+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000758s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+NOTIC: [8] Undefined index: [0]['name'] C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 371 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 478 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 478 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000668s ]
+
+[ 2015-04-22T16:27:38+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000240s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 478 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 478 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000640s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2015-04-22T16:35:37+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 479 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 479 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2015-04-22T16:41:20+08:00 ] ::1 /Project/Date/index.php?s=/Home/Management
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001616s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] Undefined variable: 控制台 C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001734s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001706s ]
+
+[ 2015-04-22T16:41:27+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8] Undefined variable: 控制台 C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020726s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020804s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2015-04-22T16:41:42+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+NOTIC: [8] Undefined variable: 控制台 C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001469s ]
+
+[ 2015-04-22T16:41:44+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined variable: 控制台 C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2015-04-22T16:41:44+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined variable: 控制台 C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000874s ]
+
+[ 2015-04-22T16:43:09+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000642s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000817s ]
+NOTIC: [8] Undefined variable: 控制台 C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023154s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023218s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000657s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2015-04-22T16:43:15+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+NOTIC: [8] Undefined variable: 控制台 C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027254s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027337s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2015-04-22T16:43:19+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8] Undefined variable: 控制台 C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000701s ]
+
+[ 2015-04-22T16:43:38+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Undefined variable: 表格 C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2015-04-22T16:44:32+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001859s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000343s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000491s ]
+NOTIC: [8] Array to string conversion C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [8] Undefined variable: Array C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2015-04-22T16:45:55+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000411s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000677s ]
+NOTIC: [8] Array to string conversion C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [8] Undefined variable: Array C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029574s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000704s ]
+
+[ 2015-04-22T16:46:21+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000599s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000849s ]
+NOTIC: [8] Array to string conversion C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [8] Undefined variable: Array C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 382 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023373s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2015-04-22T16:46:35+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+
+[ 2015-04-22T16:47:15+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+NOTIC: [8] Array to string conversion C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 383 行.
+NOTIC: [8] Undefined variable: Array C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 383 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000662s ]
+
+[ 2015-04-22T16:47:49+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000324s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000477s ]
+NOTIC: [8] Array to string conversion C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 383 行.
+NOTIC: [8] Undefined variable: Array C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 383 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 495 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 495 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033068s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001778s ]
+
+[ 2015-04-22T16:48:07+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000298s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000478s ]
+NOTIC: [8] Array to string conversion C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 384 行.
+NOTIC: [8] Undefined variable: Array C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 384 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 495 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 495 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2015-04-22T16:48:28+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+NOTIC: [8] Array to string conversion C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 384 行.
+NOTIC: [8] Undefined variable: Array C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 384 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 495 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 495 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029320s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2015-04-22T16:48:41+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000242s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+NOTIC: [8] Array to string conversion C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 384 行.
+NOTIC: [8] Undefined variable: Array C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 384 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 495 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 495 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001694s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001843s ]
+
+[ 2015-04-22T16:48:59+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [8] Array to string conversion C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 384 行.
+NOTIC: [8] Undefined variable: Array C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 384 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 496 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 496 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2015-04-22T16:49:53+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001565s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000281s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000473s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 496 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 496 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023876s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023936s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001110s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001265s ]
+
+[ 2015-04-22T16:50:08+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000264s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000329s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2015-04-22T16:50:13+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001212s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000237s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 494 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2015-04-22T16:50:47+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000225s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018844s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000623s ]
+
+[ 2015-04-22T16:50:54+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000309s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017881s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001171s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001241s ]
+
+[ 2015-04-22T16:50:56+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000318s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000514s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000961s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001065s ]
+
+[ 2015-04-22T16:50:58+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000255s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000387s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035832s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001483s ]
+
+[ 2015-04-22T16:51:00+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002969s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000363s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041342s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2015-04-22T16:53:57+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001210s ]
+
+[ 2015-04-22T16:53:59+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000319s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000426s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000988s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001074s ]
+
+[ 2015-04-22T16:54:00+08:00 ] ::1 /project/date/index.php?s=/home/management/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000362s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000589s ]
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established C:\wamp\www\Project\Date\Application\Runtime\Cache\Home\d2cd2e60bbb957babe1e0e08c36bf05a.php 第 466 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049464s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+

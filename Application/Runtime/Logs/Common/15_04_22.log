@@ -88,3 +88,57 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
 ERR: 无法加载模块:Jqgrid
 
+[ 2015-04-22T15:43:15+08:00 ] ::1 /Project/Date/jqgrid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+ERR: 无法加载模块:Jqgrid
+
+[ 2015-04-22T16:19:37+08:00 ] ::1 /Project/Date/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+ERR: 无法加载模块:Index
+
+[ 2015-04-22T16:22:59+08:00 ] ::1 /Project/Date/elements.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+ERR: 无法加载模块:Elements
+
+[ 2015-04-22T16:24:54+08:00 ] ::1 /Project/Date/form-elements.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+ERR: 无法加载模块:Form-elements
+
+[ 2015-04-22T16:25:45+08:00 ] ::1 /Project/Date/blank.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+ERR: 无法加载模块:Blank
+
+[ 2015-04-22T16:26:05+08:00 ] ::1 /Project/Date/tables.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+ERR: 无法加载模块:Tables
+
+[ 2015-04-22T16:26:15+08:00 ] ::1 /Project/Date/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+ERR: 无法加载模块:Index
+
+[ 2015-04-22T16:26:18+08:00 ] ::1 /Project/Date/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+ERR: 无法加载模块:Index
+
+[ 2015-04-22T16:43:17+08:00 ] ::1 /project/date/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+ERR: 无法加载模块:Index
+
