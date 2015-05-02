@@ -37,12 +37,14 @@ class ManagementController extends Controller {
 	}
 	
 	public function index(){
+
 		$this->set_info();
 	}
 	
 	
 	/*设置主模版基本信息 >> $location:路径 $des:模块 $info:说明信息 */
     public function set_info($location='index',$des='控制台',$info='版本信息处理'){
+		//checkLogin();
 		$main_info=array($location,$des,$info);
 		$packge=array(//基础路由
 			'main_info'   	  => 	$main_info,
