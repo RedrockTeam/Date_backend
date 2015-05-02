@@ -37,14 +37,13 @@ class ManagementController extends Controller {
 	}
 	
 	public function index(){
-
 		$this->set_info();
 	}
 	
 	
 	/*设置主模版基本信息 >> $location:路径 $des:模块 $info:说明信息 */
     public function set_info($location='index',$des='控制台',$info='版本信息处理'){
-		//checkLogin();
+		$loginUser =  checkLogin();
 		$main_info=array($location,$des,$info);
 		$packge=array(//基础路由
 			'main_info'   	  => 	$main_info,
@@ -53,19 +52,38 @@ class ManagementController extends Controller {
 			'CONTROLLER_NAME' => 	CONTROLLER_NAME,
 			'CONTROLLE_PATH'  => 	__CONTROLLER__,
 			'ACTION_NAME'     =>	 ACTION_NAME,
+			'LOGOUT'		  =>	U('home:Management/logout'),
 		);
 		
 		$function = $this->getFunctionInfo();//功能模块路由
+		$this->assign('loginUser',$loginUser);
 		$this->packgeAssign($packge);
 		$this->packgeAssign($function);
 		$this->display($main_info[0]);
     }
     
 	/*封装模板替换*/
-	private function packgeAssign($packge=array()){
+	public function packgeAssign($packge=array()){
 		foreach($packge as $key => $value){
 			$this->assign($key,$value);
 		}
 	}
 
+	public function  checkPost($param){
+		$arr=array();
+		foreach($param as $k => $v){
+			if($tmp = I('post.'.$v,'','') ){
+				$arr[$v] = $tmp;
+			}else{
+				$this->error('参数错误!');
+			}
+		}
+
+		return $arr;
+	}
+
+	public function logout(){
+		session(null);
+		redirect(U('home:Login/index'), 0, 'please to login ...');
+	}
 }

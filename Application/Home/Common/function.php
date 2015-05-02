@@ -7,8 +7,8 @@
  */
 
 function checkLogin(){
-    if($name = session('date_user_name'))   return $name;
-    else   redirect(U('home:Management/login'), 0, '请先登陆...');
+    if($name = session('loginUser'))   return $name;
+    else   redirect(U('home:Login/index'), 1, 'please to login ...');
 }
 
 function toPaw($origin){
