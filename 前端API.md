@@ -2,7 +2,6 @@
 
 method: POST
 
-###首页API
 1. 获取广告位
 
 		url: http://106.184.7.12:8002/index.php/home/banner
@@ -25,7 +24,7 @@ method: POST
 
 2. 获取约会类型
 
-		url: http://106.184.7.12:8002/index.php/home/banner
+		url: http://106.184.7.12:8002/index.php/home/date_type
 		return:
 				[
 				    {
@@ -106,3 +105,45 @@ method: POST
 				        ]
 				    }
 				]
+
+4. 获取个人(或他人)信息
+
+		url: http://106.184.7.12:8002/index.php/home/userinfo
+		post: { "id":1 } //如果验证通过, 就返回id对应信息, 否则返回错误信息
+		return 
+				错误:
+					[
+						"status": "403",
+						"info": "权限不够"
+					]
+				成功:
+					[
+						"id": 1,
+						"nickname": "sb",
+						"head": "http://xxxxxxx/",
+						"academy": "学院",
+						"telephone": "123456789012345678",
+						"qq": "123456789",
+						"weixin": "xxxxxxx"
+					]
+
+5.  发布约会
+
+		url: http://106.184.7.12:8002/index.php/home/createdate
+
+		post: 
+			{
+				"date_type" : "约会类型id",
+				"title": "xxxx(n字以内)",
+				"introduce": "xxxxxxx",
+				"date_time": "时间戳",
+				"date_place": "约会地点",
+				"date_people": "限制人数",
+				"gender_limit": ""	//0不限, 1男, 2女
+				"academy_limit": "", //学院限制
+				"academy_select_model": "", //1正选(默认), 2反选
+				"grade_limit": "", //年级限制
+				"grade_select_model": "", //1正选(默认), 2反选
+			}
+
+		
