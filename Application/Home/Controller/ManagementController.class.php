@@ -18,7 +18,7 @@ class ManagementController extends Controller {
 				'name'=> '数据后台',
 				'nextTag' =>array(//二级导航
 					0=>array(
-					  'src'=> U('home/date/index'),
+					  'src'=> U('home/DataEdit/index'),
 					  'name'=> '约约约',
 					),
 					1=>array(
@@ -28,7 +28,7 @@ class ManagementController extends Controller {
 				),
 			 ),
 			 900=>array(
-				'src'=> U('home/management/index'),
+				'src'=> U('home/management/LOGOUT'),
 				'name'=> '退出登录',
 			 ),
 		);
@@ -69,6 +69,11 @@ class ManagementController extends Controller {
 		}
 	}
 
+	/**
+	 * @param $param
+	 * @return array
+	 * @For  检查post参数
+     */
 	public function  checkPost($param){
 		$arr=array();
 		foreach($param as $k => $v){
@@ -82,7 +87,7 @@ class ManagementController extends Controller {
 		return $arr;
 	}
 
-	public function logout(){
+	public function logout(){//登出
 		session(null);
 		redirect(U('home:Login/index'), 0, 'please to login ...');
 	}
