@@ -10,7 +10,7 @@ class DataEditController extends ManagementController {
 
 		public function index(){
 			$m = new \Home\Model\DataformModel();
-			$set = $m->setCol(array('ID','Last Sales','Name', 'Stock', 'Ship via','Notes','as'))
+			$set = $m->setCol(array('ID','Name','checkbox', 'select', 'file','txarea','as'))
 				->addModelNum()->addModelDate()->addModelFontdata()->addModelCheckbox()
 				->addModelSelect()->addModelFile()->addModelTextarea()->buildForm("home:DataEdit/edit");
 			;
