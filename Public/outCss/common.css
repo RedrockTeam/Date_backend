@@ -1,0 +1,138 @@
+html{
+    height: 100%;
+}
+body{
+    line-height:1.4;
+    color:#333;
+    font-family: "SOURCEHANSANSCN","Microsoft Yahei";
+    font-size: 12px;
+    height: 100%;
+}
+input,textarea,select{
+    font-size:100%;
+    font-family:inherit;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,form{
+    margin:0;
+}
+h4,h5,h6{
+    font-size:1em;
+}
+ul,ol{
+    padding-left:0;
+    list-style-type:none;
+}
+img{
+    border:0;
+}
+a{
+    text-decoration: none;
+}
+
+
+body{
+
+}
+#head_bg{
+    background: url(../img/bg_x.png);
+    width: 100%;
+}
+#header{
+    width: 834px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#header img{
+    float: left;
+}
+.nav{
+    font-size: 20px;
+    float: right;
+    overflow: hidden;
+}
+.nav li{
+    float: left;
+    padding: 0 35px;
+}
+.nav a{
+    display: inline-block;
+    _zoom:1;
++display:block;
++ float : left;
+    color: #fff;
+    padding: 40px 15px;
+}
+.nav a:hover{
+    background: url("../img/bg_2.png");
+}
+/*the end of the header*/
+#content{
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    background: url("../img/footer.png") repeat-x bottom center;
+}
+#sub_nav{
+    width: 246px;
+    background: url(../img/bg_x.png);
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+#sub_nav li{
+    font-size: 20px;
+}
+#sub_nav a{
+    display: inline-block;
+    _zoom:1;
+    +display:block;
+    color: #fff;
+}
+#sub_nav img{
+    vertical-align: middle;
+    margin-right: 23px;
+}
+li.sub_button a{
+    padding: 30px 58px;
+}
+li.sub_button a:hover{
+    background: url("../img/bg_2.png");
+}
+li.sub_first{
+    background: url("../img/bg_2.png");
+}
+.dropdown{
+    display: none;
+    background: url("../img/bg_2.png");
+    text-align: center;
+}
+.dropdown a{
+    padding: 16px 0;
+    width: 245px;
+}
+.dropdown a:hover,li.on a{
+    background: #813535;
+    filter: Alpha(Opacity="50");
+    background: rgba(129,53,53,0.5);
+}
+/*the start of the main*/
+#main{
+    float: left;
+    height: 100%;
+}
+.inside{
+    width: 782px;
+    padding: 25px 45px;
+    margin-left: 246px;
+    overflow: hidden;
+    margin-bottom: 70px;
+    min-height: 600px;
+}
+#footer{
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-left: 350px;
+    text-align: center;
+}
