@@ -1,0 +1,235 @@
+.info_in{
+    margin: 26px 0;
+}
+.inside h1{
+    font-weight: normal;
+    font-size: 23px;
+    color: #fff;
+    padding: 10px 22px;
+    background: #c24e4e;
+    float: left;
+    position: relative;
+}
+.info_in h1 span{
+    width: 12px;
+    height: 11px;
+    background: url("../img/arrow.png");
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -5px;
+}
+.info_in div{
+    width: 738px;
+    background: #f1f1f1;
+    overflow: hidden;
+    padding: 20px 22px;
+}
+.info_in div p{
+    font-size: 14px;
+    color: #3d3d3d;
+}
+/*the end of info*/
+/*the start of the topic*/
+.inside table{
+    width: 100%;
+}
+.inside table th{
+    color: #868686;
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: 1px solid #cacaca;
+    padding: 10px 0;
+}
+.inside table td{
+    color: #686868;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #cacaca;
+}
+.topic_time{
+    width: 138px;
+    background: #eaeaea;
+}
+.topic_head{
+    width: 205px;
+    background: #f1f1f1;
+}
+.topic_content{
+    width: 236px;
+    background: #eaeaea;
+}
+td.topic_content{
+    text-align: left;
+    padding: 10px 28px;
+}
+.topic_write{
+    background: #f1f1f1;
+}
+.topic_delete{
+    background: #eaeaea;
+}
+.flip{
+    overflow: hidden;
+    width: 436px;
+    margin: 20px auto;
+    font-size: 18px;
+}
+.flip a{
+    display: inline-block;
+    _zoom:1;
+    +display:block;
+    padding: 6px 12px;
+    color: #848484;
+}
+.flip li.flip_on a,.page_up a,.page_down a{
+    background: #c24e4e;
+    color: #fff;
+}
+.flip ul{
+    float: left;
+    overflow: hidden;
+}
+.flip li{
+    float: left;
+    margin: 0 5px;
+}
+/*the end of the topic*/
+/*the start of the add_topic*/
+#add_topic form{
+    overflow: hidden;
+    padding: 25px 0;
+    width: 100%;
+}
+#add_topic form span{
+    display: inline-block;
+    _zoom:1;
+    +display:block;
+    
+}
+#add_topic form input#head{
+    width: 546px;
+    font-size: 23px;
+    padding: 16px 0;
+    background: #f1f1f1;
+    border: 0;
+}
+#add_topic form textarea{
+    font-size: 23px;
+    resize: none;
+    margin-top: 25px;
+    border: 0;
+    background: #f1f1f1;
+}
+.inside form input.submits{
+    font-size: 23px;
+    padding: 16px 34px;
+    border: 0;
+    color: #fff;
+    margin-top: 25px;
+}
+.float{
+    float: right;
+}
+#submit{
+    background: #c24e4e;
+}
+#reset{
+    background: #989898;
+}
+#monitor table td{
+    font-size: 12px;
+    padding: 5px;
+}
+#monitor table td.m_content{
+    padding: 10px;
+    text-align: left;
+}
+#monitor table td span{
+    background: #685b5b;
+    color: #fff;
+    padding: 2px;
+}
+.odd{
+    background: #eaeaea;
+}
+.even{
+    background: #f1f1f1;
+}
+.m_name{
+    width: 124px;
+}
+.m_time{
+    width: 64px;
+}
+.m_content{
+    width: 360px;
+}
+/*the end of the monitor*/
+/*the start of the chat_history*/
+#chat_history{
+    width: 100%;
+}
+.chat_bg{
+    width: 830px;
+    background: #f1f1f1;
+    padding: 20px;
+}
+#chat_history form input{
+    border: 0;
+    color: #fff;
+    background: #c24e4e;
+}
+.chats{
+    width: auto;
+    border: 1px solid #e7e7e7;
+    background: #fff;
+    margin-top: 20px;
+    padding: 26px 33px;
+    font-size: 18px;
+}
+.chats p{
+    color: #676767;
+}
+.chats p span{
+    color: #b8b8b8;
+}
+/*the start of the category*/
+#category{
+    width: 100%;
+}
+.chat_bg{
+    width: 830px;
+    background: #f1f1f1;
+    padding: 20px;
+}
+#category form{
+    overflow: hidden;
+}
+.inside form input.text{
+    overflow: hidden;
+    font-size: 14px;
+    padding: 18px;
+    width: 93%;
+    border: 10px solid #e0e0e0;
+}
+/*the start of the Management*/
+#Management table td{
+    padding: 22px;
+}
+.mg_sort{
+    width: 70%;
+}
+/*the start of the add_leader*/
+#add_leader form select{
+    font-size: 20px;
+    padding: 10px 20px;
+    width: 40%;
+    margin-left: 60px;
+    border: 10px solid #e0e0e0;
+}
+/*the start of the add_input*/
+#add_input form input.text{
+    width: 65%;
+    margin-top: 20px;
+}
