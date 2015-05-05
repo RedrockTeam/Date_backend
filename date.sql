@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-05-02 23:51:44
+Date: 2015-05-05 18:11:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -187,13 +187,14 @@ CREATE TABLE `users` (
   `qq` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL,
   `weixin` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `telephone` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '2013211000', '', null, '刘晨凌', '2', '2', null, null, null, null);
+INSERT INTO `users` VALUES ('1', '2013211000', '', null, '刘晨凌', '2', '2', null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for user_date
