@@ -36,7 +36,10 @@ return array(
         'date/showbox' => 'DateList/getList',
         'date/datetype' => 'Category/date_type',
         //私信模块
-        'letter/getletter' => 'Letter/getLetter'
+        'letter/getletter' => 'Letter/getLetter',
+        'letter/letterstatus' => 'Letter/letterStatus',
+        'letter/dateaction' => 'Letter/dateAction',
+
         //个人信息模块
 
     ],

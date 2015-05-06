@@ -4,6 +4,9 @@ use Think\Model;
 
 class DateModel extends Model {
     protected $trueTableName  = 'date';
+    protected $_validate = array(
+        array('id','number','必须是数字!'), //默认情况下用正则进行验证
+    );
     //获取约会信息
     public function getInfo($order = 'created_at desc', $offset = 0, $limit = 10){
         $a = $this->join("JOIN user_date ON date.id = user_date.date_id")
@@ -30,5 +33,11 @@ class DateModel extends Model {
             $data[] = $v;
         }
         return $data;
+    }
+
+    //根据
+    public function getRow ($date_id) {
+        $map['id'] = $date_id;
+        return $this->where($map)->find();
     }
 }
