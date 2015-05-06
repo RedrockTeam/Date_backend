@@ -65,7 +65,8 @@
 			{
 				"uid": "",
 				"token": "",
-				"page": ""
+				"page": "",
+				"size":""
 			}
 
 		return:
@@ -73,7 +74,8 @@
 				status : 200,
 				info : "请求成功",
 				data:{
-					"0":{
+					{
+					    "letter" : 1,
 						"user_id" : 123,
 						"user_name" : "Lecion",
 						"user_signature" : "个性签名",
@@ -84,7 +86,18 @@
 						"letter_status" : 1,	//私信状态，1 => 未读， 2 => 已读
 						"user_date_status" : 2,	//用户和约会的状态,0 => 拒绝, 1 => 接受, 2 => 默认（未处理）
 					},
-					"1":{........}
+					{
+                        "letter" : 2,
+                        "user_id" : 123,
+                        "user_name" : "Lecion",
+                        "user_signature" : "个性签名",
+                        "user_avatar" : "http://****.jpg",	//用户头像
+                        "user_gender" : 2, 		//1是男，2是女
+                        "content" : "约了我的炮",
+                        "date_id" : 12,		//私信中活动的id，只针对系统发送的含有活动的私信
+                        "letter_status" : 1,	//私信状态，1 => 未读， 2 => 已读
+                        "user_date_status" : 2,	//用户和约会的状态,0 => 拒绝, 1 => 接受, 2 => 默认（未处理）
+                    }
 				}
 			}
 

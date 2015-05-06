@@ -8,7 +8,7 @@ class LetterController extends BaseController {
         $data = I('post.');
         $letter = new LetterModel();
         $data = [
-            'data' => $letter->letter($data['uid'], $data['page']),
+            'data' => $letter->letter($data['uid'], $data['page'], $data['size']),
             'status' => 200,
             'info' => '请求成功',
             ];
