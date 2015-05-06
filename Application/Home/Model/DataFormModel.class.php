@@ -7,10 +7,13 @@ namespace Home\Model;
 use Think\Model;
 
 class DataformModel extends Model {
-    protected $tableData;
+	protected $autoCheckFields =false;
+
+	private  $table;
+	private  $PKey;
+	private $tableData;
 	private $produceData;
 	private $colField;
-	protected $autoCheckFields =false;
     private $colName = '';
 	private $colModel="{name:'myac',index:'', width:80, fixed:true, sortable:false, resize:false,
 							formatter:'actions',
@@ -22,22 +25,30 @@ class DataformModel extends Model {
 							}
 						}";
 
+	public function __construct($table,$PKey=''){
+		$this->table = $table;
+		$this->PKey = $PKey;
 
-    public function setTableData($table){
-        $this->tableData = $table;
+	}
+
+    public function setTableData($tableData){
+        $this->tableData = $tableData;
+		$this->produceData();
         return $this;
     }
 
-	public function produceData(){
+	private function produceData(){
 		$add='';
 		foreach($this->tableData as $key => $data){
-			$add .= "{hidenField:'none'";
+			//print_r($this->colField);
+			$add .= "{table:'$this->table'";
 			foreach($this->colField as $key2 => $field)
 			{
 				$tmp = $data[$field];
 				$add .= " ,$field:'$tmp' ";
 			}
-			$add += "},";
+			$add .= "},";
+
 		}
 
 		$this->produceData = $add;
@@ -65,7 +76,7 @@ class DataformModel extends Model {
         return $this;
     }
 
-	public function addModelNum($name='num',$width=90,$editable='true',$sorttype='int'){
+	public function addModelId($name='id',$width=90,$editable='false',$sorttype='int'){
         $this->colModel .= ",
 						{name:'$name',index:'$name', width:$width, sorttype:'$sorttype', editable: $editable}";
         return $this;
@@ -83,13 +94,13 @@ class DataformModel extends Model {
         return $this;
     }
 
-	public function addModelCheckbox($name='checkbox',$width=70,$editable='true',$edittype='checkbox',$editoptions='Yes:No'){
+	public function addModelCheckbox($name='checkbox',$width=70,$editable='true',$edittype='checkbox',$editoptions='1:0'){
         $this->colModel .= ",
            {name:'$name',index:'$name', width:$width, editable: $editable,edittype:'$edittype',editoptions: {value:'$editoptions'},unformat: aceSwitch}";
         return $this;
     }
 
-	public function addModelSelect($name='select',$width=90,$editable='true',$selectValue='value1:show1;value2:show2'){
+	public function addModelSelect($name='select',$width=90,$editable='true',$selectValue='value1:show1;value2:2'){
         $this->colModel .= ",
           {name:'$name',index:'$name', width:$width, editable: $editable,edittype:'select',editoptions:{value:'$selectValue'}}";
         return $this;
