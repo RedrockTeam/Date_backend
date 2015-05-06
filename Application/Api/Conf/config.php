@@ -25,17 +25,20 @@ return array(
     /**
      * 允许模块列表
      */
-    'DEFAULT_MODULE'       =>    'Home',  // 默认模块
-    'DEFAULT_CONTROLLER'       =>    'Management',  // 默认模块
-/**/
+    'DEFAULT_MODULE'       =>    'Api',  // 默认模块
     /**
      * 路由配置
      */
     'URL_ROUTER_ON'   => true,
     'URL_ROUTE_RULES' => [
-        'banner' => 'Banner/Banner',
-        'showbox' => 'DateList/getList',
-        'datetype' => 'Category/date_type',
+        //公共
+        'public/banner' => 'Banner/Banner',
+        //约会信息
+        'date/showbox' => 'DateList/getList',
+        'date/datetype' => 'Category/date_type',
+        //私信模块
+
+        //个人信息模块
 
     ],
 );

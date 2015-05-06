@@ -1,5 +1,5 @@
 <?php
-namespace Home\Model;
+namespace Api\Model;
 use Think\Model;
 
 class DateModel extends Model {

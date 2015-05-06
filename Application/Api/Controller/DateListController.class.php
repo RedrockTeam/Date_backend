@@ -1,8 +1,6 @@
 <?php
-namespace Home\Controller;
-use Home\Model\AdvertiseModel;
-use Home\Model\DateModel;
-use Org\Util\Date;
+namespace Api\Controller;
+use Api\Model\DateModel;
 use Think\Controller;
 class DateListController extends Controller {
     //获取广告位广告

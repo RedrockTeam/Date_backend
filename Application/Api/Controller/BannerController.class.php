@@ -1,7 +1,7 @@
 <?php
-namespace Home\Controller;
-use Home\Model\AdvertiseModel;
-use Think\Controller;
+namespace Api\Controller;
+use Api\Model\AdvertiseModel;
+use Think\Cntroller;
 class BannerController extends Controller {
     //获取广告位广告
     public function Banner ()

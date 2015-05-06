@@ -1,6 +1,6 @@
 <?php
-namespace Home\Controller;
-use Home\Model\DateTypeModel;
+namespace Api\Controller;
+use Api\Model\DateTypeModel;
 use Think\Controller;
 class CategoryController extends Controller {
     //获取约会种类
