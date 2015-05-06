@@ -1,6 +1,6 @@
 <?php
 namespace Api\Controller;
 use Think\Controller;
-class IndexController extends Controller {
+class IndexController extends BaseController {
 
 }

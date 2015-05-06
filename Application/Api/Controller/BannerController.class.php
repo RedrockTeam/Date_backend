@@ -1,16 +1,12 @@
 <?php
 namespace Api\Controller;
 use Api\Model\AdvertiseModel;
-use Think\Cntroller;
-class BannerController extends Controller {
+use Think\Controller;
+class BannerController extends BaseController {
     //获取广告位广告
     public function Banner ()
     {
-        if (!IS_POST) {
-            $data['info'] = '获取方式错误!';
-            $data['status'] = 403;
-            $this->ajaxReturn($data);
-        }
+
         $ad = new AdvertiseModel();
         $data = $ad->getBanner();
         $data['status'] = 200;
