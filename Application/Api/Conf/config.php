@@ -10,7 +10,6 @@ return array(
     'COOKIE_DOMAIN'         =>  '',      // Cookie有效域名
     'COOKIE_PATH'           =>  '/',     // Cookie路径
     'SESSION_OPTIONS' => array('use_only_cookies'=>0,'use_trans_sid'=>1),
-    'LAYOUT_ON'=>true,
     /*
     ** mysql
     */
