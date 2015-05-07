@@ -75,4 +75,12 @@ class CommonController extends BaseController{
         ];
         return $data;
     }
+
+    //计算人的信誉度
+    public static function credit ($uid) {
+        $date = new DateModel();
+        $map['user_id'] = $uid;
+        $map['status'] = 1;//TODO date失败分数?
+        return $date->where($map)->avg('score');
+    }
 }

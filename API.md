@@ -52,8 +52,14 @@
 				"status": "200",
 				"info": "成功"
 			}
-
+3. 取个人收藏列表
+        url:  http://106.184.7.12:8002/index.php/api/person/collection
+4. 取个人参加记录
+        url:  http://106.184.7.12:8002/index.php/api/person/join
+5. 取个人发起记录
+        url:  http://106.184.7.12:8002/index.php/api/person/create
 --------------
+
 ###私信模块
 		
 
@@ -161,18 +167,17 @@
 
 2.  获取约会列表
 	
-		url: http://106.184.7.12:8002/index.php/api/date/showbox
+		url: http://106.184.7.12:8002/index.php/api/date/datelist
 		post:
 		{
 			"date_type": 0, //默认为0, 即所有约会类型
 			"order": "", //.....
-			"time": ""
 		}	
 
 		return
 				[
 				    {
-				        "showbox_id": "3",
+				        "date_id": "3",
 				        "user_id": "1",
 				        "created_at": "1429446315",
 				        "date_at": "1429456315",
@@ -185,7 +190,7 @@
 				        "grade_limit": []
 				    },
 				    {
-				        "showbox_id": "2",
+				        "date_id": "2",
 				        "user_id": "1",
 				        "created_at": "1429446316",
 				        "date_at": "1429456316",
@@ -198,7 +203,7 @@
 				        "grade_limit": []
 				    },
 				    {
-				        "showbox_id": "1",
+				        "date_id": "1",
 				        "user_id": "1",
 				        "created_at": "1429446317",
 				        "date_at": "1429456317",
@@ -239,7 +244,7 @@
 			{
 				"date_type" : "约会类型id",
 				"title": "xxxx(n字以内)",
-				"introduce": "xxxxxxx",
+				"content": "xxxxxxx",
 				"date_time": "时间戳",
 				"date_place": "约会地点",
 				"date_people": "限制人数",
@@ -248,6 +253,7 @@
 				"academy_select_model": "", //1正选(默认), 2反选
 				"grade_limit": "", //年级限制
 				"grade_select_model": "", //1正选(默认), 2反选,
+				"cost_model": "", int 看ER图
 				"uid": "",
 				"token": ""
 			}
@@ -263,7 +269,55 @@
 				"status":"200",
 				"info": "发布成功"
 			}
-
+4. 取约会详情
+        url: http://106.184.7.12:8002/index.php/api/date/detaildate
+        
+        post: 
+        			{
+        				"date_id" : "约会id",
+        				"uid": "",
+        				"token": ""
+        			}
+        retrun: 
+                  {
+                  "nickname": "刘晨凌",
+                  "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                  "gender": "2",
+                  "date_id": "1",
+                  "user_id": "1",
+                  "created_at": "1429446317",
+                  "date_at": "1529456317",
+                  "place": "重邮宾馆",
+                  "title": "来约炮!",
+                  "date_type": "3",
+                  "type": "约炮",
+                  "category_id": "3",
+                  "gender_limit": "1",
+                  "cost_model": "1",
+                  "academy_limit": [
+                  {
+                  "selectmodel": "2",
+                  "name": "计算机"
+                  },
+                  {
+                  "selectmodel": "2",
+                  "name": "传媒"
+                  }
+                  ],
+                  "grade_limit": [
+                  {
+                  "selectmodel": "1",
+                  "name": "大一"
+                  },
+                  {
+                  "selectmodel": "1",
+                  "name": "大二"
+                  }
+                  ],
+                  "user_score": null //int, null暂无评分记录
+                  }
+                  
+5. 取约会报名人员
 ----------------------------	
 ###公共
 
