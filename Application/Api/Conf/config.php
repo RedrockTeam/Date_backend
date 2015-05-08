@@ -31,13 +31,20 @@ return array(
     'URL_ROUTER_ON'   => true,
     'URL_ROUTE_RULES' => [
         //公共
-        'public/banner' => 'Banner/Banner',
+        'public/banner' => 'Banner/Banner',//广告位
         //约会信息
-        'date/showbox' => 'DateList/getList',
-        'date/datetype' => 'Category/date_type',
+        'date/datelist' => 'Date/getList',//约会列表
+        'date/datetype' => 'Category/date_type',//约会类型
+        'date/detaildate' => 'Date/getDetail',//具体的约会详情
+        'date/create' => 'Date/createDate',//发布约会
         //私信模块
-        'letter/getletter' => 'Letter/getLetter'
-        //个人信息模块
+        'letter/getletter' => 'Letter/getLetter',
+        'letter/letterstatus' => 'Letter/letterStatus',
+        'letter/dateaction' => 'Letter/dateAction',
 
+        //个人信息模块
+        'person/collection' => 'Personal/getColletion',
+        'person/join' => 'Personal/getJoin',
+        'person/create' => 'Personal/getCreate',
     ],
 );

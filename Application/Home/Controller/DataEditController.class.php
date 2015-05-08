@@ -9,10 +9,11 @@ use Home\Controller\ManagementController;
 class DataEditController extends ManagementController {
 
 		public function index(){
-			$m = new \Home\Model\DataformModel();
-			$set = $m->setCol(array('ID','Name','checkbox', 'select', 'file','txarea','as'))
-				->addModelNum()->addModelDate()->addModelFontdata()->addModelCheckbox()
-				->addModelSelect()->addModelFile()->addModelTextarea()->buildForm("home:DataEdit/edit");
+			$m = new \Home\Model\DataformModel('wx_user','wx_id');
+			$data = D('wx_user')->select();
+			$set = $m->setCol(array('wx_id','name','img_src', 'sex','a','b','c'))->setTableData($data)
+				->addModelId('wx_id')->addModelDate('name')->addModelFontdata('img_src')->addModelCheckbox('sex')
+				->addModelSelect('sex')->addModelFile('sex')->addModelTextarea('sex')->buildForm("home:DataEdit/edit");
 			;
 			//echo "<pro>$set</pro>";
 			$this->assign('FormData',$set);
