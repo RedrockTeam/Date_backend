@@ -11,8 +11,9 @@ class DateController extends BaseController {
         $type = $input['date_type'];
         if($type == 0)
             $type = '%';
-        $data = $list->getInfo($type);
+        $data['data'] = $list->getInfo($type);
         $data['status'] = 200;
+        $data['info'] = '成功';
         $this->ajaxReturn($data);
     }
     //获取约详情
