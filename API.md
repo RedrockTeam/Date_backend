@@ -151,7 +151,7 @@
 		url: http://106.184.7.12:8002/index.php/api/date/datetype
 		return:
 				[
-				    {
+				    data:[{
 				        "id": "1",
 				        "type": "吃饭"
 				    },
@@ -162,7 +162,8 @@
 				    {
 				        "id": "3",
 				        "type": "约炮"
-				    }
+				    }],
+				    status:200
 				]
 
 2.  获取约会列表
