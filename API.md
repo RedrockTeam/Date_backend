@@ -329,7 +329,7 @@
 
 		return:
 			 [
-				data:[{
+				{
 					"url": "https://www.baidu.com", //赞助商链接
 					"src": "http://106.184.7.12:8002/Public/test.jpg" //banner地址
 			    },
@@ -340,9 +340,7 @@
 			    {
 					"url": "http://www.taobao.com",
 					"src":"http://106.184.7.12:8002/Public/test3.jpg"
-			    }],
-			    status:200
-			    
+			    }
 			]
 
 
