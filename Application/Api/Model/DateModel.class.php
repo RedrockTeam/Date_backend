@@ -19,7 +19,7 @@ class DateModel extends Model {
             ->buildSql();
         $c = $this->table($b.'as b')
             ->join("JOIN date_type ON b.date_type = date_type.id")
-            ->field('b.nickname, b.head, b.gender, date_id, user_id, created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, gender_limit, cost_model')
+            ->field('b.nickname, b.head, b.gender, date_id, user_id, created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, gender_limit, cost_model, b.signature')
             ->select();
         foreach($c as $v){
             $map1['date_id'] = $v['date_id'];
