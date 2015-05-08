@@ -9,8 +9,8 @@ class UsersModel extends Model {
         $map = [
             'uid' => $uid
         ];
-        $data = $this->where($map)->field('token')->find();
-        if($data['token'] === $token)
+        $data = $this->where($map)->getfield('token');
+        if($data === $token)
             return true;
         else
             return false;
