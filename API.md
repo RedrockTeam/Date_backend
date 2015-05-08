@@ -148,7 +148,7 @@
 ###约会信息
 1. 获取约会类型
 
-		url: http://106.184.7.12:8002/index.php/api/date/date_type
+		url: http://106.184.7.12:8002/index.php/api/date/datetype
 		return:
 				[
 				    {
