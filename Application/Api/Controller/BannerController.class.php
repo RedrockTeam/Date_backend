@@ -8,7 +8,7 @@ class BannerController extends BaseController {
     {
 
         $ad = new AdvertiseModel();
-        $data = $ad->getBanner();
+        $data['data'] = $ad->getBanner();
         $data['status'] = 200;
         header("Access-Control-Allow-Origin: *");
         $this->ajaxReturn($data);

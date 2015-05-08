@@ -104,9 +104,9 @@ class DateController extends BaseController {
             return false;
         if(!is_numeric($input['date_type'])) //约会类型id
             return false;
-        if(mb_strlen($input['title']) > 15 || mb_strlen($input['title']) <= 0)//标题
+        if(mb_strlen($input['title']) > 10 || mb_strlen($input['title']) <= 0)//标题
             return false;
-        if(mb_strlen($input['content']) > 100 || mb_strlen($input['content']) <= 0)//内容
+        if(mb_strlen($input['content']) > 25 || mb_strlen($input['content']) <= 0)//内容
             return false;
         if(mb_strlen($input['place']) > 25 || mb_strlen($input['place']) <= 0)//野战地点
             return false;
@@ -135,7 +135,7 @@ class DateController extends BaseController {
         $map['user_id'] = $uid;
         $map['status'] = 2;
         $num = $date->where($map)->count();
-        if( $num > 5)
+        if( $num > 10)
             return false;
         return true;
     }
