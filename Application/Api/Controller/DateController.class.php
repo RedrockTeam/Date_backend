@@ -11,8 +11,9 @@ class DateController extends BaseController {
         $type = $input['date_type'];
         if($type == 0)
             $type = '%';
-        $data = $list->getInfo($type);
+        $data['data'] = $list->getInfo($type);
         $data['status'] = 200;
+        $data['info'] = '成功';
         $this->ajaxReturn($data);
     }
     //获取约详情
@@ -28,6 +29,7 @@ class DateController extends BaseController {
     //发起约炮
     public function createDate () {
         $input = I('post.');
+
         if (!$this->checkData($input)){
             $data = [
                 'status' => '403',
@@ -35,6 +37,15 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
+
+        if (!$this->checkData($input['uid'])){
+            $data = [
+                'status' => '403',
+                'info' => '超过同时约上限'
+            ];
+            $this->ajaxReturn($data);
+        }
+
         $dateInfo = [
             'user_id' => $input['uid'],
             'title' => $input['title'],
@@ -114,6 +125,17 @@ class DateController extends BaseController {
         if($input['grade_limit'] != null && !is_numeric($input['grade_limit']))//年级限制
             return false;
         if($input['grade_select_model'] != null && !is_numeric($input['grade_select_model']))//年级限制的选择模式
+            return false;
+        return true;
+    }
+
+    //检查发起约炮上限
+    private function checkPaoNum ($uid) {
+        $date = new DateModel();
+        $map['user_id'] = $uid;
+        $map['status'] = 2;
+        $num = $date->where($map)->count();
+        if( $num > 5)
             return false;
         return true;
     }
