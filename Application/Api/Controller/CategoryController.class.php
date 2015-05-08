@@ -8,7 +8,6 @@ class CategoryController extends BaseController {
         $type = new DateTypeModel();
         $data = $type->getType();
         $data['status'] = 200;
-        header("Access-Control-Allow-Origin: *");
         $this->ajaxReturn($data);
     }
 }
