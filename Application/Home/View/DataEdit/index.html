@@ -1,5 +1,7 @@
 
+		<table id="grid-table"></table>
 
+		<div id="grid-pager"></div>
 		<script type="text/javascript">
 			window.jQuery || document.write("<script src='__PUBLIC__/assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
@@ -93,7 +95,7 @@
 						}, 0);
 					},
 			
-					editurl: $path_base+"/dummy.html",//nothing is saved
+					editurl: '<PHP>echo U('home:DataEdit/editData');</php>',
 					caption: "jqGrid with inline editing",
 			
 			

@@ -6,7 +6,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class ManagementController extends Controller {
-
+	private $pageTotal=3;
 	private function getFunctionInfo(){//功能路由
 		$function['function_info']=array(
 		     0=>array(
@@ -90,5 +90,26 @@ class ManagementController extends Controller {
 	public function logout(){//登出
 		session(null);
 		redirect(U('home:Login/index'), 0, 'please to login ...');
+	}
+
+	public function packPage($table,$order,$field='',$where='',$mod=false){
+		$User = D($table); // 实例化User对象
+		// 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+		$list  = $User->field($field,$mod)->where($where)->order($order)->page($_GET['page'].','.$this->pageTotal)->select();
+		$count = $User->where($where)->count();// 查询满足要求的总记录数
+		$Page  = new \Think\Page($count,$this->pageTotal);// 实例化分页类 传入总记录数和每页显示的记录数
+		$show  = $Page->show();// 分页显示输出
+
+		$dfield = $User->field($field,$mod)->find();
+		$field =array();
+		foreach($dfield as $key => $value){
+			$field[] = $key;
+		}
+
+		$this->assign('local_table',$table);
+		$this->assign('table_head',$field);
+		$this->assign('table_page',$show);// 赋值分页输出
+		$this->assign('table_data',$list);// 赋值数据集
+
 	}
 }
