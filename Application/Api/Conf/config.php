@@ -3,6 +3,7 @@ return array(
 	//'配置项'=>'配置值'
     'URL_CASE_INSENSITIVE' => true,
     'SESSION_AUTO_START' => true,
+    'SHOW_PAGE_TRACE'=>true,
     'URL_MODEL'          => '3',
     'DEFAULT_CHARSET'    =>  'utf-8',
     //'SESSION_PREFIX'        =>  'date_', // session 前缀
@@ -38,13 +39,14 @@ return array(
         'date/detaildate' => 'Date/getDetail',//具体的约会详情
         'date/create' => 'Date/createDate',//发布约会
         //私信模块
-        'letter/getletter' => 'Letter/getLetter',
-        'letter/letterstatus' => 'Letter/letterStatus',
-        'letter/dateaction' => 'Letter/dateAction',
+        'letter/getletter' => 'Letter/getLetter',//获取私信
+        'letter/letterstatus' => 'Letter/letterStatus',//查看未读私信数量
+        'letter/dateaction' => 'Letter/dateAction',//私信中接受/拒绝约
 
         //个人信息模块
-        'person/collection' => 'Personal/getColletion',
-        'person/join' => 'Personal/getJoin',
+        'person/collection' => 'Personal/getColletion',//获取个人收藏
+        'person/join' => 'Personal/getJoin',//
         'person/create' => 'Personal/getCreate',
+        'person/userinfo' => 'Personal/getInfo',
     ],
 );
