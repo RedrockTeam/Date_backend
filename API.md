@@ -9,7 +9,7 @@
 		url: http://106.184.7.12:8002/index.php/api/person/userinfo
 		post: { 
 				"uid":1,
-				"get_id":"需要获取的用户的uid",
+				"get_uid":"需要获取的用户的uid",
 				"token":""
 			  } //如果验证通过, 就返回id对应信息, 否则返回错误信息
 		return 
@@ -23,6 +23,8 @@
 						"id": 1,
 						"nickname": "sb",
 						"head": "http://xxxxxxx/",
+						gender : "", 
+						grade : "",
 						"academy": "学院",
 						"telephone": "123456789012345678",
 						"qq": "123456789",
@@ -138,6 +140,11 @@
 3. 私信通知
 
         url: http://106.184.7.12:8002/index.php/api/letter/letterstatus
+        post:
+        {
+            "uid": "",
+            "token": ""
+        }
         return:
                 {
                     'status' => 200,
