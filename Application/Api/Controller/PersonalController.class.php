@@ -3,6 +3,7 @@ namespace Api\Controller;
 use Api\Model\CollectionModel;
 use Api\Model\DateModel;
 use Api\Model\UserDateModel;
+use Api\Model\UsersModel;
 use Think\Controller;
 class PersonalController extends BaseController {
     //获取收藏约会
@@ -30,5 +31,22 @@ class PersonalController extends BaseController {
         $date = new DateModel();
         $data = $date->getSao($uid);
         $this->ajaxReturn($data);
+    }
+
+    //获取个人信息
+    public function getInfo () {
+        $input = I('post.');
+        $uid = $input['uid'];
+        $get_uid = $input['get_uid'];
+        $userDate = new UserDateModel();
+        if (!$userDate->joincheck($uid, $get_uid)){
+            $data = [
+                'info' => '权限不够',
+                'status' => 403
+            ];
+            $this->ajaxReturn($data);
+        }
+        $users = new UsersModel();
+        $this->ajaxReturn($users->getUserInfo($get_uid));
     }
 }

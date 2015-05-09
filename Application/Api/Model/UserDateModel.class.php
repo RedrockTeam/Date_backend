@@ -26,5 +26,18 @@ class UserDateModel extends Model {
         return $this->where($map)->join("JOIN users ON user_date.user_id = users.id")->join("JOIN date ON user_date.date_id = date.id")->select();
     }
 
+    //查看某人是否成功约炮
+    public function joincheck($uid, $get_uid) {
+        $map = [
+            'date.user_id' => $uid,
+            'user_date.user_id' => $get_uid,
+            'user_date.status' => 1
+        ];
+        $num = $this->where($map)->join('JOIN date ON user_date.date_id = date.id')->count();
+        if($num > 0)
+            return true;
+        else
+            return false;
+    }
 
 }
