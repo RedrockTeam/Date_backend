@@ -2,6 +2,9 @@
 
 		method: POST
 
+		uid: 1 -> token:   nasdfnldssdaf  ;
+		uid: 2 -> token:  cdsagrebvfra ;
+
 ###个人信息模块
 
 1. 获取个人(或他人)信息
@@ -431,6 +434,7 @@
 3. 私信通知
 
         url: http://106.184.7.12:8002/index.php/api/letter/letterstatus
+        
         post:
         {
             "uid": "",
