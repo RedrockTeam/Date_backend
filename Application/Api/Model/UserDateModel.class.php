@@ -32,7 +32,7 @@ class UserDateModel extends Model {
     //检查是否已经约过
     public function joined ($uid, $date_id) {
         $map = [
-            'uid' => $uid,
+            'user_id' => $uid,
             'date_id' => $date_id
         ];
         $count = $this->where($map)->count();
