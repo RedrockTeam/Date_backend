@@ -353,7 +353,29 @@
 			    
 			]
 
+2. 获取约会类型列表
 
-
-
+        url: http://106.184.7.12:8002/index.php/api/public/academy
+        
+        		return:
+        			 {
+                     "data": [
+                     {
+                     "id": "1",
+                     "name": "计算机"
+                     },
+                     {
+                     "id": "2",
+                     "name": "传媒"
+                     },
+                     {
+                     "id": "3",
+                     "name": "通信"
+                     }
+                     ],
+                     "info": "成功",
+                     "status": 200
+                     }
+                     
+                     
 9. 待定

@@ -33,6 +33,7 @@ return array(
     'URL_ROUTE_RULES' => [
         //公共
         'public/banner' => 'Banner/Banner',//广告位
+        'public/academy' => 'Category/academy',//学院列表
         //约会信息
         'date/datelist' => 'Date/getList',//约会列表
         'date/datetype' => 'Category/date_type',//约会类型
@@ -45,8 +46,8 @@ return array(
 
         //个人信息模块
         'person/collection' => 'Personal/getColletion',//获取个人收藏
-        'person/join' => 'Personal/getJoin',//
-        'person/create' => 'Personal/getCreate',
+        'person/join' => 'Personal/getJoin',//获取参加的约会
+        'person/create' => 'Personal/getCreate',//获取发起的约会
         'person/userinfo' => 'Personal/getInfo',
     ],
 );
