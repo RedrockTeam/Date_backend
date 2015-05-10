@@ -7,7 +7,7 @@ class UsersModel extends Model {
     //检查是否登陆
     public function checkAuth ($uid, $token) {
         $map = [
-            'uid' => $uid
+            'id' => $uid
         ];
         $data = $this->where($map)->getfield('token');
         if($data === $token)
