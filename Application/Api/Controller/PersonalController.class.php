@@ -7,7 +7,7 @@ use Api\Model\UsersModel;
 use Think\Controller;
 class PersonalController extends BaseController {
     //获取收藏约会
-    public function getColletion () {
+    public function getCollection () {
         $input = I('post.');
         $uid = $input['uid'];
         $collection = new CollectionModel();
@@ -54,5 +54,28 @@ class PersonalController extends BaseController {
         }
         $users = new UsersModel();
         $this->ajaxReturn($users->getUserInfo($get_uid));
+    }
+
+    //收藏约会
+    public function collect ($uid, $date_id) {
+        $collection = new CollectionModel();
+        $date = [
+            'date_id' => $date_id,
+            'user_id' => $uid
+        ];
+        if($collection->data($date)->add()) {
+            $data = [
+                'info' => '成功',
+                'status' => 200
+            ];
+            $this->ajaxReturn($data);
+        }
+        else{
+            $data = [
+                'info' => '网络错误!',
+                'status' => 500
+            ];
+            $this->ajaxReturn($data);
+        }
     }
 }

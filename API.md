@@ -334,11 +334,26 @@
                }
                ]
                 
+6. 收藏约会
+
+		url:  http://106.184.7.12:8002/index.php/api/person/collect
+        
+        		post:
+        			{
+        				"uid": "",
+        				"token": "",
+        			}
+        			
+        return
+        
+            {
+            				"status": 200,
+            				"info":"成功"
+            			}
         
 --------------
 
 ###私信模块
-		
 
 1.  获取私信
 
@@ -618,6 +633,22 @@
                 status:"200"
              }
 6. 取约会报名人员
+
+               url: http://106.184.7.12:8002/index.php/api/date/report
+                            
+                            post:
+                            {
+                               uid:"",
+                               token:"",
+                               date_id:""
+                            }
+                            
+                            return:
+                            {
+                                data:""
+                               info:"成功";
+                               status:"200"
+                            }
 ----------------------------	
 ###公共
 

@@ -116,7 +116,7 @@ class DateController extends BaseController {
         }
 
         $userDate = new UserDateModel();
-        //检查是否是本人
+        //检查是否是本人 1
         if(!$this->checkSelf($uid, $date_id)){
             $data = [
                 'info' => '你不能约自己!',
@@ -124,7 +124,7 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
-        //检查是否约过
+        //检查是否约过 2
         if(!$userDate->joined($uid, $date_id)) {
             $data = [
                 'info' => '你已经约过了',
@@ -132,7 +132,7 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
-        //检查约超时
+        //检查约超时 3
         if(!$this->checkTime($date_id)) {
             $data = [
                 'info' => '该约会已结束',
@@ -140,7 +140,7 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
-        //检查同时约炮上限
+        //检查同时约炮上限 4
         if(!$this->checkReportNum($uid)) {
             $data = [
                 'info' => '你已经到达同时约的上限了',
@@ -148,7 +148,7 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
-        //检查限制条件, 学院, 年级, 性别
+        //检查限制条件, 学院, 年级, 性别 5
         if(!$this->checkConditions($uid, $date_id)) {
                 $data = [
                     'info' => '你不符合限制条件',
@@ -156,7 +156,7 @@ class DateController extends BaseController {
                 ];
                 $this->ajaxReturn($data);
         }
-        //插入数据
+        //插入数据 6
         $date = [
                 'date_id' => $date_id,
                 'user_id' => $uid,
