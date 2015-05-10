@@ -104,9 +104,17 @@ class DateController extends BaseController {
         $input = I('post.');
         $uid = $input['uid'];
         $date_id = $input['date_id'];
+        if($date_id == null) {
+            $data = [
+                'info' => '参数错误',
+                'status' => '403'
+            ];
+            $this->ajaxReturn($data);
+        }
+
         $userDate = new UserDateModel();
         //检查是否约过
-        if(!$userDate->check($uid, $date_id)) {
+        if(!$userDate->joined($uid, $date_id)) {
             $data = [
                 'info' => '你已经约过了',
                 'status' => '403'
@@ -218,60 +226,85 @@ class DateController extends BaseController {
         $date = new DateModel();
         $date_map['id'] = $date_id;
         $date_info = $date->where($date_map)->find();
-        if($gender != $date_info['gender_limit'])
+        if($date_info['gender_limit'] == 0){
+
+        }
+        else{
+            if($gender != $date_info['gender_limit'])
+                return false;
+        }
+        $date_limit = new DateLimitModel();
+        //判断年级
+        if(!$this->checkGrade($grade, $date_id, $date_limit))
+            return false;
+        //判断学院
+        if(!$this->checkAcademy($academy, $date_id, $date_limit))
             return false;
 
+        return true;
+    }
+
+    private function checkGrade ($grade, $date_id, $date_limit) {
         /**
          * TODO 先判断正选反选, 再遍历, 逻辑目测没问题
          */
         //判断年级
-        $date_limit = new DateLimitModel();
+
         $limit_map1 = [
             'date_id' => $date_id,
             'condition' => 1 //1判断年级
         ];
         $limit1 = $date_limit->where($limit_map1)->select();
-        switch($limit1[0]['selectmodel']){
-            case 1: //正选
+        if($limit1){
+            switch($limit1[0]['selectmodel']){
+                case 1: //正选
                     foreach($limit1 as $v){
-                        if($v['limit'] == $grade) break;
-                        else return false;
+                        if($v['limit'] == $grade) {
+                            return true;
+                        }
                     }
-                    break;
-
-            case 2: //反选
-                foreach($limit1 as $v){
-                    if($v['limit'] == $grade) return false;
-                    else break;
-                }
-                break;
-            default:
-                return false;
+                    return false;
+                case 2: //反选
+                    foreach($limit1 as $v){
+                        if($v['limit'] == $grade)
+                            return false;
+                    }
+                    return true;
+                default:
+                    return false;
+            }
         }
+        else
+            return true;
+    }
+    //判断学院
+    private function checkAcademy ($academy, $date_id, $date_limit) {
 
-        //判断学院
         $limit_map2 = [
             'date_id' => $date_id,
             'condition' => 2 //1判断年级
         ];
         $limit2 = $date_limit->where($limit_map2)->select();
-        switch($limit2[0]['selectmodel']){
-            case 1: //正选
-                foreach($limit2 as $v){
-                    if($v['limit'] == $academy) break;
-                    else return false;
-                }
-                break;
-            case 2: //反选
-                foreach($limit2 as $v){
-                    if($v['limit'] == $academy) return false;
-                    else break;
-                }
-                break;
-            default:
-                return false;
+        if($limit2) {
+            switch ($limit2[0]['selectmodel']) {
+                case 1: //正选
+                    foreach ($limit2 as $v) {
+                        if ($v['limit'] == $academy)
+                        return true;
+                    }
+                    return false;
+                case 2: //反选
+                    foreach ($limit2 as $v) {
+                        if ($v['limit'] == $academy)
+                            return false;
+                    }
+                    return true;
+                default:
+                    return false;
+            }
         }
-        return true;
+        else
+            return true;
     }
     //插入报名约炮记录
     private function insertPao ($data) {

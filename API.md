@@ -601,8 +601,23 @@
                   ],
                   "user_score": null //int, null暂无评分记录
                   }
-                  
-5. 取约会报名人员
+5. 报名约会
+             
+             url: http://106.184.7.12:8002/index.php/api/date/report
+             
+             post:
+             {
+                uid:"",
+                token:"",
+                date_id:""
+             }
+             
+             return:
+             {
+                info:"成功";
+                status:"200"
+             }
+6. 取约会报名人员
 ----------------------------	
 ###公共
 

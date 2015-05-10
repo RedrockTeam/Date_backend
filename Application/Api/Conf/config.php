@@ -39,6 +39,7 @@ return array(
         'date/datetype' => 'Category/date_type',//约会类型
         'date/detaildate' => 'Date/getDetail',//具体的约会详情
         'date/create' => 'Date/createDate',//发布约会
+        'date/report' => 'Date/report', //报名约
         //私信模块
         'letter/getletter' => 'Letter/getLetter',//获取私信
         'letter/letterstatus' => 'Letter/letterStatus',//查看未读私信数量

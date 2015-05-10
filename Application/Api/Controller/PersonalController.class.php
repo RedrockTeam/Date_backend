@@ -11,7 +11,9 @@ class PersonalController extends BaseController {
         $input = I('post.');
         $uid = $input['uid'];
         $collection = new CollectionModel();
-        $data = $collection->getCollection($uid);
+        $data['data'] = $collection->getCollection($uid);
+        $data['info'] = '成功';
+        $data['status'] = 200;
         $this->ajaxReturn($data);
     }
 
@@ -20,7 +22,9 @@ class PersonalController extends BaseController {
         $input = I('post.');
         $uid = $input['uid'];
         $collection = new UserDateModel();
-        $data = $collection->getPao($uid);
+        $data['data'] = $collection->getPao($uid);
+        $data['info'] = '成功';
+        $data['status'] = 200;
         $this->ajaxReturn($data);
     }
 
@@ -29,7 +33,9 @@ class PersonalController extends BaseController {
         $input = I('post.');
         $uid = $input['uid'];
         $date = new DateModel();
-        $data = $date->getSao($uid);
+        $data['data'] = $date->getSao($uid);
+        $data['info'] = '成功';
+        $data['status'] = 200;
         $this->ajaxReturn($data);
     }
 
