@@ -60,7 +60,7 @@ class UserDateModel extends Model {
         $map['date_id'] = $date_id;
         return $this->where($map)
             ->join('JOIN users ON user_date.user_id = users.id')
-            ->field('users.id as user_id, user_date.date_id, nickname, gender, signature')
+            ->field('users.id as user_id, user_date.date_id, nickname, gender, signature, head')
             ->select();
     }
 
