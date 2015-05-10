@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-05-05 18:11:56
+Date: 2015-05-10 19:00:35
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -60,11 +60,15 @@ CREATE TABLE `collection` (
   `date_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of collection
 -- ----------------------------
+INSERT INTO `collection` VALUES ('1', '1', '1');
+INSERT INTO `collection` VALUES ('2', '2', '1');
+INSERT INTO `collection` VALUES ('3', '3', '1');
+INSERT INTO `collection` VALUES ('4', '4', '1');
 
 -- ----------------------------
 -- Table structure for date
@@ -72,8 +76,10 @@ CREATE TABLE `collection` (
 DROP TABLE IF EXISTS `date`;
 CREATE TABLE `date` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
   `title` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `date_type` int(2) DEFAULT NULL,
+  `cost_model` int(255) DEFAULT NULL,
   `content` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
   `place` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `date_time` int(11) DEFAULT NULL,
@@ -91,11 +97,11 @@ CREATE TABLE `date` (
 -- ----------------------------
 -- Records of date
 -- ----------------------------
-INSERT INTO `date` VALUES ('1', '来约炮!', '3', 'test', '重邮宾馆', '1429456317', '1429446317', '0', '0', '1', '1', '0', '0', '2');
-INSERT INTO `date` VALUES ('2', '来约炮!', '2', 'test', '重邮宾馆', '1429456316', '1429446316', '0', '0', '1', '1', '0', '0', '2');
-INSERT INTO `date` VALUES ('3', '来约炮!', '1', 'test', '重邮宾馆', '1429456315', '1429446315', '0', '0', '1', '1', '0', '0', '2');
-INSERT INTO `date` VALUES ('4', '来约炮!', '1', 'test', '重邮宾馆', '1429456314', '1429446314', '0', '0', '1', '1', '0', '0', '2');
-INSERT INTO `date` VALUES ('5', '来约炮!', '2', 'test', '重邮宾馆', '1429456313', '1429446313', '0', '0', '1', '1', '0', '0', '2');
+INSERT INTO `date` VALUES ('1', '1', '来约炮!', '3', '1', 'test', '重邮宾馆', '1529456317', '1429446317', '0', '0', '1', '0', '0', '0', '2');
+INSERT INTO `date` VALUES ('2', '1', '来约炮!', '2', '1', 'test', '重邮宾馆', '1429456316', '1429446316', '0', '0', '1', '1', '0', '0', '2');
+INSERT INTO `date` VALUES ('3', '1', '来约炮!', '1', '1', 'test', '重邮宾馆', '1429456315', '1429446315', '0', '0', '1', '1', '0', '0', '2');
+INSERT INTO `date` VALUES ('4', '1', '来约炮!', '1', '1', 'test', '重邮宾馆', '1429456314', '1429446314', '0', '0', '1', '0', '0', '0', '2');
+INSERT INTO `date` VALUES ('5', '1', '来约炮!', '2', '1', 'test', '重邮宾馆', '1429456313', '1429446313', '0', '0', '1', '2', '0', '0', '2');
 
 -- ----------------------------
 -- Table structure for date_limit
@@ -159,17 +165,20 @@ INSERT INTO `grade` VALUES ('4', '大四及以上');
 DROP TABLE IF EXISTS `letter`;
 CREATE TABLE `letter` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date_id` int(11) DEFAULT NULL,
   `from` int(11) DEFAULT NULL,
   `to` int(11) DEFAULT NULL,
   `content` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
   `time` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of letter
 -- ----------------------------
+INSERT INTO `letter` VALUES ('1', '1', '1', '1', 'test', '1429446317', '1');
+INSERT INTO `letter` VALUES ('2', '2', '1', '1', 'test2', '1429446317', '1');
 
 -- ----------------------------
 -- Table structure for users
@@ -194,7 +203,7 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '2013211000', '', null, '刘晨凌', '2', '2', null, null, null, null, null);
+INSERT INTO `users` VALUES ('1', '2013211000', 'http://106.184.7.12:8002/Public/head.jpg', 'i\'m db', '刘晨凌', '2', '2', '3', null, null, null, '1');
 
 -- ----------------------------
 -- Table structure for user_date
@@ -207,11 +216,12 @@ CREATE TABLE `user_date` (
   `time` int(11) DEFAULT NULL,
   `status` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of user_date
 -- ----------------------------
-INSERT INTO `user_date` VALUES ('1', '1', '1', '1429446317', '2');
+INSERT INTO `user_date` VALUES ('8', '1', '1', '1431244033', '2');
 INSERT INTO `user_date` VALUES ('2', '2', '1', '1429446317', '2');
 INSERT INTO `user_date` VALUES ('3', '3', '1', '1429446317', '2');
+INSERT INTO `user_date` VALUES ('6', '4', '1', '1431241589', '2');
