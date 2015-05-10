@@ -31,9 +31,11 @@ return array(
      */
     'URL_ROUTER_ON'   => true,
     'URL_ROUTE_RULES' => [
+
         //公共
         'public/banner' => 'Banner/Banner',//广告位
         'public/academy' => 'Category/academy',//学院列表
+
         //约会信息
         'date/datelist' => 'Date/getList',//约会列表
         'date/datetype' => 'Category/date_type',//约会类型
@@ -41,6 +43,7 @@ return array(
         'date/create' => 'Date/createDate',//发布约会
         'date/report' => 'Date/report', //报名约
         'date/dateperson' => 'Date/getDatePerson', //获取参与约会的人员
+
         //私信模块
         'letter/getletter' => 'Letter/getLetter',//获取私信
         'letter/letterstatus' => 'Letter/letterStatus',//查看未读私信数量
