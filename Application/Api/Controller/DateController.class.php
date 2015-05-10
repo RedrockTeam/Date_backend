@@ -18,6 +18,7 @@ class DateController extends BaseController {
         $data['info'] = '成功';
         $this->ajaxReturn($data);
     }
+
     //获取约详情
     public function getDetail () {
         $input = I('post.');
@@ -28,6 +29,7 @@ class DateController extends BaseController {
         $data['user_score'] = CommonController::credit($uid);
         $this->ajaxReturn($data);
     }
+
     //发起约炮
     public function createDate () {
         $input = I('post.');
@@ -99,6 +101,7 @@ class DateController extends BaseController {
         ];
         $this->ajaxReturn($data);
     }
+
     //报名约炮
     public function report () {
         $input = I('post.');
@@ -113,10 +116,26 @@ class DateController extends BaseController {
         }
 
         $userDate = new UserDateModel();
+        //检查是否是本人
+        if(!$this->checkSelf($uid, $date_id)){
+            $data = [
+                'info' => '你不能约自己!',
+                'status' => '403'
+            ];
+            $this->ajaxReturn($data);
+        }
         //检查是否约过
         if(!$userDate->joined($uid, $date_id)) {
             $data = [
                 'info' => '你已经约过了',
+                'status' => '403'
+            ];
+            $this->ajaxReturn($data);
+        }
+        //检查约超时
+        if(!$this->checkTime($date_id)) {
+            $data = [
+                'info' => '该约会已结束',
                 'status' => '403'
             ];
             $this->ajaxReturn($data);
@@ -158,6 +177,26 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
+    }
+
+    //查看某个约会的参与人员
+    public function getDatePerson () {
+        $input = I('post.');
+        $date_id = $input['date_id'];
+        $usreDate = new UserDateModel();
+        $data['data'] = $usreDate->datePerson($date_id);
+        $data['info'] = '成功';
+        $data['status'] = 200;
+        $this->ajaxReturn($data);
+    }
+
+    //检查本人
+    private function checkSelf ($uid, $date_id) {
+        $map['id'] = $date_id;
+        $info = M('date')->where($map)->find();
+        if($info['user_id'] == $uid)
+            return false;
+        return true;
     }
 
     //检查数据
@@ -202,6 +241,13 @@ class DateController extends BaseController {
         return true;
     }
 
+    private function checkTime($date_id){
+        $map['id'] = $date_id;
+        $info = M('date')->where($map)->find();
+        if($info['date_time'] < time())
+            return false;
+        return true;
+    }
     //检查同时约炮上限
     private function checkReportNum ($uid) {
         $userDate = new UserDateModel();

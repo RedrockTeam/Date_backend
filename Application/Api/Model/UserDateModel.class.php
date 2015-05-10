@@ -58,7 +58,10 @@ class UserDateModel extends Model {
     //获取当前约已报名人
     public function datePerson ($date_id) {
         $map['date_id'] = $date_id;
-        return $this->where($map)->join('JOIN users ON user_date.user_id = users.id')->select();
+        return $this->where($map)
+            ->join('JOIN users ON user_date.user_id = users.id')
+            ->field('users.id as user_id, user_date.date_id, nickname, gender, signature')
+            ->select();
     }
 
 }
