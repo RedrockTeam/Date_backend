@@ -55,15 +55,305 @@
 				"info": "成功"
 			}
 3. 取个人收藏列表
-        url:  http://106.184.7.12:8002/index.php/api/person/collection
+
+            url:  http://106.184.7.12:8002/index.php/api/person/collection
+            post: {
+            uid:"",
+            token:""
+            }
+            return {
+                {
+                    "date_id": "1",
+                    "user_id": "1",
+                    "date_status": "2",
+                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                    "signature": "i'm db",
+                    "nickname": "刘晨凌",
+                    "gender": "2",
+                    "title": "来约炮!",
+                    "date_time": "1529456317",
+                    "created_at": "1429446317",
+                    "cost_model": "1",
+                    "content": "test",
+                    "place": "重邮宾馆",
+                    "score": "0"
+                    },
+                    {
+                    "date_id": "2",
+                    "user_id": "1",
+                    "date_status": "2",
+                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                    "signature": "i'm db",
+                    "nickname": "刘晨凌",
+                    "gender": "2",
+                    "title": "来约炮!",
+                    "date_time": "1429456316",
+                    "created_at": "1429446316",
+                    "cost_model": "1",
+                    "content": "test",
+                    "place": "重邮宾馆",
+                    "score": "0"
+                    },
+                    {
+                    "date_id": "3",
+                    "user_id": "1",
+                    "date_status": "2",
+                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                    "signature": "i'm db",
+                    "nickname": "刘晨凌",
+                    "gender": "2",
+                    "title": "来约炮!",
+                    "date_time": "1429456315",
+                    "created_at": "1429446315",
+                    "cost_model": "1",
+                    "content": "test",
+                    "place": "重邮宾馆",
+                    "score": "0"
+                    }
+            }
 4. 取个人参加记录
-        url:  http://106.184.7.12:8002/index.php/api/person/join
+
+                    url:  http://106.184.7.12:8002/index.php/api/person/join
+                    post: 
+                    {
+                        uid:"",
+                        token:""
+                    }
+                    return:
+                    [
+                    {
+                    "date_id": "1",
+                    "user_id": "1",
+                    "time": "1429446317",
+                    "user_status": "1",
+                    "date_status": "2",
+                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                    "signature": "i'm db",
+                    "nickname": "刘晨凌",
+                    "gender": "2",
+                    "title": "来约炮!",
+                    "date_time": "1529456317",
+                    "created_at": "1429446317",
+                    "cost_model": "1",
+                    "content": "test",
+                    "place": "重邮宾馆",
+                    "score": "0"
+                    },
+                    {
+                    "date_id": "2",
+                    "user_id": "1",
+                    "time": "1429446317",
+                    "user_status": "2",
+                    "date_status": "2",
+                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                    "signature": "i'm db",
+                    "nickname": "刘晨凌",
+                    "gender": "2",
+                    "title": "来约炮!",
+                    "date_time": "1429456316",
+                    "created_at": "1429446316",
+                    "cost_model": "1",
+                    "content": "test",
+                    "place": "重邮宾馆",
+                    "score": "0"
+                    },
+                    {
+                    "date_id": "3",
+                    "user_id": "1",
+                    "time": "1429446317",
+                    "user_status": "2",
+                    "date_status": "2",
+                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                    "signature": "i'm db",
+                    "nickname": "刘晨凌",
+                    "gender": "2",
+                    "title": "来约炮!",
+                    "date_time": "1429456315",
+                    "created_at": "1429446315",
+                    "cost_model": "1",
+                    "content": "test",
+                    "place": "重邮宾馆",
+                    "score": "0"
+                    }
+                    ]
 5. 取个人发起记录
+
         url:  http://106.184.7.12:8002/index.php/api/person/create
+        post: 
+        {
+            uid:"",
+            token:""
+        }
+        return: 
+            
+               [
+               {
+               "id": "1",
+               "user_id": "1",
+               "title": "来约炮!",
+               "date_type": "3",
+               "cost_model": "1",
+               "content": "test",
+               "place": "重邮宾馆",
+               "date_time": "1529456317",
+               "created_at": "1429446317",
+               "apply_num": "0",
+               "sure_num": "0",
+               "limit_num": "1",
+               "gender_limit": "1",
+               "score": "0",
+               "scored_num": "0",
+               "status": "2",
+               "stu_num": "2013211000",
+               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+               "signature": "i'm db",
+               "nickname": "刘晨凌",
+               "gender": "2",
+               "grade": "2",
+               "academy": "1",
+               "qq": null,
+               "weixin": null,
+               "telephone": null,
+               "token": "1"
+               },
+               {
+               "id": "1",
+               "user_id": "1",
+               "title": "来约炮!",
+               "date_type": "2",
+               "cost_model": "1",
+               "content": "test",
+               "place": "重邮宾馆",
+               "date_time": "1429456316",
+               "created_at": "1429446316",
+               "apply_num": "0",
+               "sure_num": "0",
+               "limit_num": "1",
+               "gender_limit": "1",
+               "score": "0",
+               "scored_num": "0",
+               "status": "2",
+               "stu_num": "2013211000",
+               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+               "signature": "i'm db",
+               "nickname": "刘晨凌",
+               "gender": "2",
+               "grade": "2",
+               "academy": "1",
+               "qq": null,
+               "weixin": null,
+               "telephone": null,
+               "token": "1"
+               },
+               {
+               "id": "1",
+               "user_id": "1",
+               "title": "来约炮!",
+               "date_type": "1",
+               "cost_model": "1",
+               "content": "test",
+               "place": "重邮宾馆",
+               "date_time": "1429456315",
+               "created_at": "1429446315",
+               "apply_num": "0",
+               "sure_num": "0",
+               "limit_num": "1",
+               "gender_limit": "1",
+               "score": "0",
+               "scored_num": "0",
+               "status": "2",
+               "stu_num": "2013211000",
+               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+               "signature": "i'm db",
+               "nickname": "刘晨凌",
+               "gender": "2",
+               "grade": "2",
+               "academy": "1",
+               "qq": null,
+               "weixin": null,
+               "telephone": null,
+               "token": "1"
+               },
+               {
+               "id": "1",
+               "user_id": "1",
+               "title": "来约炮!",
+               "date_type": "1",
+               "cost_model": "1",
+               "content": "test",
+               "place": "重邮宾馆",
+               "date_time": "1429456314",
+               "created_at": "1429446314",
+               "apply_num": "0",
+               "sure_num": "0",
+               "limit_num": "1",
+               "gender_limit": "1",
+               "score": "0",
+               "scored_num": "0",
+               "status": "2",
+               "stu_num": "2013211000",
+               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+               "signature": "i'm db",
+               "nickname": "刘晨凌",
+               "gender": "2",
+               "grade": "2",
+               "academy": "1",
+               "qq": null,
+               "weixin": null,
+               "telephone": null,
+               "token": "1"
+               },
+               {
+               "id": "1",
+               "user_id": "1",
+               "title": "来约炮!",
+               "date_type": "2",
+               "cost_model": "1",
+               "content": "test",
+               "place": "重邮宾馆",
+               "date_time": "1429456313",
+               "created_at": "1429446313",
+               "apply_num": "0",
+               "sure_num": "0",
+               "limit_num": "1",
+               "gender_limit": "1",
+               "score": "0",
+               "scored_num": "0",
+               "status": "2",
+               "stu_num": "2013211000",
+               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+               "signature": "i'm db",
+               "nickname": "刘晨凌",
+               "gender": "2",
+               "grade": "2",
+               "academy": "1",
+               "qq": null,
+               "weixin": null,
+               "telephone": null,
+               "token": "1"
+               }
+               ]
+                
+6. 收藏约会
+
+		url:  http://106.184.7.12:8002/index.php/api/person/collect
+        
+        		post:
+        			{
+        				"uid": "",
+        				"token": "",
+        			}
+        			
+        return
+        
+            {
+            				"status": 200,
+            				"info":"成功"
+            			}
+        
 --------------
 
 ###私信模块
-		
 
 1.  获取私信
 
@@ -326,8 +616,39 @@
                   ],
                   "user_score": null //int, null暂无评分记录
                   }
-                  
-5. 取约会报名人员
+5. 报名约会
+             
+             url: http://106.184.7.12:8002/index.php/api/date/report
+             
+             post:
+             {
+                uid:"",
+                token:"",
+                date_id:""
+             }
+             
+             return:
+             {
+                info:"成功";
+                status:"200"
+             }
+6. 取约会报名人员
+
+               url: http://106.184.7.12:8002/index.php/api/date/report
+                            
+                            post:
+                            {
+                               uid:"",
+                               token:"",
+                               date_id:""
+                            }
+                            
+                            return:
+                            {
+                                data:""
+                               info:"成功";
+                               status:"200"
+                            }
 ----------------------------	
 ###公共
 
@@ -353,7 +674,29 @@
 			    
 			]
 
+2. 获取约会类型列表
 
-
-
+        url: http://106.184.7.12:8002/index.php/api/public/academy
+        
+        		return:
+        			 {
+                     "data": [
+                     {
+                     "id": "1",
+                     "name": "计算机"
+                     },
+                     {
+                     "id": "2",
+                     "name": "传媒"
+                     },
+                     {
+                     "id": "3",
+                     "name": "通信"
+                     }
+                     ],
+                     "info": "成功",
+                     "status": 200
+                     }
+                     
+                     
 9. 待定
