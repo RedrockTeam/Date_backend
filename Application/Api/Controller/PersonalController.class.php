@@ -44,6 +44,14 @@ class PersonalController extends BaseController {
         $input = I('post.');
         $uid = $input['uid'];
         $get_uid = $input['get_uid'];
+        $users = new UsersModel();
+        if($uid == $get_uid){
+            $map['id'] = $uid;
+            $data['data'] = $users->where($map)->find();
+            $data['info'] = '成功';
+            $data['status'] = 200;
+            $this->ajaxReturn($data);
+        }
         $userDate = new UserDateModel();
         if (!$userDate->joincheck($uid, $get_uid)){
             $data = [
@@ -52,8 +60,10 @@ class PersonalController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
-        $users = new UsersModel();
-        $this->ajaxReturn($users->getUserInfo($get_uid));
+        $data['data'] = $users->getUserInfo($get_uid);
+        $data['info'] = '成功';
+        $data['status'] = 200;
+        $this->ajaxReturn($data);
     }
 
     //收藏约会
