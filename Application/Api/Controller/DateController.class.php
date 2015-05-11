@@ -26,7 +26,8 @@ class DateController extends BaseController {
         $uid = $input['uid'];
         $date_id = $input['date_id'];
         $data = $list->getDetailInfo($date_id);
-        $data['user_score'] = CommonController::credit($uid);
+        $common = new CommonController();
+        $data['user_score'] = $common->credit($uid);
         $this->ajaxReturn($data);
     }
 
@@ -161,7 +162,8 @@ class DateController extends BaseController {
                 'date_id' => $date_id,
                 'user_id' => $uid,
                 'time' => time(),
-                'status' => 2
+                'status' => 2,
+                'score_status' => 0,
         ];
         if($this->insertPao($date)){
             $data = [
@@ -188,6 +190,63 @@ class DateController extends BaseController {
         $data['info'] = '成功';
         $data['status'] = 200;
         $this->ajaxReturn($data);
+    }
+
+    //对约炮评分
+    public function scoreDate () {
+        $input = I('post.');
+        $date = new DateModel();
+        if($input['score'] > 5 || $input['score'] < 0) {
+            $info = [
+                'info' => '评分有误',
+                'status' => 403
+            ];
+            $this->ajaxReturn($info);
+        }
+        $userDate = new UserDateModel();
+        $map0 = [
+            'date_id' => $input['date_id'],
+            'user_id' => $input['uid'],
+        ];
+        $score_status = $userDate->where($map0)->getField('score_status');
+        if($score_status != 0) {
+            $info = [
+                'info' => '你已评过次约会',
+                'status' => 403
+            ];
+            $this->ajaxReturn($info);
+        }
+        $map['id'] = $input['date_id'];
+        $map['status'] = ['NEQ', 2];
+        $date_info = $date->where($map)->find();
+        if($date_info == null) {
+            $info = [
+                'info' => '此条约会不存在或未结束',
+                'status' => 403
+            ];
+            $this->ajaxReturn($info);
+        }
+        $new_score = ($date_info['scored_num'] * $date_info['score'] + $input['score']) / ($date_info['scored_num'] + 1);
+        $data = [
+            'scored_num' => $date_info['scored_num'] + 1,
+            'score' => $new_score
+        ];
+        if($date->where($map)->data($data)->save()) {
+            $userDate->where($map0)->data(['score_status' => 1])->save();
+            $info = [
+                'info' => '成功',
+                'status' => 200
+            ];
+            $this->ajaxReturn($info);
+        }
+        else {
+            $info = [
+                'info' => '网络错误',
+                'status' => 500
+            ];
+            $this->ajaxReturn($info);
+        }
+
     }
 
     //检查本人

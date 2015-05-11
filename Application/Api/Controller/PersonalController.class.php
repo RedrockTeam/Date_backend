@@ -88,4 +88,5 @@ class PersonalController extends BaseController {
             $this->ajaxReturn($data);
         }
     }
+
 }

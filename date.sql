@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-05-10 19:00:35
+Date: 2015-05-11 21:53:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -88,7 +88,7 @@ CREATE TABLE `date` (
   `sure_num` int(11) DEFAULT NULL,
   `limit_num` int(11) DEFAULT NULL,
   `gender_limit` int(11) DEFAULT NULL,
-  `score` int(11) DEFAULT NULL,
+  `score` float DEFAULT NULL,
   `scored_num` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -97,8 +97,8 @@ CREATE TABLE `date` (
 -- ----------------------------
 -- Records of date
 -- ----------------------------
-INSERT INTO `date` VALUES ('1', '1', '来约炮!', '3', '1', 'test', '重邮宾馆', '1529456317', '1429446317', '0', '0', '1', '0', '0', '0', '2');
-INSERT INTO `date` VALUES ('2', '1', '来约炮!', '2', '1', 'test', '重邮宾馆', '1429456316', '1429446316', '0', '0', '1', '1', '0', '0', '2');
+INSERT INTO `date` VALUES ('1', '1', '来约炮!', '3', '1', 'test', '重邮宾馆', '1529456317', '1429446317', '0', '0', '1', '0', '3', '3', '1');
+INSERT INTO `date` VALUES ('2', '1', '来约炮!', '2', '1', 'test', '重邮宾馆', '1529456316', '1429446316', '0', '0', '1', '1', '0', '0', '2');
 INSERT INTO `date` VALUES ('3', '1', '来约炮!', '1', '1', 'test', '重邮宾馆', '1429456315', '1429446315', '0', '0', '1', '1', '0', '0', '2');
 INSERT INTO `date` VALUES ('4', '1', '来约炮!', '1', '1', 'test', '重邮宾馆', '1429456314', '1429446314', '0', '0', '1', '0', '0', '0', '2');
 INSERT INTO `date` VALUES ('5', '1', '来约炮!', '2', '1', 'test', '重邮宾馆', '1429456313', '1429446313', '0', '0', '1', '2', '0', '0', '2');
@@ -198,12 +198,13 @@ CREATE TABLE `users` (
   `telephone` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
   `token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '2013211000', 'http://106.184.7.12:8002/Public/head.jpg', 'i\'m db', '刘晨凌', '2', '2', '3', null, null, null, '1');
+INSERT INTO `users` VALUES ('1', '2013211000', 'http://106.184.7.12:8002/Public/head.jpg', 'i\'m db', '刘晨凌', '2', '2', '3', '1234567890', 'we', '12345678900', 'nasdfnldssdaf');
+INSERT INTO `users` VALUES ('2', '2013211001', 'http://106.184.7.12:8002/Public/head.jpg', 'i\'m db1', 'aliling', '1', '3', '1', '0987654321', 'ew', '00123456789', 'cdsagrebvfra');
 
 -- ----------------------------
 -- Table structure for user_date
@@ -215,13 +216,15 @@ CREATE TABLE `user_date` (
   `user_id` int(11) DEFAULT NULL,
   `time` int(11) DEFAULT NULL,
   `status` int(1) DEFAULT NULL,
+  `score_status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of user_date
 -- ----------------------------
-INSERT INTO `user_date` VALUES ('8', '1', '1', '1431244033', '2');
-INSERT INTO `user_date` VALUES ('2', '2', '1', '1429446317', '2');
-INSERT INTO `user_date` VALUES ('3', '3', '1', '1429446317', '2');
-INSERT INTO `user_date` VALUES ('6', '4', '1', '1431241589', '2');
+INSERT INTO `user_date` VALUES ('8', '1', '1', '1431244033', '2', '0');
+INSERT INTO `user_date` VALUES ('2', '2', '1', '1429446317', '2', '0');
+INSERT INTO `user_date` VALUES ('3', '3', '1', '1429446317', '2', '0');
+INSERT INTO `user_date` VALUES ('6', '4', '1', '1431241589', '2', '0');
+INSERT INTO `user_date` VALUES ('10', '2', '2', '1431257920', '2', '0');
