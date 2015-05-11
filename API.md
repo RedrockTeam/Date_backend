@@ -1,6 +1,7 @@
 #API列表
-
 		method: POST
+
+		//测试用户信息, public的接口不需要验证身份信息
 
 		uid: 1 -> token:   nasdfnldssdaf  ;
 		uid: 2 -> token:  cdsagrebvfra ;
@@ -679,7 +680,7 @@
 			    
 			]
 
-2. 获取约会类型列表
+2. 获取学院列表
 
         url: http://106.184.7.12:8002/index.php/api/public/academy
         

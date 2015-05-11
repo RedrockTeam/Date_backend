@@ -2,7 +2,7 @@
 namespace Api\Controller;
 use Api\Model\AdvertiseModel;
 use Think\Controller;
-class BannerController extends BaseController {
+class BannerController extends Controller {
     //获取广告位广告
     public function Banner ()
     {
