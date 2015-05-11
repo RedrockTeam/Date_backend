@@ -655,6 +655,25 @@
                                info:"成功";
                                status:"200"
                             }
+                            
+7. 评价约会
+
+                url: http://106.184.7.12:8002/index.php/api/date/report
+                            
+                            post:
+                            {
+                               uid:"",
+                               token:"",
+                               date_id:"",
+                               'score':""// 0 <= x <= 5 .....
+                            }
+                            
+                            return:
+                            {
+                               info:"成功"; //error info
+                               status:"200" //403 500
+                            }
+    
 ----------------------------	
 ###公共
 

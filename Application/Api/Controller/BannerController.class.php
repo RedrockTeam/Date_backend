@@ -10,6 +10,7 @@ class BannerController extends Controller {
         $ad = new AdvertiseModel();
         $data['data'] = $ad->getBanner();
         $data['status'] = 200;
+        $data['info'] = '成功';
         $this->ajaxReturn($data);
     }
 }

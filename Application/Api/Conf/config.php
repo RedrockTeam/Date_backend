@@ -43,6 +43,7 @@ return array(
         'date/create' => 'Date/createDate',//发布约会
         'date/report' => 'Date/report', //报名约
         'date/dateperson' => 'Date/getDatePerson', //获取参与约会的人员
+        'date/scoredate' => 'Date/scoreDate', //对约会评分
 
         //私信模块
         'letter/getletter' => 'Letter/getLetter',//获取私信
@@ -55,5 +56,6 @@ return array(
         'person/join' => 'Personal/getJoin',//获取参加的约会
         'person/create' => 'Personal/getCreate',//获取发起的约会
         'person/userinfo' => 'Personal/getInfo',//获取用户信息
+        'person/score' => 'Common/credit',
     ],
 );
