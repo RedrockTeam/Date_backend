@@ -34,7 +34,6 @@ class DateController extends BaseController {
     //发起约炮
     public function createDate () {
         $input = I('post.');
-
         if (!$this->checkData($input)){
             $data = [
                 'status' => '403',
@@ -57,19 +56,19 @@ class DateController extends BaseController {
             'date_type' => $input['date_type'],
             'cost_model' => $input['cost_model'],
             'content' => $input['content'],
-            'place' => $input['place'],
+            'place' => $input['date_place'],
             'date_time' => $input['date_time'],
-            'create_at' => time(),
+            'created_at' => time(),
             'gender_limit' => $input['gender_limit'],
             'apply_num' => 0,
             'sure_num' => 0,
             'limit_num' => 0,
             'score' => 0,
-            'score_num' => 0,
+            'scored_num' => 0,
             'status' => 2,
         ];
         $date = new DateModel();
-        $id = $date->data($dateInfo)->add();
+        $id = $date->add($dateInfo);
         if( ($input['academy_limit'] && $input['academy_select_model']) || ($input['grade_limit'] && $input['grade_select_model']) ){
            $limit = new DateLimitModel();
             $date_id = $id['id'];
@@ -268,7 +267,7 @@ class DateController extends BaseController {
             return false;
         if(mb_strlen($input['content']) > 25 || mb_strlen($input['content']) <= 0)//内容
             return false;
-        if(mb_strlen($input['place']) > 15 || mb_strlen($input['place']) <= 0)//野战地点
+        if(mb_strlen($input['date_place']) > 15 || mb_strlen($input['date_place']) <= 0)//野战地点
             return false;
         if(!is_numeric($input['date_time']))//约炮时间
             return false;
@@ -278,14 +277,18 @@ class DateController extends BaseController {
             return false;
         if(!is_numeric($input['cost_model']))//花费模式
             return false;
-        if($input['academy_limit'] != null && !is_numeric($input['academy_limit']))//学院限制
-            return false;
-        if($input['academy_select_model'] != null && !is_numeric($input['academy_select_model']))//学院限制的选择模式 1正 2反
-            return false;
-        if($input['grade_limit'] != null && !is_numeric($input['grade_limit']))//年级限制
-            return false;
-        if($input['grade_select_model'] != null && !is_numeric($input['grade_select_model']))//年级限制的选择模式
-            return false;
+        if($input['academy_select_model']){
+            if($input['academy_limit'] == null)//学院限制
+                return false;
+            if($input['academy_select_model'] != null && !is_numeric($input['academy_select_model']))//学院限制的选择模式 1正 2反
+                return false;
+        }
+        if($input['grade_select_model']) {
+            if ($input['grade_limit'] == null)//年级限制
+                return false;
+            if ($input['grade_select_model'] != null && !is_numeric($input['grade_select_model']))//年级限制的选择模式
+                return false;
+        }
         return true;
     }
 
