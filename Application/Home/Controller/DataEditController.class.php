@@ -9,9 +9,23 @@ use Home\Controller\ManagementController;
 class DataEditController extends ManagementController {
 
 		public function index(){
+			$table = I('get.table','用户信息');
+			switch($table){
+				case  "用户信息" :
+					/*表名,主键,字段,条件,字段是否反选*/
+					$this->packPage('users','id','token','',true);
+					$info = ['用户信息修改','所有用户数据信息'];
+					break;
 
-			$this->packPage('users','id','token','',true);
-			$this->set_info('DataEdit:tables','约约约信息表','约约约的所有数据信息');
+				default:
+					$this->packPage('users','id','token','',true);
+					$info = ['约约约信息表','约约约的所有数据信息'];
+					break;
+
+			}
+
+
+			$this->set_info('DataEdit:tables',$info[0],$info[1]);
 		}
 
 		public function editData(){

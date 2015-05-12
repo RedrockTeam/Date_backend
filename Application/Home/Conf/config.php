@@ -1,7 +1,7 @@
 <?php
 return array(
 	//'配置项'=>'配置值'
-    'URL_CASE_INSENSITIVE' => true,
+    //'URL_CASE_INSENSITIVE' => true,
     'SESSION_AUTO_START' => true,
     'URL_MODEL'          => '3',
     'DEFAULT_CHARSET'    =>  'utf-8',

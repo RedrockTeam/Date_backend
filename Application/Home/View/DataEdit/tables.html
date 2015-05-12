@@ -18,7 +18,7 @@
 												<tbody>
 													<volist name='table_data' id='data'>
 													<tr>
-														<form  action="" method="POST">
+														<form  action="{$DATA_EDIT_URL}" method="POST">
 															<foreach name="data" item="td">
 																<td>
 																	<a href="#">{$td}</a>
@@ -28,7 +28,9 @@
 
 															<td>
 																<input value="{$local_table}" name="table" style="display:none"/>
-																<input value="<php>print_r($table_head)</php>" name="id"  style="display:none" />
+																<input value="{$SELF_URL}" name="backUrl" style="display:none"/>
+																<input value="{$data.id}" name="id" style="display:none"/>
+																<input value="<php>print_r($table_head)</php>" name="field"  style="display:none" />
 																<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
 
 

@@ -18,8 +18,8 @@ class ManagementController extends Controller {
 				'name'=> '数据后台',
 				'nextTag' =>array(//二级导航
 					0=>array(
-					  'src'=> U('home/DataEdit/index'),
-					  'name'=> '约约约',
+					  'src'=> U('home/DataEdit/index?table=用户信息'),
+					  'name'=> '用户信息',
 					),
 					1=>array(
 					  'src'=> U('home/management/index'),
@@ -53,6 +53,8 @@ class ManagementController extends Controller {
 			'CONTROLLE_PATH'  => 	__CONTROLLER__,
 			'ACTION_NAME'     =>	 ACTION_NAME,
 			'LOGOUT'		  =>	U('home:Management/logout'),
+			'SELF_URL'		  =>	__SELF__,
+			'DATA_EDIT_URL'	  =>	U('home:DataEdit/editData'),
 		);
 		
 		$function = $this->getFunctionInfo();//功能模块路由
