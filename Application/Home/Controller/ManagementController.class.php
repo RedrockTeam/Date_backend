@@ -52,9 +52,9 @@ class ManagementController extends Controller {
 			'CONTROLLER_NAME' => 	CONTROLLER_NAME,
 			'CONTROLLE_PATH'  => 	__CONTROLLER__,
 			'ACTION_NAME'     =>	 ACTION_NAME,
-			'LOGOUT'		  =>	U('home:Management/logout'),
+			'LOGOUT'		  =>	U('Home:Management/logout'),
 			'SELF_URL'		  =>	__SELF__,
-			'DATA_EDIT_URL'	  =>	U('home:DataEdit/editData'),
+			'DATA_EDIT_URL'	  =>	U('Home:DataEdit/editData'),
 		);
 		
 		$function = $this->getFunctionInfo();//功能模块路由
@@ -91,7 +91,7 @@ class ManagementController extends Controller {
 
 	public function logout(){//登出
 		session(null);
-		redirect(U('home:Login/index'), 0, 'please to login ...');
+		redirect(U('Home:Login/index'), 0, 'please to login ...');
 	}
 
 	public function packPage($table,$order,$field='',$where='',$mod=false){

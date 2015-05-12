@@ -30,8 +30,8 @@ class DataEditController extends ManagementController {
 
 		public function editData(){
 			$post=I('post.');
-			$get=I('get.');
+			//$get=I('get.');
 			print_r($_POST);
-
+			$this->success('hahaha',$_POST['backUrl']);
 		}
 }
