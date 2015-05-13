@@ -46,8 +46,8 @@ class PersonalController extends BaseController {
         $get_uid = $input['get_uid'];
         $users = new UsersModel();
         if($uid == $get_uid){
-            $map['id'] = $uid;
-            $data['data'] = $users->where($map)->find();
+            $map['users.id'] = $uid;
+            $data['data'] = $users->where($map)->join("JOIN academy ON users.academy = academy.id")->field('users.id, head, signature, nickname, gender, grade,  users.academy as academy_id, academy.name as academy, qq, weixin, telephone')->find();
             $data['info'] = '成功';
             $data['status'] = 200;
             $this->ajaxReturn($data);
@@ -84,6 +84,43 @@ class PersonalController extends BaseController {
             $data = [
                 'info' => '网络错误!',
                 'status' => 500
+            ];
+            $this->ajaxReturn($data);
+        }
+    }
+
+    //修改个人资料
+    public function editPerson () {
+        $input = I('post.');
+        $uid = $input['uid'];
+        if(trim($input['nickname'] == null)) {
+            $data = [
+                'info' => '联系方式不能都为空',
+                'status' => 403
+            ];
+            $this->ajaxReturn($data);
+        }
+        if($input['qq'] == null && $input['telephone'] == null && $input['weixin'] == null) {
+            $data = [
+                'info' => '联系方式不能都为空',
+                'status' => 403
+            ];
+            $this->ajaxReturn($data);
+        }
+        $map = [
+            'id' => $uid,
+        ];
+        $data = [
+            'nickname' => $input['nickname'],
+            'signature' => $input['signature'],
+            'qq' => $input['qq'],
+            'telephone' => $input['telephone'],
+            'weixin' => $input['weixin'],
+        ];
+        if(M('users')->where($map)->data($data)->save()) {
+            $data = [
+                'info' => '成功',
+                'status' => 200
             ];
             $this->ajaxReturn($data);
         }
