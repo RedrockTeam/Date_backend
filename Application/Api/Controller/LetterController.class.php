@@ -20,7 +20,18 @@ class LetterController extends BaseController {
 
         $this->ajaxReturn($data);
     }
-
+    //获取私信详情
+    public function letterDetail () {
+        $input = I('post.');
+        $letter_id = $input['letter_id'];
+        $letter = new LetterModel();
+        $data = [
+            'data' => $letter->letterDeatil($letter_id),
+            'info' => '成功',
+            'status'=>200
+        ];
+        $this->ajaxReturn($data);
+    }
     //检查是否有未读私信
     public function letterStatus () {
         $input = I('post.');
