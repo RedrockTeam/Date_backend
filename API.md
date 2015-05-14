@@ -1,6 +1,10 @@
 #API列表
-
 		method: POST
+
+		//测试用户信息, public的接口不需要验证身份信息
+
+		uid: 1 -> token:   nasdfnldssdaf  ;
+		uid: 2 -> token:  cdsagrebvfra ;
 
 ###个人信息模块
 
@@ -9,7 +13,7 @@
 		url: http://106.184.7.12:8002/index.php/api/person/userinfo
 		post: { 
 				"uid":1,
-				"get_id":"需要获取的用户的uid",
+				"get_uid":"需要获取的用户的uid",
 				"token":""
 			  } //如果验证通过, 就返回id对应信息, 否则返回错误信息
 		return 
@@ -23,6 +27,8 @@
 						"id": 1,
 						"nickname": "sb",
 						"head": "http://xxxxxxx/",
+						gender : "", 
+						grade : "",
 						"academy": "学院",
 						"telephone": "123456789012345678",
 						"qq": "123456789",
@@ -31,7 +37,8 @@
 					}
 
 2. 修改个人资料
-
+        
+        //没写...
 		url:  http://106.184.7.12:8002/index.php/api/person/editpersonalinfo
 
 		post:
@@ -39,8 +46,6 @@
 				"uid": "",
 				"nickname":"sb",
 				"signature":"xxxxxx",
-				"academy":"id",
-				"grade": "id",
 				"telephone": "",
 				"qq": "",
 				"weixin": "",
@@ -53,15 +58,133 @@
 				"info": "成功"
 			}
 3. 取个人收藏列表
-        url:  http://106.184.7.12:8002/index.php/api/person/collection
+
+            url:  http://106.184.7.12:8002/index.php/api/person/collection
+            post: {
+            uid:"",
+            token:""
+            }
+            return {
+                [
+                data:{
+                    "date_id": "1",
+                    "user_id": "1",
+                    "date_status": "2",
+                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                    "signature": "i'm db",
+                    "nickname": "刘晨凌",
+                    "gender": "2",
+                    "title": "来约炮!",
+                    "date_time": "1529456317",
+                    "created_at": "1429446317",
+                    "cost_model": "1",
+                    "content": "test",
+                    "place": "重邮宾馆",
+                    "score": "0"
+                    }
+                 ],
+                "info": "成功",
+                "status": 200
+            }
 4. 取个人参加记录
-        url:  http://106.184.7.12:8002/index.php/api/person/join
+
+                    url:  http://106.184.7.12:8002/index.php/api/person/join
+                    post: 
+                    {
+                        uid:"",
+                        token:""
+                    }
+                    return:
+                    [
+                       "data": [
+                            {
+                            "date_id": "1",
+                            "user_id": "1",
+                            "time": "1429446317",
+                            "user_status": "1",
+                            "date_status": "2",
+                            "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                            "signature": "i'm db",
+                            "nickname": "刘晨凌",
+                            "gender": "2",
+                            "title": "来约炮!",
+                            "date_time": "1529456317",
+                            "created_at": "1429446317",
+                            "cost_model": "1",
+                            "content": "test",
+                            "place": "重邮宾馆",
+                            "score": "0"
+                            }
+                        ],
+                    "info": "成功",
+                    "status": 200
+                    ]
 5. 取个人发起记录
+
         url:  http://106.184.7.12:8002/index.php/api/person/create
+        post: 
+        {
+            uid:"",
+            token:""
+        }
+        return: 
+            
+               [
+               data:[
+               {
+               "id": "1",
+               "user_id": "1",
+               "title": "来约炮!",
+               "date_type": "3",
+               "cost_model": "1",
+               "content": "test",
+               "place": "重邮宾馆",
+               "date_time": "1529456317",
+               "created_at": "1429446317",
+               "apply_num": "0",
+               "sure_num": "0",
+               "limit_num": "1",
+               "gender_limit": "1",
+               "score": "0",
+               "scored_num": "0",
+               "status": "2",
+               "stu_num": "2013211000",
+               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+               "signature": "i'm db",
+               "nickname": "刘晨凌",
+               "gender": "2",
+               "grade": "2",
+               "academy": "1",
+               "qq": null,
+               "weixin": null,
+               "telephone": null,
+               "token": "1"
+               }],
+               "info":"成功",
+               "status":200
+               ]
+                
+6. 收藏约会
+
+		url:  http://106.184.7.12:8002/index.php/api/person/collect
+        
+        		post:
+        			{
+        				"uid": "",
+        				"date_id":"",
+        				"token": "",
+        			}
+        			
+        return
+        
+                            {
+            				"status": 200,
+            				"info":"成功"
+            			}
+        
 --------------
 
 ###私信模块
-		
 
 1.  获取私信
 
@@ -84,6 +207,7 @@
 					    "letter" : 1,
 						"user_id" : 123,
 						"user_name" : "Lecion",
+						"user_score": "",
 						"user_signature" : "个性签名",
 						"user_avatar" : "http://****.jpg",	//用户头像
 						"user_gender" : 2, 		//1是男，2是女
@@ -138,6 +262,12 @@
 3. 私信通知
 
         url: http://106.184.7.12:8002/index.php/api/letter/letterstatus
+        
+        post:
+        {
+            "uid": "",
+            "token": ""
+        }
         return:
                 {
                     'status' => 200,
@@ -148,10 +278,10 @@
 ###约会信息
 1. 获取约会类型
 
-		url: http://106.184.7.12:8002/index.php/api/date/date_type
+		url: http://106.184.7.12:8002/index.php/api/date/datetype
 		return:
 				[
-				    {
+				    data:[{
 				        "id": "1",
 				        "type": "吃饭"
 				    },
@@ -162,7 +292,8 @@
 				    {
 				        "id": "3",
 				        "type": "约炮"
-				    }
+				    }],
+				    status:200
 				]
 
 2.  获取约会列表
@@ -178,6 +309,7 @@
 				[
 				    data:[{
 				        "date_id": "3",
+				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446315",
 				        "date_at": "1429456315",
@@ -191,6 +323,7 @@
 				    },
 				    {
 				        "date_id": "2",
+				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446316",
 				        "date_at": "1429456316",
@@ -204,6 +337,7 @@
 				    },
 				    {
 				        "date_id": "1",
+				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446317",
 				        "date_at": "1429456317",
@@ -318,8 +452,58 @@
                   ],
                   "user_score": null //int, null暂无评分记录
                   }
-                  
-5. 取约会报名人员
+5. 报名约会
+             
+             url: http://106.184.7.12:8002/index.php/api/date/report
+             
+             post:
+             {
+                uid:"",
+                token:"",
+                date_id:""
+             }
+             
+             return:
+             {
+                info:"成功";
+                status:"200"
+             }
+6. 取约会报名人员
+
+               url: http://106.184.7.12:8002/index.php/api/date/report
+                            
+                            post:
+                            {
+                               uid:"",
+                               token:"",
+                               date_id:""
+                            }
+                            
+                            return:
+                            {
+                                data:""
+                               info:"成功";
+                               status:"200"
+                            }
+                            
+7. 评价约会
+
+                url: http://106.184.7.12:8002/index.php/api/date/report
+                            
+                            post:
+                            {
+                               uid:"",
+                               token:"",
+                               date_id:"",
+                               'score':""// 0 <= x <= 5 .....
+                            }
+                            
+                            return:
+                            {
+                               info:"成功"; //error info
+                               status:"200" //403 500
+                            }
+    
 ----------------------------	
 ###公共
 
@@ -343,7 +527,29 @@
 			    }
 			]
 
+2. 获取学院列表
 
-
-
+        url: http://106.184.7.12:8002/index.php/api/public/academy
+        
+        		return:
+        			 {
+                     "data": [
+                     {
+                     "id": "1",
+                     "name": "计算机"
+                     },
+                     {
+                     "id": "2",
+                     "name": "传媒"
+                     },
+                     {
+                     "id": "3",
+                     "name": "通信"
+                     }
+                     ],
+                     "info": "成功",
+                     "status": 200
+                     }
+                     
+                     
 9. 待定

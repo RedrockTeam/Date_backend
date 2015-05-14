@@ -77,10 +77,11 @@ class CommonController extends BaseController{
     }
 
     //计算人的信誉度
-    public static function credit ($uid) {
+    public function credit ($uid = '') {
         $date = new DateModel();
+        $uid = $uid != null ? $uid : I('post.uid');
         $map['user_id'] = $uid;
-        $map['status'] = 1;//TODO date失败分数?
+        $map['status'] = ['NEQ', 2];
         return $date->where($map)->avg('score');
     }
 }

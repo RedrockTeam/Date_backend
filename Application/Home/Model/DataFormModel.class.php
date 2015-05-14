@@ -9,26 +9,27 @@ use Think\Model;
 class DataformModel extends Model {
 	protected $autoCheckFields =false;
 
-	private  $table;
-	private  $PKey;
+	private $table;
+	private $description;
+	private $mainKey;
 	private $tableData;
 	private $produceData;
 	private $colField;
     private $colName = '';
-	private $colModel="{name:'myac',index:'', width:80, fixed:true, sortable:false, resize:false,
+	private $colModel="{name:'table',index:'table', width:80, fixed:true, sortable:false, resize:false,
 							formatter:'actions',
 							formatoptions:{
 								keys:true,
 
-								delOptions:{recreateForm: true, beforeShowForm:beforeDeleteCallback},
+								//delOptions:{recreateForm: true, beforeShowForm:beforeDeleteCallback},
 								//editformbutton:true, editOptions:{recreateForm: true, beforeShowForm:beforeEditCallback}
 							}
 						}";
 
-	public function __construct($table,$PKey=''){
+	public function __construct($table,$des='',$mainKey='id'){
 		$this->table = $table;
-		$this->PKey = $PKey;
-
+		$this->description = $des;
+		$this->mainKey = $mainKey;
 	}
 
     public function setTableData($tableData){
@@ -78,7 +79,7 @@ class DataformModel extends Model {
 
 	public function addModelId($name='id',$width=90,$editable='false',$sorttype='int'){
         $this->colModel .= ",
-						{name:'$name',index:'$name', width:$width, sorttype:'$sorttype', editable: $editable}";
+						{name:'$name',index:'$name', width:$width, sorttype:'$sorttype',sortname:'id', editable: $editable}";
         return $this;
     }
 
@@ -94,9 +95,9 @@ class DataformModel extends Model {
         return $this;
     }
 
-	public function addModelCheckbox($name='checkbox',$width=70,$editable='true',$edittype='checkbox',$editoptions='1:0'){
+	public function addModelCheckbox($name='checkbox',$width=70,$editable='true',$editoptions='1:0'){
         $this->colModel .= ",
-           {name:'$name',index:'$name', width:$width, editable: $editable,edittype:'$edittype',editoptions: {value:'$editoptions'},unformat: aceSwitch}";
+           {name:'$name',index:'$name', width:$width, editable: $editable,edittype:'checkbox',editoptions: {value:'$editoptions'},unformat: aceSwitch}";
         return $this;
     }
 
@@ -135,17 +136,19 @@ class DataformModel extends Model {
 				jQuery(grid_selector).jqGrid({
 					//direction: "rtl",
 
+					mtype: 'POST',
 					data: grid_data,
 					datatype: "local",
-					height: 250,
+					height: 400,
 					colNames:$colNae,
 					colModel:[
 						$this->colModel
 					],
 
+					sortname:'$this->mainKey',
 					viewrecords : true,
 					rowNum:10,
-					rowList:[10,20,30],
+					rowList:[10,30,50],
 					pager : pager_selector,
 					altRows: true,
 					//toppager: true,
@@ -164,9 +167,9 @@ class DataformModel extends Model {
                 enableTooltips(table);
             }, 0);
         },
-
+					postData: '$this->table',
 					editurl: "$editUrl",
-					caption: "jqGrid with inline editing",
+					caption: "$this->description",
 
 
 					autowidth: true
@@ -213,6 +216,7 @@ class DataformModel extends Model {
 					{
                         //edit record form
                         //closeAfterEdit: true,
+
                         recreateForm: true,
 						beforeShowForm : function(e) {
                         var form = $(e[0]);

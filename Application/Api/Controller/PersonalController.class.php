@@ -3,14 +3,17 @@ namespace Api\Controller;
 use Api\Model\CollectionModel;
 use Api\Model\DateModel;
 use Api\Model\UserDateModel;
+use Api\Model\UsersModel;
 use Think\Controller;
 class PersonalController extends BaseController {
     //获取收藏约会
-    public function getColletion () {
+    public function getCollection () {
         $input = I('post.');
         $uid = $input['uid'];
         $collection = new CollectionModel();
-        $data = $collection->getCollection($uid);
+        $data['data'] = $collection->getCollection($uid);
+        $data['info'] = '成功';
+        $data['status'] = 200;
         $this->ajaxReturn($data);
     }
 
@@ -19,7 +22,9 @@ class PersonalController extends BaseController {
         $input = I('post.');
         $uid = $input['uid'];
         $collection = new UserDateModel();
-        $data = $collection->getPao($uid);
+        $data['data'] = $collection->getPao($uid);
+        $data['info'] = '成功';
+        $data['status'] = 200;
         $this->ajaxReturn($data);
     }
 
@@ -28,7 +33,97 @@ class PersonalController extends BaseController {
         $input = I('post.');
         $uid = $input['uid'];
         $date = new DateModel();
-        $data = $date->getSao($uid);
+        $data['data'] = $date->getSao($uid);
+        $data['info'] = '成功';
+        $data['status'] = 200;
         $this->ajaxReturn($data);
     }
+
+    //获取个人信息
+    public function getInfo () {
+        $input = I('post.');
+        $uid = $input['uid'];
+        $get_uid = $input['get_uid'];
+        $users = new UsersModel();
+        if($uid == $get_uid){
+            $map['users.id'] = $uid;
+            $data['data'] = $users->where($map)->join("JOIN academy ON users.academy = academy.id")->field('users.id, head, signature, nickname, gender, grade,  users.academy as academy_id, academy.name as academy, qq, weixin, telephone')->find();
+            $data['info'] = '成功';
+            $data['status'] = 200;
+            $this->ajaxReturn($data);
+        }
+        $userDate = new UserDateModel();
+        if (!$userDate->joincheck($uid, $get_uid)){
+            $data = [
+                'info' => '权限不够',
+                'status' => 403
+            ];
+            $this->ajaxReturn($data);
+        }
+        $data['data'] = $users->getUserInfo($get_uid);
+        $data['info'] = '成功';
+        $data['status'] = 200;
+        $this->ajaxReturn($data);
+    }
+
+    //收藏约会
+    public function collect ($uid, $date_id) {
+        $collection = new CollectionModel();
+        $date = [
+            'date_id' => $date_id,
+            'user_id' => $uid
+        ];
+        if($collection->data($date)->add()) {
+            $data = [
+                'info' => '成功',
+                'status' => 200
+            ];
+            $this->ajaxReturn($data);
+        }
+        else{
+            $data = [
+                'info' => '网络错误!',
+                'status' => 500
+            ];
+            $this->ajaxReturn($data);
+        }
+    }
+
+    //修改个人资料
+    public function editPerson () {
+        $input = I('post.');
+        $uid = $input['uid'];
+        if(trim($input['nickname'] == null)) {
+            $data = [
+                'info' => '联系方式不能都为空',
+                'status' => 403
+            ];
+            $this->ajaxReturn($data);
+        }
+        if($input['qq'] == null && $input['telephone'] == null && $input['weixin'] == null) {
+            $data = [
+                'info' => '联系方式不能都为空',
+                'status' => 403
+            ];
+            $this->ajaxReturn($data);
+        }
+        $map = [
+            'id' => $uid,
+        ];
+        $data = [
+            'nickname' => $input['nickname'],
+            'signature' => trim($input['signature']),
+            'qq' => $input['qq'],
+            'telephone' => $input['telephone'],
+            'weixin' => $input['weixin'],
+        ];
+        if(M('users')->where($map)->data($data)->save()) {
+            $data = [
+                'info' => '成功',
+                'status' => 200
+            ];
+            $this->ajaxReturn($data);
+        }
+    }
+
 }
