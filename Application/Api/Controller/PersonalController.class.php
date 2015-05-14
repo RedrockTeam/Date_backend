@@ -112,7 +112,7 @@ class PersonalController extends BaseController {
         ];
         $data = [
             'nickname' => $input['nickname'],
-            'signature' => $input['signature'],
+            'signature' => trim($input['signature']),
             'qq' => $input['qq'],
             'telephone' => $input['telephone'],
             'weixin' => $input['weixin'],
