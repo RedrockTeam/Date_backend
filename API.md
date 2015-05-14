@@ -205,6 +205,7 @@
 				data:{
 					{
 					    "letter" : 1,
+					    "letter_type": 1, //1带接受/拒绝, 2不是
 						"user_id" : 123,
 						"user_name" : "Lecion",
 						"user_score": "",
@@ -302,6 +303,7 @@
 		post:
 		{
 			"date_type": 0, //默认为0, 即所有约会类型
+			"page"
 			"order": "", //.....
 		}	
 
