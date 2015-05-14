@@ -207,6 +207,7 @@
 					    "letter" : 1,
 						"user_id" : 123,
 						"user_name" : "Lecion",
+						"user_score": "",
 						"user_signature" : "个性签名",
 						"user_avatar" : "http://****.jpg",	//用户头像
 						"user_gender" : 2, 		//1是男，2是女
@@ -308,6 +309,7 @@
 				[
 				    data:[{
 				        "date_id": "3",
+				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446315",
 				        "date_at": "1429456315",
@@ -321,6 +323,7 @@
 				    },
 				    {
 				        "date_id": "2",
+				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446316",
 				        "date_at": "1429456316",
@@ -334,6 +337,7 @@
 				    },
 				    {
 				        "date_id": "1",
+				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446317",
 				        "date_at": "1429456317",

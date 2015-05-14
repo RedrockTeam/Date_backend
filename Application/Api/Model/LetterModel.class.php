@@ -30,5 +30,4 @@ class LetterModel extends Model {
                     ->field('letter.id as letter_id, users.id as user_id, users.nickname as user_name, users.signature as user_signature, users.head as user_avatar, users.gender as user_gender, letter.content as content, letter.date_id as date_id, letter.status as letter_status, user_date.status as user_date_status')
                     ->select();
     }
-
 }
