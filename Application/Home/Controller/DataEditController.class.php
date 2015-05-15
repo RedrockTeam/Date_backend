@@ -19,19 +19,42 @@ class DataEditController extends ManagementController {
 
 				default:
 					$this->packPage('users','id','token','',true);
-					$info = ['约约约信息表','约约约的所有数据信息'];
+					$info = ['用户信息修改','所有用户数据信息'];
 					break;
 
 			}
-
-
 			$this->set_info('DataEdit:tables',$info[0],$info[1]);
 		}
 
 		public function editData(){
-			$post=I('post.');
-			//$get=I('get.');
-			print_r($_POST);
-			$this->success('hahaha',$_POST['backUrl']);
+			$mainValue=I('post.mainValue');
+			$mainKey = $this->getSession('mainKey');
+			$field	 = $this->getSession('field');
+			$table = $this->getSession('table');
+			$find = $this->packFind($table,"$mainKey = '$mainValue'" , $field);
+			$this->assign('data',$find);
+			$this->assign('EDIT_URL',U('Home:DataEdit/edit'));
+			$this->set_info('DataEdit:edit',"修改数据表($table)"," 主键(".$mainKey.') >> '.$mainValue);
+		}
+
+		public function edit(){
+			$mainKey = $this->getSession('mainKey');
+			$backUrl = $this->getSession('backUrl');
+			$field	 = $this->getSession('field');
+			$table = $this->getSession('table');
+			$data = $this->checkPost($field);
+			if($data["$mainKey"] == -1){
+				$do='add';
+				$info = '添加';
+				unset($data["$mainKey"]);
+			}else{
+				$do='save';
+				$info = '修改';
+			}
+
+			if($r = D("$table")->$do($data))	$this->success("$info 成功:$r",$backUrl);
+			else	$this->error("$info 失败:$r",$backUrl);
+
 		}
 }
+

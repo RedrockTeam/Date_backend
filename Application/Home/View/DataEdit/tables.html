@@ -27,10 +27,11 @@
 
 
 															<td>
-																<input value="{$local_table}" name="table" style="display:none"/>
-																<input value="{$SELF_URL}" name="backUrl" style="display:none"/>
-																<input value="{$data.id}" name="id" style="display:none"/>
-																<input value="<php>print_r($table_head)</php>" name="field"  style="display:none" />
+
+																<input value='<php>echo $data["$main_key"]</php>' name="mainValue" style="display:none"/>
+
+
+
 																<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
 
 

@@ -79,10 +79,12 @@ class ManagementController extends Controller {
 	public function  checkPost($param){
 		$arr=array();
 		foreach($param as $k => $v){
-			if($tmp = I('post.'.$v,'','') ){
+			if(isset($_POST["$v"])){
+				$tmp = I('post.'.$v,'','');
 				$arr[$v] = $tmp;
 			}else{
 				$this->error('参数错误!');
+
 			}
 		}
 
@@ -95,9 +97,10 @@ class ManagementController extends Controller {
 	}
 
 	public function packPage($table,$order,$field='',$where='',$mod=false){
+
 		$User = D($table); // 实例化User对象
 		// 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
-		$list  = $User->field($field,$mod)->where($where)->order($order)->page($_GET['page'].','.$this->pageTotal)->select();
+		$list  = $User->field($field,$mod)->where($where)->order($order)->page($_GET['p'].','.$this->pageTotal)->select();
 		$count = $User->where($where)->count();// 查询满足要求的总记录数
 		$Page  = new \Think\Page($count,$this->pageTotal);// 实例化分页类 传入总记录数和每页显示的记录数
 		$show  = $Page->show();// 分页显示输出
@@ -108,10 +111,24 @@ class ManagementController extends Controller {
 			$field[] = $key;
 		}
 
-		$this->assign('local_table',$table);
+		session("table",$table);
+		session("field",$field);
+		session("mainKey",$order);
+		session("backUrl",__SELF__);
+
 		$this->assign('table_head',$field);
+		$this->assign('main_key',$order);
 		$this->assign('table_page',$show);// 赋值分页输出
 		$this->assign('table_data',$list);// 赋值数据集
+	}
 
+	public function packFind($table,$where,$field){
+		$data = D("$table")->field($field)->where($where)->find();
+		return $data;
+	}
+
+	public function getSession($name){
+		if($return = session($name) )	return $return;
+		else $this->ajaxReturn(array('info'=>'参数错误!'));
 	}
 }
