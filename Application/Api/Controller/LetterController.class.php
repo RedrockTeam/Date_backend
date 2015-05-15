@@ -7,14 +7,31 @@ class LetterController extends BaseController {
     public function getLetter () {
         $input = I('post.');
         $letter = new LetterModel();
+        $info = $letter->letter($input['uid'], $input['page'], $input['size']);
+        $common = new CommonController();
+        foreach($info as $key => $v){
+            $info[$key]['user_score'] = $common->credit($v['user_id']);
+        }
         $data = [
-            'data' => $letter->letter($input['uid'], $input['page'], $input['size']),
+            'data' => $info,
             'status' => 200,
             'info' => '请求成功',
             ];
+
         $this->ajaxReturn($data);
     }
-
+    //获取私信详情
+    public function letterDetail () {
+        $input = I('post.');
+        $letter_id = $input['letter_id'];
+        $letter = new LetterModel();
+        $data = [
+            'data' => $letter->letterDeatil($letter_id),
+            'info' => '成功',
+            'status'=>200
+        ];
+        $this->ajaxReturn($data);
+    }
     //检查是否有未读私信
     public function letterStatus () {
         $input = I('post.');

@@ -37,7 +37,8 @@
 					}
 
 2. 修改个人资料
-
+        
+        //没写...
 		url:  http://106.184.7.12:8002/index.php/api/person/editpersonalinfo
 
 		post:
@@ -45,8 +46,6 @@
 				"uid": "",
 				"nickname":"sb",
 				"signature":"xxxxxx",
-				"academy":"id",
-				"grade": "id",
 				"telephone": "",
 				"qq": "",
 				"weixin": "",
@@ -66,7 +65,8 @@
             token:""
             }
             return {
-                {
+                [
+                data:{
                     "date_id": "1",
                     "user_id": "1",
                     "date_status": "2",
@@ -81,39 +81,10 @@
                     "content": "test",
                     "place": "重邮宾馆",
                     "score": "0"
-                    },
-                    {
-                    "date_id": "2",
-                    "user_id": "1",
-                    "date_status": "2",
-                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-                    "signature": "i'm db",
-                    "nickname": "刘晨凌",
-                    "gender": "2",
-                    "title": "来约炮!",
-                    "date_time": "1429456316",
-                    "created_at": "1429446316",
-                    "cost_model": "1",
-                    "content": "test",
-                    "place": "重邮宾馆",
-                    "score": "0"
-                    },
-                    {
-                    "date_id": "3",
-                    "user_id": "1",
-                    "date_status": "2",
-                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-                    "signature": "i'm db",
-                    "nickname": "刘晨凌",
-                    "gender": "2",
-                    "title": "来约炮!",
-                    "date_time": "1429456315",
-                    "created_at": "1429446315",
-                    "cost_model": "1",
-                    "content": "test",
-                    "place": "重邮宾馆",
-                    "score": "0"
                     }
+                 ],
+                "info": "成功",
+                "status": 200
             }
 4. 取个人参加记录
 
@@ -125,60 +96,28 @@
                     }
                     return:
                     [
-                    {
-                    "date_id": "1",
-                    "user_id": "1",
-                    "time": "1429446317",
-                    "user_status": "1",
-                    "date_status": "2",
-                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-                    "signature": "i'm db",
-                    "nickname": "刘晨凌",
-                    "gender": "2",
-                    "title": "来约炮!",
-                    "date_time": "1529456317",
-                    "created_at": "1429446317",
-                    "cost_model": "1",
-                    "content": "test",
-                    "place": "重邮宾馆",
-                    "score": "0"
-                    },
-                    {
-                    "date_id": "2",
-                    "user_id": "1",
-                    "time": "1429446317",
-                    "user_status": "2",
-                    "date_status": "2",
-                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-                    "signature": "i'm db",
-                    "nickname": "刘晨凌",
-                    "gender": "2",
-                    "title": "来约炮!",
-                    "date_time": "1429456316",
-                    "created_at": "1429446316",
-                    "cost_model": "1",
-                    "content": "test",
-                    "place": "重邮宾馆",
-                    "score": "0"
-                    },
-                    {
-                    "date_id": "3",
-                    "user_id": "1",
-                    "time": "1429446317",
-                    "user_status": "2",
-                    "date_status": "2",
-                    "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-                    "signature": "i'm db",
-                    "nickname": "刘晨凌",
-                    "gender": "2",
-                    "title": "来约炮!",
-                    "date_time": "1429456315",
-                    "created_at": "1429446315",
-                    "cost_model": "1",
-                    "content": "test",
-                    "place": "重邮宾馆",
-                    "score": "0"
-                    }
+                       "data": [
+                            {
+                            "date_id": "1",
+                            "user_id": "1",
+                            "time": "1429446317",
+                            "user_status": "1",
+                            "date_status": "2",
+                            "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
+                            "signature": "i'm db",
+                            "nickname": "刘晨凌",
+                            "gender": "2",
+                            "title": "来约炮!",
+                            "date_time": "1529456317",
+                            "created_at": "1429446317",
+                            "cost_model": "1",
+                            "content": "test",
+                            "place": "重邮宾馆",
+                            "score": "0"
+                            }
+                        ],
+                    "info": "成功",
+                    "status": 200
                     ]
 5. 取个人发起记录
 
@@ -191,6 +130,7 @@
         return: 
             
                [
+               data:[
                {
                "id": "1",
                "user_id": "1",
@@ -219,123 +159,9 @@
                "weixin": null,
                "telephone": null,
                "token": "1"
-               },
-               {
-               "id": "1",
-               "user_id": "1",
-               "title": "来约炮!",
-               "date_type": "2",
-               "cost_model": "1",
-               "content": "test",
-               "place": "重邮宾馆",
-               "date_time": "1429456316",
-               "created_at": "1429446316",
-               "apply_num": "0",
-               "sure_num": "0",
-               "limit_num": "1",
-               "gender_limit": "1",
-               "score": "0",
-               "scored_num": "0",
-               "status": "2",
-               "stu_num": "2013211000",
-               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-               "signature": "i'm db",
-               "nickname": "刘晨凌",
-               "gender": "2",
-               "grade": "2",
-               "academy": "1",
-               "qq": null,
-               "weixin": null,
-               "telephone": null,
-               "token": "1"
-               },
-               {
-               "id": "1",
-               "user_id": "1",
-               "title": "来约炮!",
-               "date_type": "1",
-               "cost_model": "1",
-               "content": "test",
-               "place": "重邮宾馆",
-               "date_time": "1429456315",
-               "created_at": "1429446315",
-               "apply_num": "0",
-               "sure_num": "0",
-               "limit_num": "1",
-               "gender_limit": "1",
-               "score": "0",
-               "scored_num": "0",
-               "status": "2",
-               "stu_num": "2013211000",
-               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-               "signature": "i'm db",
-               "nickname": "刘晨凌",
-               "gender": "2",
-               "grade": "2",
-               "academy": "1",
-               "qq": null,
-               "weixin": null,
-               "telephone": null,
-               "token": "1"
-               },
-               {
-               "id": "1",
-               "user_id": "1",
-               "title": "来约炮!",
-               "date_type": "1",
-               "cost_model": "1",
-               "content": "test",
-               "place": "重邮宾馆",
-               "date_time": "1429456314",
-               "created_at": "1429446314",
-               "apply_num": "0",
-               "sure_num": "0",
-               "limit_num": "1",
-               "gender_limit": "1",
-               "score": "0",
-               "scored_num": "0",
-               "status": "2",
-               "stu_num": "2013211000",
-               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-               "signature": "i'm db",
-               "nickname": "刘晨凌",
-               "gender": "2",
-               "grade": "2",
-               "academy": "1",
-               "qq": null,
-               "weixin": null,
-               "telephone": null,
-               "token": "1"
-               },
-               {
-               "id": "1",
-               "user_id": "1",
-               "title": "来约炮!",
-               "date_type": "2",
-               "cost_model": "1",
-               "content": "test",
-               "place": "重邮宾馆",
-               "date_time": "1429456313",
-               "created_at": "1429446313",
-               "apply_num": "0",
-               "sure_num": "0",
-               "limit_num": "1",
-               "gender_limit": "1",
-               "score": "0",
-               "scored_num": "0",
-               "status": "2",
-               "stu_num": "2013211000",
-               "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-               "signature": "i'm db",
-               "nickname": "刘晨凌",
-               "gender": "2",
-               "grade": "2",
-               "academy": "1",
-               "qq": null,
-               "weixin": null,
-               "telephone": null,
-               "token": "1"
-               }
+               }],
+               "info":"成功",
+               "status":200
                ]
                 
 6. 收藏约会
@@ -379,8 +205,10 @@
 				data:{
 					{
 					    "letter" : 1,
+					    "letter_type": 1, //1带接受/拒绝, 2不是
 						"user_id" : 123,
 						"user_name" : "Lecion",
+						"user_score": "",
 						"user_signature" : "个性签名",
 						"user_avatar" : "http://****.jpg",	//用户头像
 						"user_gender" : 2, 		//1是男，2是女
@@ -475,6 +303,7 @@
 		post:
 		{
 			"date_type": 0, //默认为0, 即所有约会类型
+			"page"
 			"order": "", //.....
 		}	
 
@@ -482,6 +311,7 @@
 				[
 				    data:[{
 				        "date_id": "3",
+				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446315",
 				        "date_at": "1429456315",
@@ -495,6 +325,7 @@
 				    },
 				    {
 				        "date_id": "2",
+				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446316",
 				        "date_at": "1429456316",
@@ -508,6 +339,7 @@
 				    },
 				    {
 				        "date_id": "1",
+				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446317",
 				        "date_at": "1429456317",

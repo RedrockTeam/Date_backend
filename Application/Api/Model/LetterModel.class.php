@@ -27,8 +27,16 @@ class LetterModel extends Model {
                     ->join('JOIN user_date ON letter.date_id = user_date.date_id')
                     ->where($map2)
                     ->limit($offset, $limit)
-                    ->field('letter.id as letter_id, users.id as user_id, users.nickname as user_name, users.signature as user_signature, users.head as user_avatar, users.gender as user_gender, letter.content as content, letter.date_id as date_id, letter.status as letter_status, user_date.status as user_date_status')
+                    ->field('letter.id as letter_id, letter.type as letter_type, users.id as user_id, users.nickname as user_name, users.signature as user_signature, users.head as user_avatar, users.gender as user_gender, letter.content as content, letter.date_id as date_id, letter.status as letter_status, user_date.status as user_date_status')
                     ->select();
     }
-
+    //查看某条私信详情
+    public function letterDeatil ($letter_id) {
+        $map['letter.id'] = $letter_id;
+        return $this->where($map)
+                    ->join('JOIN users ON letter.to = users.id')
+                    ->join('JOIN user_date ON letter.date_id = user_date.date_id')
+                    ->field('letter.id as letter_id, letter.type as letter_type, users.id as user_id, users.nickname as user_name, users.signature as user_signature, users.head as user_avatar, users.gender as user_gender, letter.content as content, letter.date_id as date_id, letter.status as letter_status, user_date.status as user_date_status')
+                    ->select();
+    }
 }

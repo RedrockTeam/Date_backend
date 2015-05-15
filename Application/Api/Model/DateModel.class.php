@@ -25,11 +25,13 @@ class DateModel extends Model {
             $map1['date_id'] = $v['date_id'];
             $map1['condition'] = 1;
             $grade_limit = M('date_limit')->where($map1)->join("JOIN grade ON date_limit.limit = grade.id")->field('selectmodel, name')->select();
-            $map2['date_id'] = $v['date_id'];
-            $map2['condition'] = 2;
-            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
-            $v['academy_limit'] = $academy_limit;
-            $v['grade_limit'] = $grade_limit;
+//            $map2['date_id'] = $v['date_id'];
+//            $map2['condition'] = 2;
+//            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
+//            foreach($academy_limit as $va)
+//            $v['academy_limit'][] = $va;
+            foreach($grade_limit as $va)
+                $v['grade_limit'][] = $va['name'];
             $data[] = $v;
         }
         return $data;
@@ -53,11 +55,12 @@ class DateModel extends Model {
             $map1['date_id'] = $v['date_id'];
             $map1['condition'] = 1;
             $grade_limit = M('date_limit')->where($map1)->join("JOIN grade ON date_limit.limit = grade.id")->field('selectmodel, name')->select();
-            $map2['date_id'] = $v['date_id'];
-            $map2['condition'] = 2;
-            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
-            $v['academy_limit'] = $academy_limit;
-            $v['grade_limit'] = $grade_limit;
+//            $map2['date_id'] = $v['date_id'];
+//            $map2['condition'] = 2;
+//            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
+//            $v['academy_limit'] = $academy_limit;
+            foreach($grade_limit as $va)
+                $v['grade_limit'][] = $va['name'];
             $data[] = $v;
         }
         return $data[0];
