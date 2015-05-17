@@ -13,16 +13,18 @@ class DataEditController extends ManagementController {
 			switch($table){
 				case  "用户信息" :
 					/*表名,主键,字段,条件,字段是否反选*/
-					$this->packPage('users','id','token','',true);
+					$pack = ['users','id','token','',true];
 					$info = ['用户信息修改','所有用户数据信息'];
 					break;
 
 				default:
-					$this->packPage('users','id','token','',true);
+					$pack = ['users','id','token','',true];
 					$info = ['用户信息修改','所有用户数据信息'];
 					break;
 
 			}
+
+			$this->packPage($pack[0],$pack[1],$pack[2],$pack[3],$pack[4]);
 			$this->set_info('DataEdit:tables',$info[0],$info[1]);
 		}
 
@@ -33,6 +35,7 @@ class DataEditController extends ManagementController {
 			$table = $this->getSession('table');
 			$find = $this->packFind($table,"$mainKey = '$mainValue'" , $field);
 			$this->assign('data',$find);
+			$this->assign('mainKey',$mainKey);
 			$this->assign('EDIT_URL',U('Home:DataEdit/edit'));
 			$this->set_info('DataEdit:edit',"修改数据表($table)"," 主键(".$mainKey.') >> '.$mainValue);
 		}
