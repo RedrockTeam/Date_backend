@@ -11,9 +11,37 @@ class DateController extends BaseController {
         $list = new DateModel();
         $input = I('post.');
         $type = $input['date_type'];
+        if( $input['page'] == null || !isset($input['page']) || !is_numeric($input['page'])) {
+            $data = [
+                'status' => 403,
+                'info' => '参数错误1'
+            ];
+            $this->ajaxReturn($data);
+        }
+        if( $input['size'] == null || !isset($input['size']) || !is_numeric($input['size'])) {
+            $data = [
+                'status' => 403,
+                'info' => '参数错误2'
+            ];
+            $this->ajaxReturn($data);
+        }
+        switch($input['order']) {
+
+            case 1:
+                $order = 'created_at desc';
+                break;
+            default:
+                $data = [
+                    'status' => 403,
+                    'info' => '参数错误'
+                ];
+                $this->ajaxReturn($data);
+        }
+        $page = $input['page']>0 ? $input['page']:1;
+        $size = $input['size']>0 ? $input['size']:1;
         if($type == 0)
             $type = '%';
-        $data['data'] = $list->getInfo($type);
+        $data['data'] = $list->getInfo($type, $page, $size, $order);
         $data['status'] = 200;
         $data['info'] = '成功';
         $this->ajaxReturn($data);

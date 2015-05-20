@@ -5,7 +5,7 @@ use Think\Model;
 class DateModel extends Model {
     protected $trueTableName  = 'date';
     //获取约会信息
-    public function getInfo($type = '%', $order = 'created_at desc', $page = 1, $limit = 10){
+    public function getInfo($type = '%', $page = 1, $limit = 10, $order = 'created_at desc'){
         $where['date.date_type'] = array('LIKE', $type);
         $offset = ($page - 1) * $limit;
         $a = $this
