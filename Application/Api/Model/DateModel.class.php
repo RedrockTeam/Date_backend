@@ -10,7 +10,7 @@ class DateModel extends Model {
         $offset = ($page - 1) * $limit;
         $a = $this
                 ->where($where)
-                ->field('date.id as date_id, date.user_id, created_at, date_time as date_at, place, title, date_type, gender_limit, cost_model')
+                ->field('date.id as date_id, date.user_id, content, created_at, date_time as date_at, place, title, date_type, gender_limit, cost_model')
                 ->limit($offset, $limit)
                 ->order($order)
                 ->buildSql();
@@ -19,7 +19,7 @@ class DateModel extends Model {
             ->buildSql();
         $c = $this->table($b.'as b')
             ->join("JOIN date_type ON b.date_type = date_type.id")
-            ->field('b.nickname, b.head, b.gender, date_id, user_id, created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, gender_limit, cost_model, b.signature')
+            ->field('b.nickname, b.head, b.gender, date_id, user_id, content, created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, gender_limit, cost_model, b.signature')
             ->select();
         foreach($c as $v){
             $map1['date_id'] = $v['date_id'];
