@@ -26,7 +26,9 @@ class DateController extends BaseController {
             $this->ajaxReturn($data);
         }
         switch($input['order']) {
-
+            case 0:
+                $order = 'created_at desc';
+                break;
             case 1:
                 $order = 'created_at desc';
                 break;
