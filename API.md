@@ -303,75 +303,155 @@
 		post:
 		{
 			"date_type": 0, //默认为0, 即所有约会类型
-			"page"
-			"order": "", //.....
+			"page": ,//页码
+            "size": ,//每页显示条数
+			"order": "", //1 order by created_at desc; 2 待定...
 		}	
 
 		return
-				[
-				    data:[{
-				        "date_id": "3",
-				        "head": "xxxxxxxxxx",
-				        "user_id": "1",
-				        "created_at": "1429446315",
-				        "date_at": "1429456315",
-				        "place": "重邮宾馆",
-				        "title": "来约炮!",
-				        "date_type": "1",
-				        "category_id": "1",
-				        "gender_limit": "1",
-				        "academy_limit": [],
-				        "grade_limit": []
-				    },
-				    {
-				        "date_id": "2",
-				        "head": "xxxxxxxxxx",
-				        "user_id": "1",
-				        "created_at": "1429446316",
-				        "date_at": "1429456316",
-				        "place": "重邮宾馆",
-				        "title": "来约炮!",
-				        "date_type": "2",
-				        "category_id": "2",
-				        "gender_limit": "1",
-				        "academy_limit": [],
-				        "grade_limit": []
-				    },
-				    {
-				        "date_id": "1",
-				        "head": "xxxxxxxxxx",
-				        "user_id": "1",
-				        "created_at": "1429446317",
-				        "date_at": "1429456317",
-				        "place": "重邮宾馆",
-				        "title": "来约炮!",
-				        "date_type": "3",
-				        "category_id": "3",
-				        "gender_limit": "1",
-				        "academy_limit": [
-				            {
-				                "selectmodel": "2",
-				                "name": "计算机"
-				            },
-				            {
-				                "selectmodel": "2",
-				                "name": "传媒"
-				            }
-				        ],
-				        "grade_limit": [
-				            {
-				                "selectmodel": "1",
-				                "name": "grade_id"
-				            },
-				            {
-				                "selectmodel": "1",
-				                "name": "grade_id"
-				            }
-				        ]
-				    }]
-				    "status" : 200,
-				    "info" : "成功"
-				]
+				{
+                    "data": [
+                        {
+                            "nickname": "刘晨凌",
+                            "head": "http://106.184.7.12:8002/Public/head.jpg",
+                            "gender": "2",
+                            "date_id": "4",
+                            "user_id": "1",
+                            "content": "test",
+                            "created_at": "1429446314",
+                            "date_at": "1429456314",
+                            "place": "重邮宾馆",
+                            "title": "来约炮!",
+                            "date_type": "1",
+                            "type": "吃饭",
+                            "people_limit": "1",
+                            "category_id": "1",
+                            "gender_limit": "0",
+                            "cost_model": "1",
+                            "signature": "i'm db"
+                        },
+                        {
+                            "nickname": "刘晨凌",
+                            "head": "http://106.184.7.12:8002/Public/head.jpg",
+                            "gender": "2",
+                            "date_id": "26",
+                            "user_id": "1",
+                            "content": "test1",
+                            "created_at": "1431434132",
+                            "date_at": "1431429313",
+                            "place": "menkou",
+                            "title": "test",
+                            "date_type": "1",
+                            "type": "吃饭",
+                            "people_limit": "0",
+                            "category_id": "1",
+                            "gender_limit": "0",
+                            "cost_model": "1",
+                            "signature": "i'm db"
+                        },
+                        {
+                            "nickname": "刘晨凌",
+                            "head": "http://106.184.7.12:8002/Public/head.jpg",
+                            "gender": "2",
+                            "date_id": "25",
+                            "user_id": "1",
+                            "content": "test1",
+                            "created_at": "1431434102",
+                            "date_at": "1431429313",
+                            "place": "menkou",
+                            "title": "test",
+                            "date_type": "1",
+                            "type": "吃饭",
+                            "people_limit": "0",
+                            "category_id": "1",
+                            "gender_limit": "0",
+                            "cost_model": "1",
+                            "signature": "i'm db"
+                        },
+                        {
+                            "nickname": "刘晨凌",
+                            "head": "http://106.184.7.12:8002/Public/head.jpg",
+                            "gender": "2",
+                            "date_id": "3",
+                            "user_id": "1",
+                            "content": "test",
+                            "created_at": "1429446315",
+                            "date_at": "1429456315",
+                            "place": "重邮宾馆",
+                            "title": "来约炮!",
+                            "date_type": "1",
+                            "type": "吃饭",
+                            "people_limit": "1",
+                            "category_id": "1",
+                            "gender_limit": "1",
+                            "cost_model": "1",
+                            "signature": "i'm db"
+                        },
+                        {
+                            "nickname": "刘晨凌",
+                            "head": "http://106.184.7.12:8002/Public/head.jpg",
+                            "gender": "2",
+                            "date_id": "5",
+                            "user_id": "1",
+                            "content": "test",
+                            "created_at": "1429446313",
+                            "date_at": "1429456313",
+                            "place": "重邮宾馆",
+                            "title": "来约炮!",
+                            "date_type": "2",
+                            "type": "打牌",
+                            "people_limit": "1",
+                            "category_id": "2",
+                            "gender_limit": "2",
+                            "cost_model": "1",
+                            "signature": "i'm db"
+                        },
+                        {
+                            "nickname": "刘晨凌",
+                            "head": "http://106.184.7.12:8002/Public/head.jpg",
+                            "gender": "2",
+                            "date_id": "2",
+                            "user_id": "1",
+                            "content": "test",
+                            "created_at": "1429446316",
+                            "date_at": "1529456316",
+                            "place": "重邮宾馆",
+                            "title": "来约炮!",
+                            "date_type": "2",
+                            "type": "打牌",
+                            "people_limit": "1",
+                            "category_id": "2",
+                            "gender_limit": "1",
+                            "cost_model": "1",
+                            "signature": "i'm db"
+                        },
+                        {
+                            "nickname": "刘晨凌",
+                            "head": "http://106.184.7.12:8002/Public/head.jpg",
+                            "gender": "2",
+                            "date_id": "1",
+                            "user_id": "1",
+                            "content": "test",
+                            "created_at": "1429446317",
+                            "date_at": "1529456317",
+                            "place": "重邮宾馆",
+                            "title": "来约炮!",
+                            "date_type": "3",
+                            "type": "约炮",
+                            "people_limit": "1",
+                            "category_id": "3",
+                            "gender_limit": "0",
+                            "cost_model": "1",
+                            "signature": "i'm db",
+                            "grade_limit": [
+                                "大一",
+                                "大二"
+                            ]
+                        }
+                    ],
+                    "status": 200,
+                    "info": "成功"
+                }
 
 
 3.  发布约会
@@ -430,6 +510,7 @@
                   "date_type": "3",
                   "type": "约炮",
                   "category_id": "3",
+                  "people_limit": "1",//人数限制
                   "gender_limit": "1",
                   "cost_model": "1",
                   "academy_limit": [
