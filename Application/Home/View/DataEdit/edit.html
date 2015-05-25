@@ -1,23 +1,37 @@
 
 
 
-
+<?php $count=0;?>
 <form class="form-horizontal" action="{$EDIT_URL}" method="post" role="form">
 	<foreach name="data" item='value' >
 		<div class="form-group">
-			<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> {$key} </label>
+			<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> {$key}</label>
 
 			<div class="col-sm-9">
 				<if  condition="$key eq $mainKey">
 					<div style="font-size: 20px;color:darkorange;">{$value}</div>
-					<input type="text" name="{$key}" id="form-field-1" class="col-xs-10 col-sm-5" style="display: none;" value="{$value}"/>
+					<input type="text" name="{$mainKey}" id="form-field-1" class="col-xs-10 col-sm-5" style="display: none;" value="{$value}"/>
 				<else/>
-					<input type="text" name="{$key}" id="form-field-1" class="col-xs-10 col-sm-5" value="{$value}"/>
+					<php>
+						if((isset($fieldTmp[$count]))){
+					</php>
+
+						<select name="{$fieldTmp[$count]['field']}">
+							<option value="{$fieldTmp[$count]['value']}">{$value}(当前)</option>
+							<foreach name="fieldTmp[$count]['option']" item='fieldV'  key="k">
+								<option value="{$k}">{$fieldV}</option>
+							</foreach>
+						</select>
+					<php>
+						}else{
+					</php>
+						<input type="text" name="{$inputField[$count]}" id="form-field-1" class="col-xs-10 col-sm-5" value="{$value}"/>
+					<php>}</php>
 				</if>
 			</div>
 		</div>
 		<div class="space-4"></div>
-
+		<?php $count++;?>
 	</foreach>
 
 	<div class="clearfix form-actions">

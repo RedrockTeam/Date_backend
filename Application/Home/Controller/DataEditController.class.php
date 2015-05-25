@@ -10,42 +10,42 @@ class DataEditController extends ManagementController {
 
 		public function index(){
 			$table = I('get.table','用户信息');
-			switch($table){
-				case  "用户信息" :
-					/*表名,主键,字段,条件,字段是否反选*/
-					$pack = ['users','id','token','',true];
-					$info = ['用户信息修改','所有用户数据信息'];
-					break;
+			$model = new \Home\Model\DataEditRouteModel();
+			$modelCenter = $model->returnTableInfo($table);
 
-				default:
-					$pack = ['users','id','token','',true];
-					$info = ['用户信息修改','所有用户数据信息'];
-					break;
+			$info = $modelCenter['info'];
 
-			}
-
-			$this->packPage($pack[0],$pack[1],$pack[2],$pack[3],$pack[4]);
-			$this->set_info('DataEdit:tables',$info[0],$info[1]);
+			$this->packPage($modelCenter);
+			$this->set_info('DataEdit:tables',$info['title'],$info['detail']);
 		}
 
 		public function editData(){
 			$mainValue=I('post.mainValue');
 			$mainKey = $this->getSession('mainKey');
-			$field	 = $this->getSession('field');
-			$table = $this->getSession('table');
-			$find = $this->packFind($table,"$mainKey = '$mainValue'" , $field);
+			//print_r("$mainKey = '$mainValue'");
+//			exit();
+			$find = $this->packFind("$mainKey = '$mainValue'");
+
 			$this->assign('data',$find);
-			$this->assign('mainKey',$mainKey);
+
+			$value = end(explode(".",$mainKey));
+			$this->assign('mainKey',$value);
 			$this->assign('EDIT_URL',U('Home:DataEdit/edit'));
 			$this->set_info('DataEdit:edit',"修改数据表($table)"," 主键(".$mainKey.') >> '.$mainValue);
 		}
 
 		public function edit(){
 			$mainKey = $this->getSession('mainKey');
+			$mainKey = end(explode(".",$mainKey));
 			$backUrl = $this->getSession('backUrl');
-			$field	 = $this->getSession('field');
-			$table = $this->getSession('table');
-			$data = $this->checkPost($field);
+			$editField	 = $this->getSession('editField');
+			$editField[] = $mainKey;
+
+			$tableInfo = $this->getSession('tableInfo');
+			$table = $tableInfo['table'];
+			$data = $this->checkPost($editField);
+//			print_r($data);
+//			EXIT();
 			if($data["$mainKey"] == -1){
 				$do='add';
 				$info = '添加';
@@ -55,8 +55,8 @@ class DataEditController extends ManagementController {
 				$info = '修改';
 			}
 
-			if($r = D("$table")->$do($data))	$this->success("$info 成功:$r",$backUrl);
-			else	$this->error("$info 失败:$r",$backUrl);
+			if($r = D("$table")->$do($data))	$this->success("$info 成功",$backUrl);
+			else	$this->error("$info 失败:<br>未修改原值");
 
 		}
 }
