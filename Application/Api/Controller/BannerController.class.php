@@ -11,6 +11,7 @@ class BannerController extends Controller {
         $data = $ad->getBanner();
         $data['status'] = 200;
         $data['info'] = '成功';
+        header("Access-Control-Allow-Origin: *");
         $this->ajaxReturn($data);
     }
 }

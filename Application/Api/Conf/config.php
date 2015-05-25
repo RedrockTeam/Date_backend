@@ -49,6 +49,7 @@ return array(
         'letter/getletter' => 'Letter/getLetter',//获取私信
         'letter/letterstatus' => 'Letter/letterStatus',//查看未读私信数量
         'letter/dateaction' => 'Letter/dateAction',//私信中接受/拒绝约
+        'letter/letterdetail' => 'Letter/letterDetail',
 
         //个人信息模块
         'person/collect' => 'Personal/Collect',//收藏约会
