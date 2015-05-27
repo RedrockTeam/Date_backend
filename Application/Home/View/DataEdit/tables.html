@@ -1,0 +1,62 @@
+
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="table-responsive">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+															<foreach name="table_head" item="vo">
+																<th>{$key}</th>
+															</foreach>
+															<th>修改|启用|冻结</th>
+
+													</tr>
+												</thead>
+
+												<tbody>
+													<volist name='table_data' id='data'>
+													<tr>
+														<form  action="{$DATA_EDIT_URL}" method="POST">
+															<foreach name="data" item="td">
+																<td>
+																	<a href="#">{$td}</a>
+																</td>
+															</foreach>
+
+
+															<td>
+
+																<input value='<php>echo $data["$main_key"]</php>' name="mainValue" style="display:none"/>
+
+
+																<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+
+
+																	<button class="btn btn-xs btn-info">
+																		<i class="icon-edit bigger-120"></i>
+																	</button>
+
+																	<!--
+																	<button class="btn btn-xs btn-success">
+																		<i class="icon-ok bigger-120"></i>
+																	</button>
+
+																	<button class="btn btn-xs btn-warning">
+																		<i class="icon-flag bigger-120"></i>
+																	</button>
+																	-->
+																</div>
+
+															</td>
+														</form>
+													</tr>
+													</volist>
+												</tbody>
+											</table>
+										</div><!-- /.table-responsive -->
+									</div><!-- /span -->
+								</div><!-- /row -->
+
+								<div>{$table_page}</div>
