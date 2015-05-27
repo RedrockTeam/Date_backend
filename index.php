@@ -9,6 +9,7 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 header("charset=utf-8");
+header("Access-Control-Allow-Origin: *");//TODO temp
 // 应用入口文件
 
 // 检测PHP环境
