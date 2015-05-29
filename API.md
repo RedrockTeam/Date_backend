@@ -185,6 +185,19 @@
 7. 计算个人信用
          
         url:  http://106.184.7.12:8002/index.php/api/person/score
+         
+         post:
+         {
+                                    "uid": "",
+                    				"date_id":"",
+                    				"token": "",
+         }
+         return
+         {
+            search_uid:
+            uid:
+            token:
+         }
         
 --------------
 
@@ -278,6 +291,22 @@
                     'status' => 200,
                     'letter' => 4//未读私信数量
                 };
+                
+4. 私信详情
+     url: http://106.184.7.12:8002/index.php/api/letter/letterdetail
+     
+         post:
+                {
+                    "uid": "",
+                    "token": "",
+                    "letter_id":""
+                }
+                return:
+                        {
+                                     'data' => [wangle],
+                                     'info' => '成功',
+                                     'status'=>200
+                        };
 ------------------------------------
 
 ###约会信息
@@ -602,14 +631,30 @@
                
                     post:
                     {
-                    uid:"",
-                                            token:"",
-                                            date_id:""
+                        uid:"",
+                        token:"",
+                        date_id:"",
+                        score:""
                     }
                     return:
                     {
-                    
+                        'info' => '你已评过次约会',
+                        'status' => 403             
                     }
+                     {
+                        'info' => '此条约会不存在或未结束',
+                                        'status' => 403            
+                     }
+                      {
+                       'info' => '成功',
+                                       'status' => 200             
+                     }
+                     {
+                                  'info' => '网络错误',
+                                     'status' => 500
+                     }
+                     
+                    
 ----------------------------	
 ###公共
 
