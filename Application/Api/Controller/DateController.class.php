@@ -55,9 +55,11 @@ class DateController extends BaseController {
         $list = new DateModel();
         $uid = $input['uid'];
         $date_id = $input['date_id'];
-        $data = $list->getDetailInfo($date_id);
+        $data['data'] = $list->getDetailInfo($date_id);
         $common = new CommonController();
-        $data['user_score'] = $common->credit($uid);
+        $data['data']['user_score'] = $common->credit($uid);
+        $data['status'] = 200;
+        $data['info'] = '成功';
         $this->ajaxReturn($data);
     }
 
@@ -384,7 +386,7 @@ class DateController extends BaseController {
 
     private function checkGrade ($grade, $date_id, $date_limit) {
         /**
-         * TODO 先判断正选反选, 再遍历, 逻辑目测没问题
+         * TODO 先判断正选反选, 再遍历, 逻辑目测没问题-- 日了狗了, 又不做正选反选了
          */
         //判断年级
 

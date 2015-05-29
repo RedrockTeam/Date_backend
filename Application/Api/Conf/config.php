@@ -40,7 +40,7 @@ return array(
         'date/datelist' => 'Date/getList',//约会列表
         'date/datetype' => 'Category/date_type',//约会类型
         'date/detaildate' => 'Date/getDetail',//具体的约会详情
-        'date/create' => 'Date/createDate',//发布约会
+        'date/createdate' => 'Date/createDate',//发布约会
         'date/report' => 'Date/report', //报名约
         'date/dateperson' => 'Date/getDatePerson', //获取参与约会的人员
         'date/scoredate' => 'Date/scoreDate', //对约会评分
@@ -57,6 +57,6 @@ return array(
         'person/join' => 'Personal/getJoin',//获取参加的约会
         'person/create' => 'Personal/getCreate',//获取发起的约会
         'person/userinfo' => 'Personal/getInfo',//获取用户信息
-        'person/score' => 'Common/credit',
+        'person/score' => 'Common/credit', //获取用户信用
     ],
 );
