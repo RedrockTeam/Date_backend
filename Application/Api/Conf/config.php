@@ -57,6 +57,6 @@ return array(
         'person/join' => 'Personal/getJoin',//获取参加的约会
         'person/create' => 'Personal/getCreate',//获取发起的约会
         'person/userinfo' => 'Personal/getInfo',//获取用户信息
-        'person/score' => 'Common/credit',
+        'person/score' => 'Common/credit', //获取用户信用
     ],
 );

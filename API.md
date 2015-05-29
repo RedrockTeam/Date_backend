@@ -77,7 +77,7 @@
                     "title": "来约炮!",
                     "date_time": "1529456317",
                     "created_at": "1429446317",
-                    "cost_model": "1",
+                    "cost_model": "1", //AA, 我请客, 求请客
                     "content": "test",
                     "place": "重邮宾馆",
                     "score": "0"
@@ -110,7 +110,7 @@
                             "title": "来约炮!",
                             "date_time": "1529456317",
                             "created_at": "1429446317",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "content": "test",
                             "place": "重邮宾馆",
                             "score": "0"
@@ -136,7 +136,7 @@
                "user_id": "1",
                "title": "来约炮!",
                "date_type": "3",
-               "cost_model": "1",
+               "cost_model": "1",//AA, 我请客, 求请客
                "content": "test",
                "place": "重邮宾馆",
                "date_time": "1529456317",
@@ -327,7 +327,7 @@
                             "people_limit": "1",
                             "category_id": "1",
                             "gender_limit": "0",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -346,7 +346,7 @@
                             "people_limit": "0",
                             "category_id": "1",
                             "gender_limit": "0",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -365,7 +365,7 @@
                             "people_limit": "0",
                             "category_id": "1",
                             "gender_limit": "0",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -384,7 +384,7 @@
                             "people_limit": "1",
                             "category_id": "1",
                             "gender_limit": "1",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -403,7 +403,7 @@
                             "people_limit": "1",
                             "category_id": "2",
                             "gender_limit": "2",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -422,7 +422,7 @@
                             "people_limit": "1",
                             "category_id": "2",
                             "gender_limit": "1",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -441,7 +441,7 @@
                             "people_limit": "1",
                             "category_id": "3",
                             "gender_limit": "0",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db",
                             "grade_limit": [
                                 "大一",
@@ -471,7 +471,7 @@
 				"academy_select_model": "", //1正选(默认), 2反选
 				"grade_limit": "", //年级限制
 				"grade_select_model": "", //1正选(默认), 2反选,
-				"cost_model": "", int 看ER图
+				"cost_model": "", //AA, 我请客, 求请客
 				"uid": "",
 				"token": ""
 			}
@@ -498,42 +498,32 @@
         			}
         retrun: 
                   {
-                  "nickname": "刘晨凌",
-                  "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-                  "gender": "2",
-                  "date_id": "1",
-                  "user_id": "1",
-                  "created_at": "1429446317",
-                  "date_at": "1529456317",
-                  "place": "重邮宾馆",
-                  "title": "来约炮!",
-                  "date_type": "3",
-                  "type": "约炮",
-                  "category_id": "3",
-                  "people_limit": "1",//人数限制
-                  "gender_limit": "1",
-                  "cost_model": "1",
-                  "academy_limit": [
-                  {
-                  "selectmodel": "2",
-                  "name": "计算机"
-                  },
-                  {
-                  "selectmodel": "2",
-                  "name": "传媒"
-                  }
-                  ],
-                  "grade_limit": [
-                  {
-                  "selectmodel": "1",
-                  "name": "大一"
-                  },
-                  {
-                  "selectmodel": "1",
-                  "name": "大二"
-                  }
-                  ],
-                  "user_score": null //int, null暂无评分记录
+                      "data": {
+                          "nickname": "刘晨凌",
+                          "head": "http://106.184.7.12:8002/Public/head.jpg",
+                          "gender": "2",
+                          "date_id": "1",
+                          "user_id": "1",
+                          "content": "test",
+                          "created_at": "1429446317",
+                          "date_at": "1529456317",
+                          "place": "重邮宾馆",
+                          "title": "来约炮!",
+                          "date_type": "3",
+                          "type": "约炮",
+                          "people_limit": "1",
+                          "category_id": "3",
+                          "gender_limit": "0",
+                          "cost_model": "1",
+                          "signature": "i'm db",
+                          "grade_limit": [
+                              "1",
+                              "2"
+                          ],
+                          "user_score": "3"
+                      },
+                      "status": 200,
+                      "info": "成功"
                   }
 5. 报名约会
              
