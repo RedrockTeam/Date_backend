@@ -177,10 +177,14 @@
         			
         return
         
-                            {
+                       {
             				"status": 200,
             				"info":"成功"
             			}
+            			
+7. 计算个人信用
+         
+        url:  http://106.184.7.12:8002/index.php/api/person/score
         
 --------------
 
@@ -576,7 +580,36 @@
                                info:"成功"; //error info
                                status:"200" //403 500
                             }
-    
+
+8. 获取参与报名这个约会的人
+
+               url: http://106.184.7.12:8002/index.php/api/date/dateperson
+               
+                    post:
+                    {
+                        uid:"",
+                        token:"",
+                        date_id:""
+                    }
+                    return:
+                    {
+                       info:"成功"; //error info
+                       status:"200" //403 500
+                    }
+               
+9. 给约会评分
+               url: http://106.184.7.12:8002/index.php/api/date/scoredate
+               
+                    post:
+                    {
+                    uid:"",
+                                            token:"",
+                                            date_id:""
+                    }
+                    return:
+                    {
+                    
+                    }
 ----------------------------	
 ###公共
 
