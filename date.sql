@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-05-17 17:28:36
+Date: 2015-05-31 00:54:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -201,14 +201,16 @@ CREATE TABLE `users` (
   `weixin` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `telephone` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
   `token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '2013211000', 'http://106.184.7.12:8002/Public/head.jpg', 'i\'m db', '刘晨凌', '2', '2', '3', '1234567890', 'we', '12345678900', 'nasdfnldssdaf');
-INSERT INTO `users` VALUES ('2', '2013211001', 'http://106.184.7.12:8002/Public/head.jpg', 'i\'m db1', 'aliling', '1', '3', '1', '0987654321', 'ew', '00123456789', 'cdsagrebvfra');
+INSERT INTO `users` VALUES ('1', '2013211000', 'http://106.184.7.12:8002/Public/head.jpg', 'i\'m db', '刘晨凌', '2', '2', '3', '1234567890', 'we', '12345678900', 'nasdfnldssdaf', '1433003912', '1433003934');
+INSERT INTO `users` VALUES ('2', '2013211001', 'http://106.184.7.12:8002/Public/head.jpg', 'i\'m db1', 'aliling', '1', '3', '1', '0987654321', 'ew', '00123456789', 'cdsagrebvfra', '1433003912', '1433003934');
 
 -- ----------------------------
 -- Table structure for user_date
