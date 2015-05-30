@@ -73,7 +73,14 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
-
+        //检查信息完整
+        if(!$this->dataComplete($input['uid'])) {
+            $data = [
+                'info' => '请先完善个人信息',
+                'status' => '403'
+            ];
+            $this->ajaxReturn($data);
+        }
         if (!$this->checkPaoNum($input['uid'])){
             $data = [
                 'status' => '403',
@@ -149,9 +156,17 @@ class DateController extends BaseController {
 
         $userDate = new UserDateModel();
         //检查是否是本人 1
-        if(!$this->checkSelf($uid, $date_id)){
+        if(!$this->checkSelf($uid, $date_id)) {
             $data = [
                 'info' => '你不能约自己!',
+                'status' => '403'
+            ];
+            $this->ajaxReturn($data);
+        }
+        //检查信息完整
+        if(!$this->dataComplete($uid)) {
+            $data = [
+                'info' => '请先完善个人信息',
                 'status' => '403'
             ];
             $this->ajaxReturn($data);
@@ -455,4 +470,13 @@ class DateController extends BaseController {
             return false;
     }
 
+    private function dataComplete($uid) {
+        $user = new UsersModel();
+        $map = ['id' => $uid];
+        $info = $user->where($map)->find();
+        if($info['qq'] == null && $info['weixin'] == null && $info['telephone'] == null)
+            return false;
+        else
+            return true;
+    }
 }

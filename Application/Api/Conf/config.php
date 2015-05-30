@@ -35,6 +35,7 @@ return array(
         //公共
         'public/banner' => 'Banner/Banner',//广告位
         'public/academy' => 'Category/academy',//学院列表
+        'public/login' => 'Login/login', //登录
 
         //约会信息
         'date/datelist' => 'Date/getList',//约会列表
@@ -49,7 +50,7 @@ return array(
         'letter/getletter' => 'Letter/getLetter',//获取私信
         'letter/letterstatus' => 'Letter/letterStatus',//查看未读私信数量
         'letter/dateaction' => 'Letter/dateAction',//私信中接受/拒绝约
-        'letter/letterdetail' => 'Letter/letterDetail',
+        'letter/letterdetail' => 'Letter/letterDetail',//私信详情
 
         //个人信息模块
         'person/collect' => 'Personal/Collect',//收藏约会
