@@ -1,5 +1,6 @@
 <?php
 namespace Api\Controller;
+use Api\Model\UsersModel;
 use Think\Controller;
 class LoginController extends Controller {
     private $url = 'http://hongyan.cqupt.edu.cn/RedCenter/Api/Handle/login';
@@ -23,7 +24,9 @@ class LoginController extends Controller {
         else{
             $data = [
                     'status' => 200,
-                    'info' => '登录成功, 可以开始约炮→_→'
+                    'info' => '登录成功, 可以开始约炮→_→',
+                    'token' => session('token'),
+                    'uid' => session('uid')
             ];
             $this->ajaxReturn($data);
         }
@@ -38,8 +41,28 @@ class LoginController extends Controller {
         ];
         $result = $this->curl($data);
         if($result->status == 200){
-
-            return true;
+            $user = new UsersModel();
+            $map = [
+                'stu_num' => $username
+            ];
+            $token = md5(time().$username);
+            session('token', $token);
+            if($user->where($map)->data(['updated_at' => time(),'token'=>$token])->save()) {
+                $info = $user->where($map)->find();
+                session('uid', $info['id']);
+                return true;
+            }
+            else {
+                $new = [
+                    'stu_num' => $username,
+                    'created_at' => time(),
+                    'updated_at' => time(),
+                    'token' => $token
+                ];
+                $info = $user->add($new);
+                session('uid', $info['id']);
+                return true;
+            }
         }
         else{
             return false;

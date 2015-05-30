@@ -24,7 +24,7 @@ class BaseController extends Controller {
             $token = $input['token'];
             if(!$this->auth($uid, $token)){
                 $data = [
-                    'info' => '权限验证失败',
+                    'info' => '你未登录或登录超时',
                     'status' => 403
                 ];
                 $this->ajaxReturn($data);
