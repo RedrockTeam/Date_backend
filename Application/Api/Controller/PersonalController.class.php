@@ -47,8 +47,10 @@ class PersonalController extends BaseController {
         $users = new UsersModel();
         if($uid == $get_uid){
             $map['users.id'] = $uid;
-            $data['data'] = $users->where($map)->join("JOIN academy ON users.academy = academy.id")->field('users.id, head, signature, nickname, gender, grade,  users.academy as academy_id, academy.name as academy, qq, weixin, telephone')->find();
+            $data['data'] = $users->where($map)->join("JOIN academy ON users.academy = academy.id")->field('users.id, head, signature, nickname, gender, grade, users.academy as academy_id, academy.name as academy, qq, weixin, telephone')->find();
             $data['info'] = '成功';
+            $date = new DateModel();
+            $data['data']['mydate'] = $date->getSao($uid);
             $data['status'] = 200;
             $this->ajaxReturn($data);
         }

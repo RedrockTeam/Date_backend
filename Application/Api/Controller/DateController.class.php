@@ -55,9 +55,11 @@ class DateController extends BaseController {
         $list = new DateModel();
         $uid = $input['uid'];
         $date_id = $input['date_id'];
-        $data = $list->getDetailInfo($date_id);
+        $data['data'] = $list->getDetailInfo($date_id);
         $common = new CommonController();
-        $data['user_score'] = $common->credit($uid);
+        $data['data']['user_score'] = $common->credit($uid);
+        $data['status'] = 200;
+        $data['info'] = '成功';
         $this->ajaxReturn($data);
     }
 
@@ -71,7 +73,14 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
-
+        //检查信息完整
+        if(!$this->dataComplete($input['uid'])) {
+            $data = [
+                'info' => '请先完善个人信息',
+                'status' => '403'
+            ];
+            $this->ajaxReturn($data);
+        }
         if (!$this->checkPaoNum($input['uid'])){
             $data = [
                 'status' => '403',
@@ -147,9 +156,17 @@ class DateController extends BaseController {
 
         $userDate = new UserDateModel();
         //检查是否是本人 1
-        if(!$this->checkSelf($uid, $date_id)){
+        if(!$this->checkSelf($uid, $date_id)) {
             $data = [
                 'info' => '你不能约自己!',
+                'status' => '403'
+            ];
+            $this->ajaxReturn($data);
+        }
+        //检查信息完整
+        if(!$this->dataComplete($uid)) {
+            $data = [
+                'info' => '请先完善个人信息',
                 'status' => '403'
             ];
             $this->ajaxReturn($data);
@@ -384,7 +401,7 @@ class DateController extends BaseController {
 
     private function checkGrade ($grade, $date_id, $date_limit) {
         /**
-         * TODO 先判断正选反选, 再遍历, 逻辑目测没问题
+         * TODO 先判断正选反选, 再遍历, 逻辑目测没问题-- 日了狗了, 又不做正选反选了
          */
         //判断年级
 
@@ -453,4 +470,13 @@ class DateController extends BaseController {
             return false;
     }
 
+    private function dataComplete($uid) {
+        $user = new UsersModel();
+        $map = ['id' => $uid];
+        $info = $user->where($map)->find();
+        if($info['qq'] == null && $info['weixin'] == null && $info['telephone'] == null)
+            return false;
+        else
+            return true;
+    }
 }

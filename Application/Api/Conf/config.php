@@ -35,12 +35,13 @@ return array(
         //公共
         'public/banner' => 'Banner/Banner',//广告位
         'public/academy' => 'Category/academy',//学院列表
+        'public/login' => 'Login/login', //登录
 
         //约会信息
         'date/datelist' => 'Date/getList',//约会列表
         'date/datetype' => 'Category/date_type',//约会类型
         'date/detaildate' => 'Date/getDetail',//具体的约会详情
-        'date/create' => 'Date/createDate',//发布约会
+        'date/createdate' => 'Date/createDate',//发布约会
         'date/report' => 'Date/report', //报名约
         'date/dateperson' => 'Date/getDatePerson', //获取参与约会的人员
         'date/scoredate' => 'Date/scoreDate', //对约会评分
@@ -49,7 +50,7 @@ return array(
         'letter/getletter' => 'Letter/getLetter',//获取私信
         'letter/letterstatus' => 'Letter/letterStatus',//查看未读私信数量
         'letter/dateaction' => 'Letter/dateAction',//私信中接受/拒绝约
-        'letter/letterdetail' => 'Letter/letterDetail',
+        'letter/letterdetail' => 'Letter/letterDetail',//私信详情
 
         //个人信息模块
         'person/collect' => 'Personal/Collect',//收藏约会
@@ -57,6 +58,6 @@ return array(
         'person/join' => 'Personal/getJoin',//获取参加的约会
         'person/create' => 'Personal/getCreate',//获取发起的约会
         'person/userinfo' => 'Personal/getInfo',//获取用户信息
-        'person/score' => 'Common/credit',
+        'person/score' => 'Common/credit', //获取用户信用
     ],
 );

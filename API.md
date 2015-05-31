@@ -77,7 +77,7 @@
                     "title": "来约炮!",
                     "date_time": "1529456317",
                     "created_at": "1429446317",
-                    "cost_model": "1",
+                    "cost_model": "1", //AA, 我请客, 求请客
                     "content": "test",
                     "place": "重邮宾馆",
                     "score": "0"
@@ -110,7 +110,7 @@
                             "title": "来约炮!",
                             "date_time": "1529456317",
                             "created_at": "1429446317",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "content": "test",
                             "place": "重邮宾馆",
                             "score": "0"
@@ -136,7 +136,7 @@
                "user_id": "1",
                "title": "来约炮!",
                "date_type": "3",
-               "cost_model": "1",
+               "cost_model": "1",//AA, 我请客, 求请客
                "content": "test",
                "place": "重邮宾馆",
                "date_time": "1529456317",
@@ -177,10 +177,27 @@
         			
         return
         
-                            {
+                       {
             				"status": 200,
             				"info":"成功"
             			}
+            			
+7. 计算个人信用
+         
+        url:  http://106.184.7.12:8002/index.php/api/person/score
+         
+         post:
+         {
+                                    "uid": "",
+                    				"date_id":"",
+                    				"token": "",
+         }
+         return
+         {
+            search_uid:
+            uid:
+            token:
+         }
         
 --------------
 
@@ -274,6 +291,22 @@
                     'status' => 200,
                     'letter' => 4//未读私信数量
                 };
+                
+4. 私信详情
+     url: http://106.184.7.12:8002/index.php/api/letter/letterdetail
+     
+         post:
+                {
+                    "uid": "",
+                    "token": "",
+                    "letter_id":""
+                }
+                return:
+                        {
+                                     'data' => [wangle],
+                                     'info' => '成功',
+                                     'status'=>200
+                        };
 ------------------------------------
 
 ###约会信息
@@ -327,7 +360,7 @@
                             "people_limit": "1",
                             "category_id": "1",
                             "gender_limit": "0",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -346,7 +379,7 @@
                             "people_limit": "0",
                             "category_id": "1",
                             "gender_limit": "0",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -365,7 +398,7 @@
                             "people_limit": "0",
                             "category_id": "1",
                             "gender_limit": "0",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -384,7 +417,7 @@
                             "people_limit": "1",
                             "category_id": "1",
                             "gender_limit": "1",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -403,7 +436,7 @@
                             "people_limit": "1",
                             "category_id": "2",
                             "gender_limit": "2",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -422,7 +455,7 @@
                             "people_limit": "1",
                             "category_id": "2",
                             "gender_limit": "1",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db"
                         },
                         {
@@ -441,7 +474,7 @@
                             "people_limit": "1",
                             "category_id": "3",
                             "gender_limit": "0",
-                            "cost_model": "1",
+                            "cost_model": "1",//AA, 我请客, 求请客
                             "signature": "i'm db",
                             "grade_limit": [
                                 "大一",
@@ -471,7 +504,7 @@
 				"academy_select_model": "", //1正选(默认), 2反选
 				"grade_limit": "", //年级限制
 				"grade_select_model": "", //1正选(默认), 2反选,
-				"cost_model": "", int 看ER图
+				"cost_model": "", //AA, 我请客, 求请客
 				"uid": "",
 				"token": ""
 			}
@@ -498,42 +531,32 @@
         			}
         retrun: 
                   {
-                  "nickname": "刘晨凌",
-                  "head": "http:\/\/106.184.7.12:8002\/Public\/head.jpg",
-                  "gender": "2",
-                  "date_id": "1",
-                  "user_id": "1",
-                  "created_at": "1429446317",
-                  "date_at": "1529456317",
-                  "place": "重邮宾馆",
-                  "title": "来约炮!",
-                  "date_type": "3",
-                  "type": "约炮",
-                  "category_id": "3",
-                  "people_limit": "1",//人数限制
-                  "gender_limit": "1",
-                  "cost_model": "1",
-                  "academy_limit": [
-                  {
-                  "selectmodel": "2",
-                  "name": "计算机"
-                  },
-                  {
-                  "selectmodel": "2",
-                  "name": "传媒"
-                  }
-                  ],
-                  "grade_limit": [
-                  {
-                  "selectmodel": "1",
-                  "name": "大一"
-                  },
-                  {
-                  "selectmodel": "1",
-                  "name": "大二"
-                  }
-                  ],
-                  "user_score": null //int, null暂无评分记录
+                      "data": {
+                          "nickname": "刘晨凌",
+                          "head": "http://106.184.7.12:8002/Public/head.jpg",
+                          "gender": "2",
+                          "date_id": "1",
+                          "user_id": "1",
+                          "content": "test",
+                          "created_at": "1429446317",
+                          "date_at": "1529456317",
+                          "place": "重邮宾馆",
+                          "title": "来约炮!",
+                          "date_type": "3",
+                          "type": "约炮",
+                          "people_limit": "1",
+                          "category_id": "3",
+                          "gender_limit": "0",
+                          "cost_model": "1",
+                          "signature": "i'm db",
+                          "grade_limit": [
+                              "1",
+                              "2"
+                          ],
+                          "user_score": "3"
+                      },
+                      "status": 200,
+                      "info": "成功"
                   }
 5. 报名约会
              
@@ -586,7 +609,52 @@
                                info:"成功"; //error info
                                status:"200" //403 500
                             }
-    
+
+8. 获取参与报名这个约会的人
+
+               url: http://106.184.7.12:8002/index.php/api/date/dateperson
+               
+                    post:
+                    {
+                        uid:"",
+                        token:"",
+                        date_id:""
+                    }
+                    return:
+                    {
+                       info:"成功"; //error info
+                       status:"200" //403 500
+                    }
+               
+9. 给约会评分
+               url: http://106.184.7.12:8002/index.php/api/date/scoredate
+               
+                    post:
+                    {
+                        uid:"",
+                        token:"",
+                        date_id:"",
+                        score:""
+                    }
+                    return:
+                    {
+                        'info' => '你已评过次约会',
+                        'status' => 403             
+                    }
+                     {
+                        'info' => '此条约会不存在或未结束',
+                                        'status' => 403            
+                     }
+                      {
+                       'info' => '成功',
+                                       'status' => 200             
+                     }
+                     {
+                                  'info' => '网络错误',
+                                     'status' => 500
+                     }
+                     
+                    
 ----------------------------	
 ###公共
 
@@ -636,5 +704,23 @@
                      "status": 200
                      }
                      
+3.   登录接口
+    
+    url: http://106.184.7.12:8002/index.php/api/public/login
+    
+    post:
+            {
+                username:"",//(必须) user: 用户名(目前只支持学号, 等到数据库导进去统一识别码之后也可以用同意识别码做账号)
+                password:""//(必须) password: 密码(同时支持ucenter/重邮通行证/和身份证后六位登陆, 身份证不区分大小写)
+
+            }
+            
+    return
+            {
+                "status": 200,
+                "info": "登录成功, 可以开始约炮→_→",
+                "token": "1f2a034e1fdafad894f5799e2e20c3dd",
+                "uid": "5"
+            }
                      
 9. 待定
