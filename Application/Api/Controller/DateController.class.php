@@ -61,6 +61,7 @@ class DateController extends BaseController {
         $data['data'] = $list->getDetailInfo($date_id);
         $common = new CommonController();
         $data['data']['user_score'] = $common->credit($uid);
+        $data['data']['join'] = $this->getPerson($input);
         $data['status'] = 200;
         $data['info'] = '成功';
         $this->ajaxReturn($data);
@@ -241,6 +242,15 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
+    }
+
+    //查看某个约会的参与人员
+    public function getPerson () {//刘晨凌叫我这么给他的....
+        $input = I('post.');
+        $date_id = $input['date_id'];
+        $usreDate = new UserDateModel();
+        $data = $usreDate->datePerson($date_id);
+        return $data;
     }
 
     //查看某个约会的参与人员
