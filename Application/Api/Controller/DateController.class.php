@@ -2,6 +2,7 @@
 namespace Api\Controller;
 use Api\Model\DateLimitModel;
 use Api\Model\DateModel;
+use Api\Model\LetterModel;
 use Api\Model\UserDateModel;
 use Api\Model\UsersModel;
 use Think\Controller;
@@ -214,6 +215,19 @@ class DateController extends BaseController {
                 'score_status' => 0,
         ];
         if($this->insertPao($date)){
+            $letter = new LetterModel();
+            $map = ['id'=>$date_id];
+            $to = M('date')->where($map)->getField('user_id');
+            $new_letter = [
+                    'date_id' => $date_id,
+                    'from' => $uid,
+                    'to' => $to,
+                    'content' => '报名了你的约',
+                    'time' => time(),
+                    'status' => 0,
+                    'type' => 2
+            ];
+            $letter->add($new_letter);
             $data = [
                 'info' => '成功',
                 'status' => '200'
