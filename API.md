@@ -709,11 +709,12 @@
     url: http://106.184.7.12:8002/index.php/api/public/login
     
     post:
-            {
+    
+               {
                 username:"",//(必须) user: 用户名(目前只支持学号, 等到数据库导进去统一识别码之后也可以用同意识别码做账号)
                 password:""//(必须) password: 密码(同时支持ucenter/重邮通行证/和身份证后六位登陆, 身份证不区分大小写)
 
-            }
+                }
             
     return
             {
