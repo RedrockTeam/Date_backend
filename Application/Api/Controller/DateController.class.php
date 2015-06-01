@@ -49,8 +49,8 @@ class DateController extends BaseController {
         $data['data'] = $list->getInfo($type, $page, $size, $order);
         $data['status'] = 200;
         $data['info'] = '成功';
-        print_r($data);
-        // $this->ajaxReturn($data);
+//        print_r($data);
+         $this->ajaxReturn($data);
     }
 
     //获取约详情
