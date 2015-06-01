@@ -49,7 +49,8 @@ class DateController extends BaseController {
         $data['data'] = $list->getInfo($type, $page, $size, $order);
         $data['status'] = 200;
         $data['info'] = '成功';
-        $this->ajaxReturn($data);
+        print_r($data);
+        // $this->ajaxReturn($data);
     }
 
     //获取约详情
@@ -64,7 +65,7 @@ class DateController extends BaseController {
         if($data['data']['user_score'] == null) {
             $data['data']['user_score'] = 0;
         }
-        $data['data']['join'] = $this->getPerson($input);
+        $data['data']['joined'] = $this->getPerson($input);
         $data['status'] = 200;
         $data['info'] = '成功';
         $this->ajaxReturn($data);

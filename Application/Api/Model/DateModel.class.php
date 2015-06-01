@@ -30,12 +30,18 @@ class DateModel extends Model {
 //            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
 //            foreach($academy_limit as $va)
 //            $v['academy_limit'][] = $va;
-            foreach($grade_limit as $va)
+             if ($grade_limit != null ) {
+                foreach($grade_limit as $va)
                 $v['grade_limit'][] = $va['id'];
+            }
+            else{
+                $v['grade_limit'] = [];
+            }
+            
+
             $data[] = $v;
         }
-        return $data;
-            return $c;
+            return $data;
     }
 
     //获取约会详情
@@ -60,8 +66,15 @@ class DateModel extends Model {
 //            $map2['condition'] = 2;
 //            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
 //            $v['academy_limit'] = $academy_limit;
-            foreach($grade_limit as $va)
+            if ($grade_limit != null ) {
+                foreach($grade_limit as $va)
                 $v['grade_limit'][] = $va['id'];
+            }
+            else{
+                $v['grade_limit'] = [];
+            }
+            
+
             $data[] = $v;
         }
         return $data[0];
