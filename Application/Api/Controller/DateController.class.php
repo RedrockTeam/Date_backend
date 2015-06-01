@@ -11,19 +11,27 @@ class DateController extends BaseController {
         $list = new DateModel();
         $input = I('post.');
         $type = $input['date_type'];
-        if( $input['page'] == null || !isset($input['page']) || !is_numeric($input['page'])) {
+
+        if(!is_numeric($input['page'])) {
             $data = [
                 'status' => 403,
                 'info' => '参数错误1'
             ];
             $this->ajaxReturn($data);
         }
-        if( $input['size'] == null || !isset($input['size']) || !is_numeric($input['size'])) {
+        else {
+            $page = $input['page']>0 ? $input['page']:1;
+        }
+
+        if(!is_numeric($input['size'])) {
             $data = [
                 'status' => 403,
                 'info' => '参数错误2'
             ];
             $this->ajaxReturn($data);
+        }
+        else {
+            $size = $input['size']>0 ? $input['size']:1;
         }
         switch($input['order']) {
             case 0:
@@ -33,14 +41,8 @@ class DateController extends BaseController {
                 $order = 'created_at desc';
                 break;
             default:
-                $data = [
-                    'status' => 403,
-                    'info' => '参数错误'
-                ];
-                $this->ajaxReturn($data);
+                $order = 'created_at desc';
         }
-        $page = $input['page']>0 ? $input['page']:1;
-        $size = $input['size']>0 ? $input['size']:1;
         if($type == 0)
             $type = '%';
         $data['data'] = $list->getInfo($type, $page, $size, $order);
@@ -310,9 +312,9 @@ class DateController extends BaseController {
             return false;
         if(!is_numeric($input['date_type'])) //约会类型id
             return false;
-        if(mb_strlen($input['title']) > 10 || mb_strlen($input['title']) <= 0)//标题
+        if(mb_strlen($input['title'], 'utf8') > 10 || mb_strlen($input['title']) <= 0)//标题
             return false;
-        if(mb_strlen($input['content']) > 25 || mb_strlen($input['content']) <= 0)//内容
+        if(mb_strlen($input['content'], 'utf8') > 25 || mb_strlen($input['content']) <= 0)//内容
             return false;
         if(mb_strlen($input['date_place']) > 15 || mb_strlen($input['date_place']) <= 0)//野战地点
             return false;
