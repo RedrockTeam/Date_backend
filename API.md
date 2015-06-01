@@ -199,6 +199,25 @@
             token:
          }
         
+8. 修改个人资料
+        
+           url:  http://106.184.7.12:8002/index.php/api/person/editdata
+           
+           post:
+           {
+                uid:"",
+                nickname:"",
+                signature:"",
+                qq:"",
+                weixin:"",
+                telephone:"",
+           }
+           
+           return:
+           {
+                'info' => '成功',
+                'status' => 200
+           }
 --------------
 
 ###私信模块
@@ -335,7 +354,9 @@
 		url: http://106.184.7.12:8002/index.php/api/date/datelist
 		post:
 		{
-			"date_type": 0, //默认为0, 即所有约会类型
+		   	"uid":"",
+		   	"token":"",
+		   	"date_type": 0, //默认为0, 即所有约会类型
 			"page": ,//页码
             "size": ,//每页显示条数
 			"order": "", //1 order by created_at desc; 2 待定...
@@ -709,11 +730,12 @@
     url: http://106.184.7.12:8002/index.php/api/public/login
     
     post:
-            {
+    
+               {
                 username:"",//(必须) user: 用户名(目前只支持学号, 等到数据库导进去统一识别码之后也可以用同意识别码做账号)
                 password:""//(必须) password: 密码(同时支持ucenter/重邮通行证/和身份证后六位登陆, 身份证不区分大小写)
 
-            }
+                }
             
     return
             {
