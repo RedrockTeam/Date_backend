@@ -31,11 +31,10 @@ class DateModel extends Model {
 //            foreach($academy_limit as $va)
 //            $v['academy_limit'][] = $va;
             foreach($grade_limit as $va)
-                $v['grade_limit'][] = $va['id'];
+                $v['grade_limit'][] = $va['id'];; 
             $data[] = $v;
         }
         return $data;
-            return $c;
     }
 
     //获取约会详情
