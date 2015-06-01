@@ -521,8 +521,6 @@
 				"date_place": "约会地点",
 				"date_people": "限制人数",
 				"gender_limit": ""	//0不限, 1男, 2女
-				"academy_limit": "", //学院限制
-				"academy_select_model": "", //1正选(默认), 2反选
 				"grade_limit": "", //年级限制
 				"grade_select_model": "", //1正选(默认), 2反选,
 				"cost_model": "", //AA, 我请客, 求请客
