@@ -61,6 +61,9 @@ class DateController extends BaseController {
         $data['data'] = $list->getDetailInfo($date_id);
         $common = new CommonController();
         $data['data']['user_score'] = $common->credit($uid);
+        if($data['data']['user_score'] == null) {
+            $data['data']['user_score'] = 0;
+        }
         $data['data']['join'] = $this->getPerson($input);
         $data['status'] = 200;
         $data['info'] = '成功';
