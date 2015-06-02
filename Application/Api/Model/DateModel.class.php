@@ -31,14 +31,14 @@ class DateModel extends Model {
 //            foreach($academy_limit as $va)
 //            $v['academy_limit'][] = $va;
             foreach($grade_limit as $va)
-                $v['grade_limit'][] = $va['name'];
+                $v['grade_limit'][] = $va['id'];
             $data[] = $v;
         }
         return $data;
     }
 
     //获取约会详情
-    public function getDetailInfo($date_id){
+    public function getDetailInfo($uid, $date_id){
         $where['date.id'] = $date_id;
         $a = $this
             ->where($where)
@@ -60,12 +60,39 @@ class DateModel extends Model {
 //            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
 //            $v['academy_limit'] = $academy_limit;
             foreach($grade_limit as $va)
-                $v['grade_limit'][] = $va['name'];
+                $v['grade_limit'][] = $va['id'];
             $data[] = $v;
         }
+        $data[0]['collection_status'] = $this->getcCollectionStatus($uid, $date_id);
+        $data[0]['apply_status'] = $this->getcCApplyStatus($uid, $date_id);
         return $data[0];
     }
-
+    //获取收藏状态
+    private function getcCollectionStatus($uid, $date_id) {
+        $collection = new CollectionModel();
+        $map = [
+            'user_id' => $uid,
+            'date_id' => $date_id,
+        ];
+        $num = $collection->where($map)->count();
+        if($num > 0)
+            return 1;
+        else
+            return 0;
+    }
+    //获取报名状态
+    private function getcCApplyStatus($uid, $date_id) {
+        $userDate = new UserDateModel();
+        $map = [
+            'user_id' => $uid,
+            'date_id' => $date_id,
+        ];
+        $num = $userDate->where($map)->count();
+        if($num > 0)
+            return 1;
+        else
+            return 0;
+    }
     //根据
     public function getRow ($date_id) {
         $map['id'] = $date_id;

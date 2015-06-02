@@ -58,7 +58,7 @@ class DateController extends BaseController {
         $list = new DateModel();
         $uid = $input['uid'];
         $date_id = $input['date_id'];
-        $data['data'] = $list->getDetailInfo($date_id);
+        $data['data'] = $list->getDetailInfo($uid, $date_id);
         $common = new CommonController();
         $data['data']['user_score'] = $common->credit($uid);
         if($data['data']['user_score'] == null) {
