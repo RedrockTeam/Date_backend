@@ -10,7 +10,7 @@ class DataEditController extends ManagementController {
 
 		public function index(){
 			$table = I('get.table','用户信息');
-			$model = new \Home\Model\DataEditRouteModel();
+			$model = new \Home\Model\ModelRouteCenter\DataEditRouteModel();
 			$modelCenter = $model->returnTableInfo($table);
 
 			$info = $modelCenter['info'];
@@ -44,7 +44,7 @@ class DataEditController extends ManagementController {
 			$tableInfo = $this->getSession('tableInfo');
 			$table = $tableInfo['table'];
 			$data = $this->checkPost($editField);
-//			print_r($data);
+//			print_r($editField);
 //			EXIT();
 			if($data["$mainKey"] == -1){
 				$do='add';

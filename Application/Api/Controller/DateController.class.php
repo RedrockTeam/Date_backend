@@ -50,7 +50,7 @@ class DateController extends BaseController {
         $data['status'] = 200;
         $data['info'] = '成功';
 //        print_r($data);
-         $this->ajaxReturn($data);
+        $this->ajaxReturn($data);
     }
 
     //获取约详情
@@ -117,7 +117,7 @@ class DateController extends BaseController {
         $date = new DateModel();
         $id = $date->add($dateInfo);
         if( ($input['academy_limit'] && $input['academy_select_model']) || ($input['grade_limit'] && $input['grade_select_model']) ){
-           $limit = new DateLimitModel();
+            $limit = new DateLimitModel();
             $date_id = $id['id'];
             if($input['academy_limit'] && $input['academy_select_model']){
                 foreach($input['academy_limit'] as $v){
@@ -206,32 +206,32 @@ class DateController extends BaseController {
         }
         //检查限制条件, 学院, 年级, 性别 5
         if(!$this->checkConditions($uid, $date_id)) {
-                $data = [
-                    'info' => '你不符合限制条件',
-                    'status' => '403'
-                ];
-                $this->ajaxReturn($data);
+            $data = [
+                'info' => '你不符合限制条件',
+                'status' => '403'
+            ];
+            $this->ajaxReturn($data);
         }
         //插入数据 6
         $date = [
-                'date_id' => $date_id,
-                'user_id' => $uid,
-                'time' => time(),
-                'status' => 2,
-                'score_status' => 0,
+            'date_id' => $date_id,
+            'user_id' => $uid,
+            'time' => time(),
+            'status' => 2,
+            'score_status' => 0,
         ];
         if($this->insertPao($date)){
             $letter = new LetterModel();
             $map = ['id'=>$date_id];
             $to = M('date')->where($map)->getField('user_id');
             $new_letter = [
-                    'date_id' => $date_id,
-                    'from' => $uid,
-                    'to' => $to,
-                    'content' => '报名了你的约',
-                    'time' => time(),
-                    'status' => 0,
-                    'type' => 2
+                'date_id' => $date_id,
+                'from' => $uid,
+                'to' => $to,
+                'content' => '报名了你的约',
+                'time' => time(),
+                'status' => 0,
+                'type' => 2
             ];
             $letter->add($new_letter);
             $data = [
@@ -476,7 +476,7 @@ class DateController extends BaseController {
                 case 1: //正选
                     foreach ($limit2 as $v) {
                         if ($v['limit'] == $academy)
-                        return true;
+                            return true;
                     }
                     return false;
                 case 2: //反选

@@ -22,8 +22,8 @@ class ManagementController extends Controller {
 					  'name'=> '用户信息',
 					),
 					1=>array(
-					  'src'=> U('home/management/index'),
-					  'name'=> '表单',
+					  'src'=> U('home/DataEdit/index?table=约会信息'),
+					  'name'=> '约会信息',
 					),
 				),
 			 ),
@@ -44,6 +44,7 @@ class ManagementController extends Controller {
 	/*设置主模版基本信息 >> $location:路径 $des:模块 $info:说明信息 */
     public function set_info($location='index',$des='控制台',$info='版本信息处理'){
 		$loginUser =  checkLogin();
+		checkLevel(1);
 		$main_info=array($location,$des,$info);
 		$packge=array(//基础路由
 			'main_info'   	  => 	$main_info,
@@ -102,9 +103,8 @@ class ManagementController extends Controller {
 	 * @For  自定义数据分页
 	 */
 	public function packPage($tableInfo){
-
-
-		if(!$tableInfo['table'] || !$tableInfo['order'] ){$this->ajaxReturn(['info'=>'model 配置参数错误','status'=>'407']);}
+		$nowPage = I('get.p','1');
+		if(!$tableInfo['table'] || !$tableInfo['order'] ||  !$tableInfo['field'] ){$this->ajaxReturn(['info'=>'model 配置参数错误','status'=>'407']);}
 		$table =  $tableInfo['table'];
 		$order = $tableInfo['order'];
 
@@ -126,7 +126,7 @@ class ManagementController extends Controller {
 		}
 
 
-		$list = $User->field($field, $mod)->order($order)->page($_GET['p'] . ',' . $this->pageTotal)->select();
+		$list = $User->field($field, $mod)->order($order)->page($nowPage. ',' . $this->pageTotal)->select();
 		$count = $User->field($field, $mod)->count();// 查询满足要求的总记录数
 		$dfield =  $list[0];
 
@@ -139,7 +139,7 @@ class ManagementController extends Controller {
 //			$fiedd["$value"] = $key;
 //		}
 ////
-//		print_r($fiedd);
+//		print_r($field);
 //		exit();
 //		if(!$field){$field='*';}
 
@@ -188,10 +188,15 @@ class ManagementController extends Controller {
 			if(count($tmp2) == 2) {
 				$dataRegist[] = trim($tmp2[0]);
 				$tmp3 = explode(".", $tmp2[0]);
-				if($tmp3[0] !=$tableInfo['table']) {$fieldTmp[$k][trim($tmp3[0])]=trim($tmp3[1]);}
+				if(!$tmp3[1]){$tmp3[1] = $tmp3[0];$tmp3[0] = $tableInfo['table'];}
+				if($tmp3[0] !=$tableInfo['table'] ) {$fieldTmp[$k][trim($tmp3[0])]=trim($tmp3[1]);}
+//				elseif(trim($tmp3[1])){$inputTmp[$k] = trim($tmp3[0]);print_r($tmp3);}
 				else {$inputTmp[$k] = trim($tmp3[1]);}
 			}
 		}
+
+//		echo "<pre>";print_r($inputTmp);echo "<pre>";
+//		exit();
 
 		$fUser = D($tableInfo['table']);
 		if(isset($tableInfo['join'])){
@@ -203,13 +208,15 @@ class ManagementController extends Controller {
 //			$fUser = $fUser->fetchSql(false)->field($tmpField);
 //		}
 		$fv = $fUser->fetchSql(false)->field($tmpField)->where($where)->find();
-//		print_r($where);
+//		print_r($fv);
 //		exit();
 
 		foreach($fieldTmp as $k => $tmpF){
 			foreach($fv as $k2 => $tmpfFv){
+
 				if(array_keys($tmpF)[0]==$k2  ){
 					$fv_t = explode(".", $dataRegist[$k-1]);
+
 					if($fv_t[0]!= $tableInfo['table']) {
 						$v    = $tableInfo['join'][$fv_t[0]];
 						$tmp2 = (explode("=", str_replace(' ', '', $v)));
@@ -228,15 +235,17 @@ class ManagementController extends Controller {
 						$inputTmp[] = $tmp4[1];
 						unset($tdsTrans);
 
+
 					}
 					$feResult["$k"]['value'] = $tmpfFv;
 				}
 			}
 		}
-//		echo "<pre>";print_r($tdsTrans);echo "<pre>";
+//		echo "<pre>";print_r($tmpfFv);echo "<pre>";
 //		exit();
 
 		session('editField',$inputTmp);
+
 		$this->assign('fieldTmp',$feResult);
 		$this->assign('inputField',$inputTmp);
 		$this->assign('field',$field);
@@ -244,12 +253,12 @@ class ManagementController extends Controller {
 	}
 
 	public function getSession($name){
-		if($name=='field' || $name=='editField'){
-			return session($name);
-		}
+//		if($name=='field' || $name=='editField'){
+//			return session($name);
+//		}
 		if($return = session($name) )	return $return;
 		else{
-			exit($name);
+			//exit($name);
 			$this->ajaxReturn(array('info'=>'参数错误!'));
 		}
 	}
