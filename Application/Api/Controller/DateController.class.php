@@ -85,13 +85,13 @@ class DateController extends BaseController {
         if(!$this->dataComplete($input['uid'])) {
             $data = [
                 'info' => '请先完善个人信息',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
         if (!$this->checkPaoNum($input['uid'])){
             $data = [
-                'status' => '403',
+                'status' => '409',
                 'info' => '超过同时约上限'
             ];
             $this->ajaxReturn($data);
@@ -168,7 +168,7 @@ class DateController extends BaseController {
         if(!$this->checkSelf($uid, $date_id)) {
             $data = [
                 'info' => '你不能约自己!',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -176,7 +176,7 @@ class DateController extends BaseController {
         if(!$this->dataComplete($uid)) {
             $data = [
                 'info' => '请先完善个人信息',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -184,7 +184,7 @@ class DateController extends BaseController {
         if(!$userDate->joined($uid, $date_id)) {
             $data = [
                 'info' => '你已经约过了',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -192,7 +192,7 @@ class DateController extends BaseController {
         if(!$this->checkTime($date_id)) {
             $data = [
                 'info' => '该约会已结束',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -200,7 +200,7 @@ class DateController extends BaseController {
         if(!$this->checkReportNum($uid)) {
             $data = [
                 'info' => '你已经到达同时约的上限了',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -208,7 +208,7 @@ class DateController extends BaseController {
         if(!$this->checkConditions($uid, $date_id)) {
             $data = [
                 'info' => '你不符合限制条件',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
