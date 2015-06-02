@@ -142,7 +142,7 @@ class DateController extends BaseController {
             }
         }
         $data = [
-            'date_id' => $date_id,
+            'date_id' => $id,
             'status' => 200,
             'info' => '成功'
         ];
