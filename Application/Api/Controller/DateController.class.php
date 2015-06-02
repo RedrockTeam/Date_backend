@@ -32,7 +32,7 @@ class DateController extends BaseController {
             $this->ajaxReturn($data);
         }
         else {
-            $size = $input['size']>0 ? $input['size']:1;
+            $size = $input['size']>0 ? $input['size']:10;
         }
         switch($input['order']) {
             case 0:
@@ -46,7 +46,7 @@ class DateController extends BaseController {
         }
         if($type == 0)
             $type = '%';
-        $data['data'] = $list->getInfo($type, $page, $size, $order);
+        $data['data'] = $list->getInfo($type, $order, $page, $size);
         $data['status'] = 200;
         $data['info'] = '成功';
 //        print_r($data);
