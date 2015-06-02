@@ -115,10 +115,9 @@ class DateController extends BaseController {
         ];
         $date = new DateModel();
         $id = $date->add($dateInfo);
-        $date_id = $id['id'];
         if( ($input['academy_limit'] && $input['academy_select_model']) || ($input['grade_limit'] && $input['grade_select_model']) ){
             $limit = new DateLimitModel();
-            $date_id = $id['id'];
+            $date_id = $id;
             if($input['academy_limit'] && $input['academy_select_model']){
                 foreach($input['academy_limit'] as $v){
                     $academy = [
