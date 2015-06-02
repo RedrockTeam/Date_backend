@@ -49,7 +49,6 @@ class DateController extends BaseController {
         $data['data'] = $list->getInfo($type, $order, $page, $size);
         $data['status'] = 200;
         $data['info'] = '成功';
-//        print_r($data);
         $this->ajaxReturn($data);
     }
 
@@ -116,6 +115,7 @@ class DateController extends BaseController {
         ];
         $date = new DateModel();
         $id = $date->add($dateInfo);
+        $date_id = $id['id'];
         if( ($input['academy_limit'] && $input['academy_select_model']) || ($input['grade_limit'] && $input['grade_select_model']) ){
             $limit = new DateLimitModel();
             $date_id = $id['id'];
@@ -143,7 +143,7 @@ class DateController extends BaseController {
             }
         }
         $data = [
-            'date_id' => $id['id'],
+            'date_id' => $date_id,
             'status' => 200,
             'info' => '成功'
         ];
