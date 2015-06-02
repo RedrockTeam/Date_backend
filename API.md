@@ -388,8 +388,8 @@
 				"date_time": "时间戳",
 				"date_place": "约会地点",
 				"date_people": "限制人数",
-				"gender_limit": ""	//0不限, 1男, 2女
-				"grade_limit": "2011", //年级限制 2011 2012 2013
+				"gender_limit": ""	//0不限, 1男, 2女, 有默认值, 不限的话可以不用传
+				"grade_limit": "2011", //年级限制 2011 2012 2013, 如果没有限制, grade_limit和grade_select_model就别传
 				"grade_select_model": "", //1正选(默认), 2反选,
 				"cost_model": "", int 看ER图
 				"uid": "",
@@ -552,8 +552,7 @@
                      "info": "成功",
                      "status": 200
                      }
-                     
-3.   登录接口
+3. 登录接口
     
     url: http://106.184.7.12:8002/index.php/api/public/login
     
@@ -572,6 +571,34 @@
                         "token": "1f2a034e1fdafad894f5799e2e20c3dd",
                         "uid": "5"
                     }
+                     
+                                       
+4. 年级接口
+     url: http://106.184.7.12:8002/index.php/api/public/grade
+     
+      return
+                        {
+                            "data": [
+                                {
+                                    "id": "1",
+                                    "name": "2011级"
+                                },
+                                {
+                                    "id": "2",
+                                    "name": "2012级"
+                                },
+                                {
+                                    "id": "3",
+                                    "name": "2013级"
+                                },
+                                {
+                                    "id": "4",
+                                    "name": "2014级"
+                                }
+                            ],
+                            "info": "成功",
+                            "status": 200
+                        }
                      
 9. 投诉
 

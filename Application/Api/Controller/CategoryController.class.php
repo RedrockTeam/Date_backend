@@ -18,4 +18,12 @@ class CategoryController extends Controller {
         $data['status'] = 200;
         $this->ajaxReturn($data);
     }
+
+    //获取年级
+    public function grade () {
+        $data['data'] = M('grade')->select();
+        $data['info'] = '成功';
+        $data['status'] = 200;
+        $this->ajaxReturn($data);
+    }
 }

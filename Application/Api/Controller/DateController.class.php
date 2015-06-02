@@ -73,6 +73,7 @@ class DateController extends BaseController {
     //发起约炮
     public function createDate () {
         $input = I('post.');
+        $input['gender_limit'] = $input['gender_limit']? $input['gender_limit']:0;
         if (!$this->checkData($input)){
             $data = [
                 'status' => '403',
