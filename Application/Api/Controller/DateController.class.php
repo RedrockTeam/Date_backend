@@ -2,7 +2,6 @@
 namespace Api\Controller;
 use Api\Model\DateLimitModel;
 use Api\Model\DateModel;
-use Api\Model\LetterModel;
 use Api\Model\UserDateModel;
 use Api\Model\UsersModel;
 use Think\Controller;
@@ -12,45 +11,12 @@ class DateController extends BaseController {
         $list = new DateModel();
         $input = I('post.');
         $type = $input['date_type'];
-
-        if(!is_numeric($input['page'])) {
-            $data = [
-                'status' => 403,
-                'info' => '参数错误1'
-            ];
-            $this->ajaxReturn($data);
-        }
-        else {
-            $page = $input['page']>0 ? $input['page']:1;
-        }
-
-        if(!is_numeric($input['size'])) {
-            $data = [
-                'status' => 403,
-                'info' => '参数错误2'
-            ];
-            $this->ajaxReturn($data);
-        }
-        else {
-            $size = $input['size']>0 ? $input['size']:1;
-        }
-        switch($input['order']) {
-            case 0:
-                $order = 'created_at desc';
-                break;
-            case 1:
-                $order = 'created_at desc';
-                break;
-            default:
-                $order = 'created_at desc';
-        }
         if($type == 0)
             $type = '%';
-        $data['data'] = $list->getInfo($type, $page, $size, $order);
+        $data['data'] = $list->getInfo($type);
         $data['status'] = 200;
         $data['info'] = '成功';
-//        print_r($data);
-         $this->ajaxReturn($data);
+        $this->ajaxReturn($data);
     }
 
     //获取约详情
@@ -59,15 +25,9 @@ class DateController extends BaseController {
         $list = new DateModel();
         $uid = $input['uid'];
         $date_id = $input['date_id'];
-        $data['data'] = $list->getDetailInfo($date_id);
+        $data = $list->getDetailInfo($date_id);
         $common = new CommonController();
-        $data['data']['user_score'] = $common->credit($uid);
-        if($data['data']['user_score'] == null) {
-            $data['data']['user_score'] = 0;
-        }
-        $data['data']['joined'] = $this->getPerson($input);
-        $data['status'] = 200;
-        $data['info'] = '成功';
+        $data['user_score'] = $common->credit($uid);
         $this->ajaxReturn($data);
     }
 
@@ -81,14 +41,7 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
-        //检查信息完整
-        if(!$this->dataComplete($input['uid'])) {
-            $data = [
-                'info' => '请先完善个人信息',
-                'status' => '403'
-            ];
-            $this->ajaxReturn($data);
-        }
+
         if (!$this->checkPaoNum($input['uid'])){
             $data = [
                 'status' => '403',
@@ -164,17 +117,9 @@ class DateController extends BaseController {
 
         $userDate = new UserDateModel();
         //检查是否是本人 1
-        if(!$this->checkSelf($uid, $date_id)) {
+        if(!$this->checkSelf($uid, $date_id)){
             $data = [
                 'info' => '你不能约自己!',
-                'status' => '403'
-            ];
-            $this->ajaxReturn($data);
-        }
-        //检查信息完整
-        if(!$this->dataComplete($uid)) {
-            $data = [
-                'info' => '请先完善个人信息',
                 'status' => '403'
             ];
             $this->ajaxReturn($data);
@@ -220,19 +165,6 @@ class DateController extends BaseController {
                 'score_status' => 0,
         ];
         if($this->insertPao($date)){
-            $letter = new LetterModel();
-            $map = ['id'=>$date_id];
-            $to = M('date')->where($map)->getField('user_id');
-            $new_letter = [
-                    'date_id' => $date_id,
-                    'from' => $uid,
-                    'to' => $to,
-                    'content' => '报名了你的约',
-                    'time' => time(),
-                    'status' => 0,
-                    'type' => 2
-            ];
-            $letter->add($new_letter);
             $data = [
                 'info' => '成功',
                 'status' => '200'
@@ -246,15 +178,6 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
-    }
-
-    //查看某个约会的参与人员
-    public function getPerson () {//刘晨凌叫我这么给他的....
-        $input = I('post.');
-        $date_id = $input['date_id'];
-        $usreDate = new UserDateModel();
-        $data = $usreDate->datePerson($date_id);
-        return $data;
     }
 
     //查看某个约会的参与人员
@@ -340,9 +263,9 @@ class DateController extends BaseController {
             return false;
         if(!is_numeric($input['date_type'])) //约会类型id
             return false;
-        if(mb_strlen($input['title'], 'utf8') > 10 || mb_strlen($input['title']) <= 0)//标题
+        if(mb_strlen($input['title']) > 15 || mb_strlen($input['title']) <= 0)//标题
             return false;
-        if(mb_strlen($input['content'], 'utf8') > 25 || mb_strlen($input['content']) <= 0)//内容
+        if(mb_strlen($input['content']) > 100 || mb_strlen($input['content']) <= 0)//内容
             return false;
         if(mb_strlen($input['date_place']) > 15 || mb_strlen($input['date_place']) <= 0)//野战地点
             return false;
@@ -375,7 +298,7 @@ class DateController extends BaseController {
         $map['user_id'] = $uid;
         $map['status'] = 2;
         $num = $date->where($map)->count();
-        if( $num > 10)
+        if( $num > 5)
             return false;
         return true;
     }
@@ -431,7 +354,7 @@ class DateController extends BaseController {
 
     private function checkGrade ($grade, $date_id, $date_limit) {
         /**
-         * TODO 先判断正选反选, 再遍历, 逻辑目测没问题-- 日了狗了, 又不做正选反选了
+         * TODO 先判断正选反选, 再遍历, 逻辑目测没问题
          */
         //判断年级
 
@@ -500,13 +423,4 @@ class DateController extends BaseController {
             return false;
     }
 
-    private function dataComplete($uid) {
-        $user = new UsersModel();
-        $map = ['id' => $uid];
-        $info = $user->where($map)->find();
-        if($info['qq'] == null && $info['weixin'] == null && $info['telephone'] == null)
-            return false;
-        else
-            return true;
-    }
 }
