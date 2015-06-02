@@ -1,0 +1,63 @@
+
+
+
+<?php $count=0;?>
+<form class="form-horizontal" action="{$EDIT_URL}" method="post" role="form">
+	<foreach name="data" item='value' >
+		<div class="form-group">
+			<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> {$key}</label>
+
+			<div class="col-sm-9">
+				<if  condition="$key eq $mainKey">
+					<div style="font-size: 20px;color:darkorange;">{$value}</div>
+					<input type="text" name="{$mainKey}" id="form-field-1" class="col-xs-10 col-sm-5" style="display: none;" value="{$value}"/>
+				<else/>
+					<php>
+						if((isset($fieldTmp[$count]))){
+					</php>
+
+						<select name="{$fieldTmp[$count]['field']}">
+							<option value="{$fieldTmp[$count]['value']}">{$value}(当前)</option>
+							<foreach name="fieldTmp[$count]['option']" item='fieldV'  key="k">
+								<option value="{$k}">{$fieldV}</option>
+							</foreach>
+						</select>
+					<php>
+						}else{
+					</php>
+						<input type="text" name="{$inputField[$count]}" id="form-field-1" class="col-xs-10 col-sm-5" value="{$value}"/>
+					<php>}</php>
+				</if>
+			</div>
+		</div>
+		<div class="space-4"></div>
+		<?php $count++;?>
+	</foreach>
+
+	<div class="clearfix form-actions">
+		<div class="col-md-offset-3 col-md-9">
+			<button class="btn btn-info"  type="submit">
+				<i class="icon-ok bigger-110"></i>
+				修改完成
+			</button>
+
+			&nbsp; &nbsp; &nbsp;
+			<button class="btn" type="reset">
+				<i class="icon-undo bigger-110"></i>
+				撤销修改
+			</button>
+		</div>
+	</div>
+
+
+
+					<!--	<div>
+							<label for="form-field-9">With Character Limit</label>
+
+							<textarea class="form-control limited" id="form-field-9" maxlength="50"></textarea>
+						</div> -->
+
+
+
+
+</form>

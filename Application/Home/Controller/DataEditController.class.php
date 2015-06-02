@@ -10,28 +10,54 @@ class DataEditController extends ManagementController {
 
 		public function index(){
 			$table = I('get.table','用户信息');
-			switch($table){
-				case  "用户信息" :
-					/*表名,主键,字段,条件,字段是否反选*/
-					$this->packPage('users','id','token','',true);
-					$info = ['用户信息修改','所有用户数据信息'];
-					break;
+			$model = new \Home\Model\ModelRouteCenter\DataEditRouteModel();
+			$modelCenter = $model->returnTableInfo($table);
 
-				default:
-					$this->packPage('users','id','token','',true);
-					$info = ['约约约信息表','约约约的所有数据信息'];
-					break;
+			$info = $modelCenter['info'];
 
-			}
-
-
-			$this->set_info('DataEdit:tables',$info[0],$info[1]);
+			$this->packPage($modelCenter);
+			$this->set_info('DataEdit:tables',$info['title'],$info['detail']);
 		}
 
 		public function editData(){
-			$post=I('post.');
-			$get=I('get.');
-			print_r($_POST);
+			$mainValue=I('post.mainValue');
+			$mainKey = $this->getSession('mainKey');
+			//print_r("$mainKey = '$mainValue'");
+//			exit();
+			$find = $this->packFind("$mainKey = '$mainValue'");
+
+			$this->assign('data',$find);
+
+			$value = end(explode(".",$mainKey));
+			$this->assign('mainKey',$value);
+			$this->assign('EDIT_URL',U('Home:DataEdit/edit'));
+			$this->set_info('DataEdit:edit',"修改数据表($table)"," 主键(".$mainKey.') >> '.$mainValue);
+		}
+
+		public function edit(){
+			$mainKey = $this->getSession('mainKey');
+			$mainKey = end(explode(".",$mainKey));
+			$backUrl = $this->getSession('backUrl');
+			$editField	 = $this->getSession('editField');
+			$editField[] = $mainKey;
+
+			$tableInfo = $this->getSession('tableInfo');
+			$table = $tableInfo['table'];
+			$data = $this->checkPost($editField);
+//			print_r($editField);
+//			EXIT();
+			if($data["$mainKey"] == -1){
+				$do='add';
+				$info = '添加';
+				unset($data["$mainKey"]);
+			}else{
+				$do='save';
+				$info = '修改';
+			}
+
+			if($r = D("$table")->$do($data))	$this->success("$info 成功",$backUrl);
+			else	$this->error("$info 失败:<br>未修改原值");
 
 		}
 }
+
