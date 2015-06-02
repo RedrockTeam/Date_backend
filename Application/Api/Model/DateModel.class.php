@@ -75,6 +75,6 @@ class DateModel extends Model {
     //获取某人发SAO记录
     public function getSao ($uid) {
         $map['date.user_id'] = $uid;
-        return $this->where($map)->join("JOIN users ON date.user_id = users.id")->field('date.id as date_id, title, place, date_time, cost_model, status as date_status')->select();
+        return $this->where($map)->join("JOIN users ON date.user_id = users.id")->field('users.nickname, users.head, date.id as date_id, title, place, date_time, created_at, cost_model, status as date_status')->select();
     }
 }
