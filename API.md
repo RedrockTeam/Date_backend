@@ -389,13 +389,7 @@
 				"date_place": "约会地点",
 				"date_people": "限制人数",
 				"gender_limit": ""	//0不限, 1男, 2女
-<<<<<<< HEAD
-				"grade_limit": "2011", //年级限制 2011 2012 2013 
-=======
-				"academy_limit": "", //学院限制
-				"academy_select_model": "", //1正选(默认), 2反选
-				"grade_limit": "", //年级限制
->>>>>>> 08a037b1ce4b07375f2549a1c7f0702809443127
+				"grade_limit": "2011", //年级限制 2011 2012 2013
 				"grade_select_model": "", //1正选(默认), 2反选,
 				"cost_model": "", int 看ER图
 				"uid": "",
