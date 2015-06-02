@@ -110,7 +110,7 @@
                             "title": "来约炮!",
                             "date_time": "1529456317",
                             "created_at": "1429446317",
-                            "cost_model": "1",//AA, 我请客, 求请客
+                            "cost_model": "1",//1AA, 2我请客, 3求请客
                             "content": "test",
                             "place": "重邮宾馆",
                             "score": "0"
@@ -521,7 +521,7 @@
 				"date_place": "约会地点",
 				"date_people": "限制人数",
 				"gender_limit": ""	//0不限, 1男, 2女
-				"grade_limit": "", //年级限制
+				"grade_limit": "2011", //年级限制 2011 2012 2013 
 				"grade_select_model": "", //1正选(默认), 2反选,
 				"cost_model": "", //AA, 我请客, 求请客
 				"uid": "",
@@ -736,11 +736,28 @@
                 }
             
     return
-            {
-                "status": 200,
-                "info": "登录成功, 可以开始约炮→_→",
-                "token": "1f2a034e1fdafad894f5799e2e20c3dd",
-                "uid": "5"
-            }
+                    {
+                        "status": 200,
+                        "info": "登录成功, 可以开始约炮→_→",
+                        "token": "1f2a034e1fdafad894f5799e2e20c3dd",
+                        "uid": "5"
+                    }
                      
-9. 待定
+9. 投诉
+
+    url: http://106.184.7.12:8002/index.php/api/advice/advice
+    
+    post:
+    
+            {
+                uid:"",
+                token:"",
+                content:"有意见保留意见, 不服打我啊"
+            }
+            
+    return:
+    
+            {
+                'info' => '成功', //失败
+                'status' => 200  //500
+            }

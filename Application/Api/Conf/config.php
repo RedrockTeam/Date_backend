@@ -59,6 +59,9 @@ return array(
         'person/create' => 'Personal/getCreate',//获取发起的约会
         'person/userinfo' => 'Personal/getInfo',//获取用户信息
         'person/score' => 'Common/credit', //获取用户信用
-        'person/editdata' => 'Personal/editPerson' //修改个人资料
+        'person/editdata' => 'Personal/editPerson', //修改个人资料
+
+        //不服打我啊
+        'advice/advice' => 'AdviceController/getAdvice'//投诉
     ],
 );
