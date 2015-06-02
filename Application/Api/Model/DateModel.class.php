@@ -5,12 +5,12 @@ use Think\Model;
 class DateModel extends Model {
     protected $trueTableName  = 'date';
     //获取约会信息
-    public function getInfo($type = '%', $order = 'date.created_at desc', $page = 1, $limit = 10){
+    public function getInfo($type = '%', $order = 'created_at desc', $page = 1, $limit = 10){
         $where['date.date_type'] = array('LIKE', $type);
         $offset = ($page - 1) * $limit;
         $a = $this
                 ->where($where)
-                ->field('date.id as date_id, date.user_id, date.created_at, date_time as date_at, place, title, date_type, gender_limit, cost_model')
+                ->field('date.id as date_id, date.user_id, date.created_at as date_created_at, date_time as date_at, place, title, date_type, gender_limit, cost_model')
                 ->limit($offset, $limit)
                 ->order($order)
                 ->buildSql();
@@ -19,7 +19,7 @@ class DateModel extends Model {
             ->buildSql();
         $c = $this->table($b.'as b')
             ->join("JOIN date_type ON b.date_type = date_type.id")
-            ->field('b.nickname, b.head, b.gender, date_id, user_id, b.created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, gender_limit, cost_model, b.signature')
+            ->field('b.nickname, b.head, b.gender, date_id, user_id, b.date_created_at as created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, gender_limit, cost_model, b.signature')
             ->select();
         foreach($c as $v){
             $map1['date_id'] = $v['date_id'];
@@ -42,14 +42,14 @@ class DateModel extends Model {
         $where['date.id'] = $date_id;
         $a = $this
             ->where($where)
-            ->field('date.id as date_id, date.user_id, date.created_at, date_time as date_at, place, title, date_type, gender_limit, cost_model')
+            ->field('date.id as date_id, date.user_id, date.created_at as date_created_at, date_time as date_at, place, title, date_type, gender_limit, cost_model')
             ->buildSql();
         $b = $this->table($a.'as a')
             ->join("JOIN users ON a.user_id = users.id")
             ->buildSql();
         $c = $this->table($b.'as b')
             ->join("JOIN date_type ON b.date_type = date_type.id")
-            ->field('b.nickname, b.head, b.gender, date_id, user_id, b.created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, gender_limit, cost_model')
+            ->field('b.nickname, b.head, b.gender, date_id, user_id, date_created_at as created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, gender_limit, cost_model')
             ->select();
         foreach($c as $v){
             $map1['date_id'] = $v['date_id'];
