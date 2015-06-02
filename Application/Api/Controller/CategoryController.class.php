@@ -8,7 +8,6 @@ class CategoryController extends Controller {
         $type = new DateTypeModel();
         $data['data'] = $type->getType();
         $data['status'] = 200;
-        header("Access-Control-Allow-Origin: *");
         $this->ajaxReturn($data);
     }
 
@@ -17,7 +16,14 @@ class CategoryController extends Controller {
         $data['data'] = M('academy')->select();
         $data['info'] = '成功';
         $data['status'] = 200;
-        header("Access-Control-Allow-Origin: *");
+        $this->ajaxReturn($data);
+    }
+
+    //获取年级
+    public function grade () {
+        $data['data'] = M('grade')->select();
+        $data['info'] = '成功';
+        $data['status'] = 200;
         $this->ajaxReturn($data);
     }
 }

@@ -79,7 +79,7 @@ class CommonController extends BaseController{
     //计算人的信誉度
     public function credit ($uid = '') {
         $date = new DateModel();
-        $uid = $uid != null ? $uid : I('post.uid');
+        $uid = $uid != null ? $uid : I('post.search_uid');
         $map['user_id'] = $uid;
         $map['status'] = ['NEQ', 2];
         return $date->where($map)->avg('score');

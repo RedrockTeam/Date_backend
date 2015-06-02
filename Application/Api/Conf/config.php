@@ -35,6 +35,8 @@ return array(
         //公共
         'public/banner' => 'Banner/Banner',//广告位
         'public/academy' => 'Category/academy',//学院列表
+        'public/grade' => 'Category/grade',//年级列表
+        'public/login'  => 'Login/login',//login
 
         //约会信息
         'date/datelist' => 'Date/getList',//约会列表
@@ -49,7 +51,6 @@ return array(
         'letter/getletter' => 'Letter/getLetter',//获取私信
         'letter/letterstatus' => 'Letter/letterStatus',//查看未读私信数量
         'letter/dateaction' => 'Letter/dateAction',//私信中接受/拒绝约
-        'letter/letterdetail' => 'Letter/letterDetail',
 
         //个人信息模块
         'person/collect' => 'Personal/Collect',//收藏约会
@@ -57,6 +58,11 @@ return array(
         'person/join' => 'Personal/getJoin',//获取参加的约会
         'person/create' => 'Personal/getCreate',//获取发起的约会
         'person/userinfo' => 'Personal/getInfo',//获取用户信息
-        'person/score' => 'Common/credit',
+        'person/score' => 'Common/credit', //获取用户信用
+        'person/editdata' => 'Personal/editPerson', //修改个人资料
+
+        //不服打我啊
+        'advice/advice' => 'AdviceController/getAdvice'//投诉
+
     ],
 );

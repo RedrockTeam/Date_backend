@@ -29,7 +29,8 @@ class LoginController extends ManagementController {
         $right_pass = toPaw($this->userIfo[$post['name']]['password']);
         if($password == $right_pass ){
             session('loginUser',$post['name']);
-            session('userLevel',$post['level']);
+
+            session('userLevel',$this->userIfo[$post['name']]['level']);
         } else    $this->error('密码错误');
         $this->success('登陆成功',U('home:management/index'));
     }
