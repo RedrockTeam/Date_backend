@@ -6,7 +6,7 @@ class BannerController extends Controller {
     //获取广告位广告
     public function Banner (){
         $ad = new AdvertiseModel();
-        $data = $ad->getBanner();
+        $data['data'] = $ad->getBanner();
         $data['status'] = 200;
         $data['info'] = '成功';
         $this->ajaxReturn($data);
