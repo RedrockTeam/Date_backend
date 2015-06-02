@@ -500,7 +500,7 @@ class DateController extends BaseController {
         else
             return false;
     }
-
+    //检测联系方式完整
     private function dataComplete($uid) {
         $user = new UsersModel();
         $map = ['id' => $uid];
