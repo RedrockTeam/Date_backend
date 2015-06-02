@@ -24,7 +24,7 @@ class DateModel extends Model {
         foreach($c as $v){
             $map1['date_id'] = $v['date_id'];
             $map1['condition'] = 1;
-            $grade_limit = M('date_limit')->where($map1)->join("JOIN grade ON date_limit.limit = grade.id")->field('selectmodel, name')->select();
+            $grade_limit = M('date_limit')->where($map1)->join("JOIN grade ON date_limit.limit = grade.id")->field('selectmodel, id')->select();
 //            $map2['date_id'] = $v['date_id'];
 //            $map2['condition'] = 2;
 //            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
@@ -54,7 +54,7 @@ class DateModel extends Model {
         foreach($c as $v){
             $map1['date_id'] = $v['date_id'];
             $map1['condition'] = 1;
-            $grade_limit = M('date_limit')->where($map1)->join("JOIN grade ON date_limit.limit = grade.id")->field('selectmodel, name')->select();
+            $grade_limit = M('date_limit')->where($map1)->join("JOIN grade ON date_limit.limit = grade.id")->field('selectmodel, id')->select();
 //            $map2['date_id'] = $v['date_id'];
 //            $map2['condition'] = 2;
 //            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
