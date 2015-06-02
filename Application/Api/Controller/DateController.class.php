@@ -344,7 +344,7 @@ class DateController extends BaseController {
             return false;
         if(mb_strlen($input['content'], 'utf8') > 25 || mb_strlen($input['content']) <= 0)//内容
             return false;
-        if(mb_strlen($input['date_place']) > 15 || mb_strlen($input['date_place']) <= 0)//野战地点
+        if(mb_strlen($input['date_place'], 'utf8') > 15 || mb_strlen($input['date_place']) <= 0)//野战地点
             return false;
         if(!is_numeric($input['date_time']))//约炮时间
             return false;
