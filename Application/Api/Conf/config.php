@@ -35,6 +35,7 @@ return array(
         //公共
         'public/banner' => 'Banner/Banner',//广告位
         'public/academy' => 'Category/academy',//学院列表
+        'public/login'  => 'Login/login',//login
 
         //约会信息
         'date/datelist' => 'Date/getList',//约会列表
