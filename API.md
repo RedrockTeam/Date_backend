@@ -59,7 +59,7 @@
 			}
 3. 取个人收藏列表
 
-            url:  http://106.184.7.12:8002/index.php/api/person/collection
+            url:  http://106.184.7.12:8002/index.php/api/person/collection //排序方式按收藏的时间排序
             post: {
             uid:"",
             token:""
