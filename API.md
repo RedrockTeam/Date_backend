@@ -426,18 +426,9 @@
                   "date_type": "3",
                   "type": "约炮",
                   "category_id": "3",
+                  "people_limit":"12",
                   "gender_limit": "1",
                   "cost_model": "1",
-                  "academy_limit": [
-                  {
-                  "selectmodel": "2",
-                  "name": "计算机"
-                  },
-                  {
-                  "selectmodel": "2",
-                  "name": "传媒"
-                  }
-                  ],
                   "grade_limit": [
                   {
                   "selectmodel": "1",

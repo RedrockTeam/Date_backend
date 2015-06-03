@@ -109,7 +109,7 @@ class DateController extends BaseController {
             'gender_limit' => $input['gender_limit'],
             'apply_num' => 0,
             'sure_num' => 0,
-            'limit_num' => 0,
+            'limit_num' => $input['date_people'],
             'score' => 0,
             'scored_num' => 0,
             'status' => 2,
