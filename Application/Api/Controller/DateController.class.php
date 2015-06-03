@@ -132,6 +132,7 @@ class DateController extends BaseController {
 //                }
 //            }
 //            if($input['grade_limit'] && $input['grade_select_model']){
+            if(is_array($input['grade_limit'])){
                 foreach($input['grade_limit'] as $v){
                     $grade = [
                         'date_id' => $date_id,
@@ -140,7 +141,16 @@ class DateController extends BaseController {
                         'limit' => $v,
                     ];
                     $limit->data($grade)->add();
-//                }
+                }
+            }
+            else {
+                $grade = [
+                    'date_id' => $date_id,
+                    'selectmodel' => $input['grade_select_model'],
+                    'condition' => 2,
+                    'limit' => $input['grade_limit'],
+                ];
+                $limit->data($grade)->add();
             }
         }
         $data = [
