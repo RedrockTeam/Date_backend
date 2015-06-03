@@ -110,11 +110,7 @@
                             "title": "来约炮!",
                             "date_time": "1529456317",
                             "created_at": "1429446317",
-<<<<<<< HEAD
                             "cost_model": "1",//1AA, 2我请客, 3求请客
-=======
-                            "cost_model": "1",
->>>>>>> 08a037b1ce4b07375f2549a1c7f0702809443127
                             "content": "test",
                             "place": "重邮宾馆",
                             "score": "0"
