@@ -385,7 +385,7 @@
 				"date_place": "约会地点",
 				"date_people": "限制人数",
 				"gender_limit": ""	//0不限, 1男, 2女, 有默认值, 不限的话可以不用传
-				"grade_limit": "[1,2]", //数组!!!年级限制 2011 2012 2013, 如果没有限制, grade_limit和grade_select_model就别传
+				"grade_limit": "[1,2]", //数组!!!年级限制 1 -> 2011 2 -> 2012 3 -> 2013, 如果没有限制, grade_limit和grade_select_model就别传
 				"grade_select_model": "", //1正选(默认), 2反选,如果有年级限制就必须有这个
 				"cost_model": "", int 看ER图
 				"uid": "",
