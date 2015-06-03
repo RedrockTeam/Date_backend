@@ -343,7 +343,7 @@ class DateController extends BaseController {
             return false;
         if(mb_strlen(trim($input['title']), 'utf8') > 10 || mb_strlen($input['title']) <= 0)//标题
             return false;
-        if(mb_strlen(trim($input['content']), 'utf8') > 150 || mb_strlen($input['content']) <= 0)//内容
+        if(mb_strlen(trim($input['content']), 'utf8') > 150 || mb_strlen($input['content']) < 0)//内容
             return false;
         if(mb_strlen($input['date_place'], 'utf8') > 15 || mb_strlen($input['date_place']) <= 0)//野战地点
             return false;
