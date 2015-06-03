@@ -116,21 +116,22 @@ class DateController extends BaseController {
         ];
         $date = new DateModel();
         $id = $date->add($dateInfo);
-        if( ($input['academy_limit'] && $input['academy_select_model']) || ($input['grade_limit'] && $input['grade_select_model']) ){
+        if($input['grade_limit'] && $input['grade_select_model']){
             $limit = new DateLimitModel();
             $date_id = $id;
-            if($input['academy_limit'] && $input['academy_select_model']){
-                foreach($input['academy_limit'] as $v){
-                    $academy = [
-                        'date_id' => $date_id,
-                        'selectmodel' => $input['academy_select_model'],
-                        'condition' => 2,
-                        'limit' => $v,
-                    ];
-                    $limit->data($academy)->add();
-                }
-            }
-            if($input['grade_limit'] && $input['grade_select_model']){
+//            ($input['academy_limit'] && $input['academy_select_model']) ||
+//            if($input['academy_limit'] && $input['academy_select_model']){
+//                foreach($input['academy_limit'] as $v){
+//                    $academy = [
+//                        'date_id' => $date_id,
+//                        'selectmodel' => $input['academy_select_model'],
+//                        'condition' => 2,
+//                        'limit' => $v,
+//                    ];
+//                    $limit->data($academy)->add();
+//                }
+//            }
+//            if($input['grade_limit'] && $input['grade_select_model']){
                 foreach($input['grade_limit'] as $v){
                     $grade = [
                         'date_id' => $date_id,
@@ -139,7 +140,7 @@ class DateController extends BaseController {
                         'limit' => $v,
                     ];
                     $limit->data($grade)->add();
-                }
+//                }
             }
         }
         $data = [
