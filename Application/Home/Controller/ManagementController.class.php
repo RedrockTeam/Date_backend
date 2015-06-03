@@ -6,7 +6,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class ManagementController extends Controller {
-	private $pageTotal=3;
+	private $pageTotal=15;
 	private function getFunctionInfo(){//功能路由
 		$function['function_info']=array(
 		     0=>array(
@@ -26,6 +26,16 @@ class ManagementController extends Controller {
 					  'name'=> '约会信息',
 					),
 				),
+			 ),
+			 9=>array(
+				 'src'=> '',
+				 'name'=> '广告管理',
+				 'nextTag' =>array(//二级导航
+					 0=>array(
+						 'src'=> U('home/DataEdit/index?table=广告修改'),
+						 'name'=> '广告修改',
+					 ),
+				 ),
 			 ),
 			 900=>array(
 				'src'=> U('home/management/LOGOUT'),

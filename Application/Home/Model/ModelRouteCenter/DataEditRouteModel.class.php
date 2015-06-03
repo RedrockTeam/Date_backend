@@ -9,13 +9,15 @@ use Think\Model;
 class DataEditRouteModel extends Model {
 	protected $autoCheckFields =false;
 	protected $dataModelArray=array(
-		'用户信息'=>'UsersModel',
-		'约会信息'=>'DateModel',
+		'用户信息'=>'DataEditModel\UsersModel',
+		'约会信息'=>'DataEditModel\DateModel',
+
+		'广告修改'=>'Advertise\AdvertiseModel',
 	);
 
 	public function returnTableInfo($route){
 		$route = trim($route);
-		$model = '\\Home\\Model\\DataEditModel\\'.$this->dataModelArray["$route"];
+		$model = '\\Home\\Model\\'.$this->dataModelArray["$route"];
 		$returnArr = new $model();
 		return $returnArr->returnTableInfo();
 	}
