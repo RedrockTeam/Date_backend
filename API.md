@@ -38,8 +38,8 @@
 
 2. 修改个人资料
         
-        //没写...
-		url:  http://106.184.7.12:8002/index.php/api/person/editpersonalinfo
+        //todo 性别有点问题, 需要考虑
+		url:  http://106.184.7.12:8002/index.php/api/person/editdata
 
 		post:
 			{
@@ -301,8 +301,10 @@
 		url: http://106.184.7.12:8002/index.php/api/date/datelist
 		post:
 		{
+			"uid": "",
+			"token": "",
 			"date_type": 0, //默认为0, 即所有约会类型
-			"order": "", //.....
+			"order": "", //...
 		}	
 
 		return

@@ -57,8 +57,9 @@ class PersonalController extends BaseController {
         $userDate = new UserDateModel();
         if (!$userDate->joincheck($uid, $get_uid)){
             $data = [
-                'info' => '权限不够',
-                'status' => 403
+                'data' => $users->getUserLittleInfo($get_uid),
+                'info' => '成功',
+                'status' => 200
             ];
             $this->ajaxReturn($data);
         }

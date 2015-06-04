@@ -13,7 +13,7 @@ class DateController extends BaseController {
         $input = I('post.');
         $type = $input['date_type'];
 
-        if(!is_numeric($input['page'])) {
+        if(isset($input['page']) && !is_numeric($input['page'])) {
             $data = [
                 'status' => 403,
                 'info' => '参数错误1'
@@ -24,7 +24,7 @@ class DateController extends BaseController {
             $page = $input['page']>0 ? $input['page']:1;
         }
 
-        if(!is_numeric($input['size'])) {
+        if(isset($input['size']) && !is_numeric($input['size'])) {
             $data = [
                 'status' => 403,
                 'info' => '参数错误2'

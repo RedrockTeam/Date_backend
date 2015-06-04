@@ -26,4 +26,10 @@ class UsersModel extends Model {
         $map['users.id'] = $uid;
         return $this->where($map)->join("LEFT JOIN academy ON users.academy = academy.id")->field('users.id, head, signature, nickname, gender, grade,  users.academy as academy_id, academy.name as academy, qq, weixin, telephone')->find();
     }
+
+    //取用户部分信息
+    public function getUserLittleInfo ($uid) {
+        $map['users.id'] = $uid;
+        return $this->where($map)->join("LEFT JOIN academy ON users.academy = academy.id")->field('users.id, head, signature, nickname, gender, grade,  users.academy as academy_id, academy.name as academy')->find();
+    }
 }

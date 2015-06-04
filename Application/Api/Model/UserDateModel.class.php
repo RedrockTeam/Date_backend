@@ -41,7 +41,7 @@ class UserDateModel extends Model {
         $map = [
             'date.user_id' => $uid,
             'user_date.user_id' => $get_uid,
-            'user_date.status' => ['neq',0]
+            'user_date.status' => 1
         ];
         $num = $this->where($map)->join('JOIN date ON user_date.date_id = date.id')->count();
         if($num > 0)
