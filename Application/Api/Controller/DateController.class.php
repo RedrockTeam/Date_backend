@@ -16,7 +16,7 @@ class DateController extends BaseController {
         if(isset($input['page']) && !is_numeric($input['page'])) {
             $data = [
                 'status' => 403,
-                'info' => '参数错误1'
+                'info' => '页码必须为数字'
             ];
             $this->ajaxReturn($data);
         }
@@ -27,7 +27,7 @@ class DateController extends BaseController {
         if(isset($input['size']) && !is_numeric($input['size'])) {
             $data = [
                 'status' => 403,
-                'info' => '参数错误2'
+                'info' => '每页长度必须为数字'
             ];
             $this->ajaxReturn($data);
         }

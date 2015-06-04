@@ -120,9 +120,8 @@ class PersonalController extends BaseController {
             'telephone' => $input['telephone'],
             'weixin' => $input['weixin'],
         ];
-        $gender = M('users')->where($map)->getField('gender');
+        $gender = M('users')->where($map)->getField('gender');//检查性别是否已存在
         if($gender == null) {
-
             M('users')->where($map)->data(['gender' => $input['gender']])->save();
         }
         if(M('users')->where($map)->data($data)->save()) {
