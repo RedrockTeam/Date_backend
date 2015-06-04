@@ -65,8 +65,11 @@ class DateModel extends Model {
 //            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
 //            $v['academy_limit'] = $academy_limit;
             if($grade_limit != null) {
-                foreach ($grade_limit as $va)
+                foreach ($grade_limit as $va){
                     $v['grade_limit'][] = $va['id'];
+                    $grade_map['id'] =  $va['id'];
+                    $v['grade'][] = M('grade')->where($grade_map)->getField('name');
+                }
             }
             else{
                 $v['grade_limit'] = [];
