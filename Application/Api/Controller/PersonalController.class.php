@@ -92,7 +92,7 @@ class PersonalController extends BaseController {
     }
 
     //修改个人资料
-    public function editPerson () {
+    public function editPerson () {//todo 性别怎么办!
         $input = I('post.');
         $uid = $input['uid'];
         if(trim($input['nickname'] == null)) {
