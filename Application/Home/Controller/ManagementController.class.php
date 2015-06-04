@@ -6,34 +6,14 @@
 namespace Home\Controller;
 use Think\Controller;
 class ManagementController extends Controller {
-	private $pageTotal=3;
-	private function getFunctionInfo(){//功能路由
-		$function['function_info']=array(
-		     0=>array(
-				'src'=> U('home/management/index'),
-				'name'=> '控制台',
-			 ),
-			 1=>array(
-				'src'=> '',
-				'name'=> '数据后台',
-				'nextTag' =>array(//二级导航
-					0=>array(
-					  'src'=> U('home/DataEdit/index?table=用户信息'),
-					  'name'=> '用户信息',
-					),
-					1=>array(
-					  'src'=> U('home/DataEdit/index?table=约会信息'),
-					  'name'=> '约会信息',
-					),
-				),
-			 ),
-			 900=>array(
-				'src'=> U('home/management/LOGOUT'),
-				'name'=> '退出登录',
-			 ),
-		);
-		
-		return $function;
+	private $pageTotal;
+	private $function;
+
+
+	private function setInfo(){//返回路由
+		$m = new \Home\Model\ManagementNav\ManagementNavModel();
+		$this->pageTotal = $m->returnTotalPage();//页数
+		$this->function=$m->returnNavigation();//导航
 	}
 	
 	public function index(){
@@ -58,7 +38,7 @@ class ManagementController extends Controller {
 			'DATA_EDIT_URL'	  =>	U('Home:DataEdit/editData'),
 		);
 		
-		$function = $this->getFunctionInfo();//功能模块路由
+		$function = $this->function;//功能模块路由
 		$this->assign('loginUser',$loginUser);
 		$this->packgeAssign($packge);
 		$this->packgeAssign($function);
@@ -67,6 +47,7 @@ class ManagementController extends Controller {
     
 	/*封装模板替换*/
 	public function packgeAssign($packge=array()){
+
 		foreach($packge as $key => $value){
 			$this->assign($key,$value);
 		}
@@ -125,7 +106,7 @@ class ManagementController extends Controller {
 
 		}
 
-
+		$this->setInfo();
 		$list = $User->field($field, $mod)->order($order)->page($nowPage. ',' . $this->pageTotal)->select();
 		$count = $User->field($field, $mod)->count();// 查询满足要求的总记录数
 		$dfield =  $list[0];

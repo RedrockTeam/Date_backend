@@ -20,9 +20,10 @@ class DataEditController extends ManagementController {
 		}
 
 		public function editData(){
+			$table = session('tableInfo')['table'];
 			$mainValue=I('post.mainValue');
 			$mainKey = $this->getSession('mainKey');
-			//print_r("$mainKey = '$mainValue'");
+//			print_r($table);
 //			exit();
 			$find = $this->packFind("$mainKey = '$mainValue'");
 
@@ -55,8 +56,10 @@ class DataEditController extends ManagementController {
 				$info = '修改';
 			}
 
-			if($r = D("$table")->$do($data))	$this->success("$info 成功",$backUrl);
-			else	$this->error("$info 失败:<br>未修改原值");
+			if($r = D("$table")->$do($data)){
+				//数据联动处理,暂未添加
+				$this->success("$info 成功",$backUrl);
+			}else{$this->error("$info 失败:<br>未修改原值");}
 
 		}
 }
