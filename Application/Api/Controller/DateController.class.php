@@ -137,7 +137,7 @@ class DateController extends BaseController {
                     $grade = [
                         'date_id' => $date_id,
                         'selectmodel' => $input['grade_select_model'],
-                        'condition' => 2,
+                        'condition' => 1,
                         'limit' => $v,
                     ];
                     $limit->data($grade)->add();
@@ -147,7 +147,7 @@ class DateController extends BaseController {
                 $grade = [
                     'date_id' => $date_id,
                     'selectmodel' => $input['grade_select_model'],
-                    'condition' => 2,
+                    'condition' => 1,
                     'limit' => $input['grade_limit'],
                 ];
                 $limit->data($grade)->add();
