@@ -38,7 +38,7 @@
 
 2. 修改个人资料
         
-        //todo 性别有点问题, 需要考虑
+        //attention 性别只有第一次能修改!
 		url:  http://106.184.7.12:8002/index.php/api/person/editdata
 
 		post:
@@ -46,6 +46,7 @@
 				"uid": "",
 				"nickname":"sb",
 				"signature":"xxxxxx",
+				"gender":"1", //1男, 2女
 				"telephone": "",
 				"qq": "",
 				"weixin": "",

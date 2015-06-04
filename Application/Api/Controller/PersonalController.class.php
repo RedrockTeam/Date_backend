@@ -98,7 +98,7 @@ class PersonalController extends BaseController {
         $uid = $input['uid'];
         if(trim($input['nickname'] == null)) {
             $data = [
-                'info' => '联系方式不能都为空',
+                'info' => '昵称不能为空',
                 'status' => 403
             ];
             $this->ajaxReturn($data);
@@ -120,6 +120,11 @@ class PersonalController extends BaseController {
             'telephone' => $input['telephone'],
             'weixin' => $input['weixin'],
         ];
+        $gender = M('users')->where($map)->getField('gender');
+        if($gender == null) {
+
+            M('users')->where($map)->data(['gender' => $input['gender']])->save();
+        }
         if(M('users')->where($map)->data($data)->save()) {
             $data = [
                 'info' => '成功',
