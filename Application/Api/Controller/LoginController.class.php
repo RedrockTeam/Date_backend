@@ -55,6 +55,7 @@ class LoginController extends Controller {
             else {
                 $new = [
                     'stu_num' => $username,
+                    'head' => '',
                     'created_at' => time(),
                     'updated_at' => time(),
                     'token' => $token
