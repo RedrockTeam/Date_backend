@@ -25,6 +25,7 @@ class LoginController extends Controller {
             $data = [
                     'status' => 200,
                     'info' => '登录成功, 可以开始约炮→_→',
+                    'head' => session('head'),
                     'token' => session('token'),
                     'uid' => session('uid')
             ];
@@ -50,17 +51,19 @@ class LoginController extends Controller {
             if($user->where($map)->data(['updated_at' => time(),'token'=>$token])->save()) {
                 $info = $user->where($map)->find();
                 session('uid', $info['id']);
+                session('head', $info['head']);
                 return true;
             }
             else {
                 $new = [
                     'stu_num' => $username,
-                    'head' => '',
+                    'head' => 'http://106.184.7.12:8002/Public/default.jpg',
                     'created_at' => time(),
                     'updated_at' => time(),
                     'token' => $token
                 ];
                 $info = $user->add($new);
+                session('head', 'http://106.184.7.12:8002/Public/default.jpg');
                 session('uid', $info['id']);
                 return true;
             }
