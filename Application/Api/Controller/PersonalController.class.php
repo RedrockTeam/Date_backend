@@ -77,6 +77,14 @@ class PersonalController extends BaseController {
             'date_id' => $input['date_id'],
             'user_id' => $input['uid']
         ];
+        $count = $collection->data($date)->count();
+        if($count > 0){
+            $data = [
+                'info' => '你已收藏此条约会!',
+                'status' => 403
+            ];
+            $this->ajaxReturn($data);
+        }
         if($collection->data($date)->add()) {
             $data = [
                 'info' => '成功',
