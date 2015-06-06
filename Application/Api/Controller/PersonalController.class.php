@@ -70,11 +70,12 @@ class PersonalController extends BaseController {
     }
 
     //收藏约会
-    public function collect ($uid, $date_id) {
+    public function collect () {
+        $input = I('post.');
         $collection = new CollectionModel();
         $date = [
-            'date_id' => $date_id,
-            'user_id' => $uid
+            'date_id' => $input['date_id'],
+            'user_id' => $input['uid']
         ];
         if($collection->data($date)->add()) {
             $data = [
@@ -93,8 +94,27 @@ class PersonalController extends BaseController {
     }
 
     //取消收藏
-    public function delCollection() {
+    public function rmCollection() {
         $input = I('post.');
+        $date = [
+            'date_id' => $input['date_id'],
+            'user_id' => $input['uid']
+        ];
+        $collection = new CollectionModel();
+        if($collection->where($date)->delete()) {
+            $data = [
+                'info' => '成功',
+                'status' => 200
+            ];
+            $this->ajaxReturn($data);
+        }
+        else{
+            $data = [
+                'info' => '没有这条收藏记录!',
+                'status' => 409
+            ];
+            $this->ajaxReturn($data);
+        }
     }
     //修改个人资料
     public function editPerson () {//todo 性别怎么办!

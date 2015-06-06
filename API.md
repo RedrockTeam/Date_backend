@@ -182,6 +182,23 @@
             				"status": 200,
             				"info":"成功"
             			}
+7. 取消收藏约会
+
+		url:  http://106.184.7.12:8002/index.php/api/person/rmcollect
+        
+        		post:
+        			{
+        				"uid": "",
+        				"date_id":"",
+        				"token": "",
+        			}
+        			
+        return
+        
+                            {
+            				"status": 200,//409
+            				"info":"成功"//没有这条收藏记录
+            			}
         
 --------------
 

@@ -55,6 +55,7 @@ return array(
 
         //个人信息模块
         'person/collect' => 'Personal/Collect',//收藏约会
+        'person/rmcollection' => 'Personal/rmCollection',//取消收藏约会
         'person/collection' => 'Personal/getCollection',//获取个人收藏
         'person/join' => 'Personal/getJoin',//获取参加的约会
         'person/create' => 'Personal/getCreate',//获取发起的约会
