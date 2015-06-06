@@ -407,7 +407,7 @@ class DateController extends BaseController {
             'status' => 2
         ];
         $num = $userDate->where($map)->count();
-        if($num > 10)
+        if($num > 1000)//todo 生产环境里记得改10
             return false;
         return true;
     }
