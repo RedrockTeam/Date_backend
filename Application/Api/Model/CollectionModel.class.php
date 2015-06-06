@@ -11,6 +11,7 @@ class CollectionModel extends Model {
                     ->join('JOIN date ON collection.date_id = date.id')
                     ->join('JOIN users ON date.user_id = users.id')
                     ->field('date_id, date.user_id, date.status as date_status, head, signature, nickname, gender, title, date_time, date.created_at, cost_model, content, place, score')
+                    ->order('collection.id desc')
                     ->select();
     }
 }

@@ -13,10 +13,10 @@ class DateController extends BaseController {
         $input = I('post.');
         $type = $input['date_type'];
 
-        if(!is_numeric($input['page'])) {
+        if(isset($input['page']) && !is_numeric($input['page'])) {
             $data = [
                 'status' => 403,
-                'info' => '参数错误1'
+                'info' => '页码必须为数字'
             ];
             $this->ajaxReturn($data);
         }
@@ -24,10 +24,10 @@ class DateController extends BaseController {
             $page = $input['page']>0 ? $input['page']:1;
         }
 
-        if(!is_numeric($input['size'])) {
+        if(isset($input['size']) && !is_numeric($input['size'])) {
             $data = [
                 'status' => 403,
-                'info' => '参数错误2'
+                'info' => '每页长度必须为数字'
             ];
             $this->ajaxReturn($data);
         }
@@ -58,7 +58,7 @@ class DateController extends BaseController {
         $list = new DateModel();
         $uid = $input['uid'];
         $date_id = $input['date_id'];
-        $data['data'] = $list->getDetailInfo($date_id);
+        $data['data'] = $list->getDetailInfo($uid, $date_id);
         $common = new CommonController();
         $data['data']['user_score'] = $common->credit($uid);
         if($data['data']['user_score'] == null) {
@@ -85,13 +85,13 @@ class DateController extends BaseController {
         if(!$this->dataComplete($input['uid'])) {
             $data = [
                 'info' => '请先完善个人信息',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
         if (!$this->checkPaoNum($input['uid'])){
             $data = [
-                'status' => '403',
+                'status' => '409',
                 'info' => '超过同时约上限'
             ];
             $this->ajaxReturn($data);
@@ -99,47 +99,58 @@ class DateController extends BaseController {
 
         $dateInfo = [
             'user_id' => $input['uid'],
-            'title' => $input['title'],
+            'title' => trim($input['title']),
             'date_type' => $input['date_type'],
             'cost_model' => $input['cost_model'],
-            'content' => $input['content'],
-            'place' => $input['date_place'],
+            'content' => trim($input['content']),
+            'place' => trim($input['date_place']),
             'date_time' => $input['date_time'],
             'created_at' => time(),
             'gender_limit' => $input['gender_limit'],
             'apply_num' => 0,
             'sure_num' => 0,
-            'limit_num' => 0,
+            'limit_num' => $input['date_people'],
             'score' => 0,
             'scored_num' => 0,
             'status' => 2,
         ];
         $date = new DateModel();
         $id = $date->add($dateInfo);
-        if( ($input['academy_limit'] && $input['academy_select_model']) || ($input['grade_limit'] && $input['grade_select_model']) ){
+        if($input['grade_limit'] && $input['grade_select_model']){
             $limit = new DateLimitModel();
             $date_id = $id;
-            if($input['academy_limit'] && $input['academy_select_model']){
-                foreach($input['academy_limit'] as $v){
-                    $academy = [
-                        'date_id' => $date_id,
-                        'selectmodel' => $input['academy_select_model'],
-                        'condition' => 2,
-                        'limit' => $v,
-                    ];
-                    $limit->data($academy)->add();
-                }
-            }
-            if($input['grade_limit'] && $input['grade_select_model']){
+//            ($input['academy_limit'] && $input['academy_select_model']) ||
+//            if($input['academy_limit'] && $input['academy_select_model']){
+//                foreach($input['academy_limit'] as $v){
+//                    $academy = [
+//                        'date_id' => $date_id,
+//                        'selectmodel' => $input['academy_select_model'],
+//                        'condition' => 2,
+//                        'limit' => $v,
+//                    ];
+//                    $limit->data($academy)->add();
+//                }
+//            }
+//            if($input['grade_limit'] && $input['grade_select_model']){
+            if(is_array($input['grade_limit'])){
                 foreach($input['grade_limit'] as $v){
                     $grade = [
                         'date_id' => $date_id,
                         'selectmodel' => $input['grade_select_model'],
-                        'condition' => 2,
+                        'condition' => 1,
                         'limit' => $v,
                     ];
                     $limit->data($grade)->add();
                 }
+            }
+            else {
+                $grade = [
+                    'date_id' => $date_id,
+                    'selectmodel' => $input['grade_select_model'],
+                    'condition' => 1,
+                    'limit' => $input['grade_limit'],
+                ];
+                $limit->data($grade)->add();
             }
         }
         $data = [
@@ -168,7 +179,7 @@ class DateController extends BaseController {
         if(!$this->checkSelf($uid, $date_id)) {
             $data = [
                 'info' => '你不能约自己!',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -176,7 +187,7 @@ class DateController extends BaseController {
         if(!$this->dataComplete($uid)) {
             $data = [
                 'info' => '请先完善个人信息',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -184,7 +195,7 @@ class DateController extends BaseController {
         if(!$userDate->joined($uid, $date_id)) {
             $data = [
                 'info' => '你已经约过了',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -192,7 +203,7 @@ class DateController extends BaseController {
         if(!$this->checkTime($date_id)) {
             $data = [
                 'info' => '该约会已结束',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -200,7 +211,7 @@ class DateController extends BaseController {
         if(!$this->checkReportNum($uid)) {
             $data = [
                 'info' => '你已经到达同时约的上限了',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -208,7 +219,7 @@ class DateController extends BaseController {
         if(!$this->checkConditions($uid, $date_id)) {
             $data = [
                 'info' => '你不符合限制条件',
-                'status' => '403'
+                'status' => '409'
             ];
             $this->ajaxReturn($data);
         }
@@ -341,9 +352,9 @@ class DateController extends BaseController {
             return false;
         if(!is_numeric($input['date_type'])) //约会类型id
             return false;
-        if(mb_strlen($input['title'], 'utf8') > 10 || mb_strlen($input['title']) <= 0)//标题
+        if(mb_strlen(trim($input['title']), 'utf8') > 10 || mb_strlen($input['title']) <= 0)//标题
             return false;
-        if(mb_strlen($input['content'], 'utf8') > 25 || mb_strlen($input['content']) <= 0)//内容
+        if(mb_strlen(trim($input['content']), 'utf8') > 150)//内容
             return false;
         if(mb_strlen($input['date_place'], 'utf8') > 15 || mb_strlen($input['date_place']) <= 0)//野战地点
             return false;
@@ -396,7 +407,7 @@ class DateController extends BaseController {
             'status' => 2
         ];
         $num = $userDate->where($map)->count();
-        if($num > 10)
+        if($num > 1000)//todo 生产环境里记得改10
             return false;
         return true;
     }

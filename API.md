@@ -38,14 +38,15 @@
 
 2. 修改个人资料
         
-        //没写...
-		url:  http://106.184.7.12:8002/index.php/api/person/editpersonalinfo
+        //attention 性别只有第一次能修改!
+		url:  http://106.184.7.12:8002/index.php/api/person/editdata
 
 		post:
 			{
 				"uid": "",
 				"nickname":"sb",
 				"signature":"xxxxxx",
+				"gender":"1", //1男, 2女
 				"telephone": "",
 				"qq": "",
 				"weixin": "",
@@ -59,7 +60,7 @@
 			}
 3. 取个人收藏列表
 
-            url:  http://106.184.7.12:8002/index.php/api/person/collection
+            url:  http://106.184.7.12:8002/index.php/api/person/collection //排序方式按收藏的时间排序
             post: {
             uid:"",
             token:""
@@ -110,11 +111,7 @@
                             "title": "来约炮!",
                             "date_time": "1529456317",
                             "created_at": "1429446317",
-<<<<<<< HEAD
                             "cost_model": "1",//1AA, 2我请客, 3求请客
-=======
-                            "cost_model": "1",
->>>>>>> 08a037b1ce4b07375f2549a1c7f0702809443127
                             "content": "test",
                             "place": "重邮宾馆",
                             "score": "0"
@@ -184,6 +181,23 @@
                             {
             				"status": 200,
             				"info":"成功"
+            			}
+7. 取消收藏约会
+
+		url:  http://106.184.7.12:8002/index.php/api/person/rmcollect
+        
+        		post:
+        			{
+        				"uid": "",
+        				"date_id":"",
+        				"token": "",
+        			}
+        			
+        return
+        
+                            {
+            				"status": 200,//409
+            				"info":"成功"//没有这条收藏记录
             			}
         
 --------------
@@ -275,8 +289,39 @@
         return:
                 {
                     'status' => 200,
+                    'info' => '成功',
                     'letter' => 4//未读私信数量
                 };
+                
+                
+4. 获取单独某条私信
+
+        url: http://106.184.7.12:8002/index.php/api/letter/detailletter
+        post:
+                {
+                    "uid": "",
+                    "token": "",
+                    "letter_id":""
+                }
+                
+        return:
+        
+                {
+                    data:{
+                                                 "letter" : 2,
+                                                 "user_id" : 123,
+                                                 "user_name" : "Lecion",
+                                                 "user_signature" : "个性签名",
+                                                 "user_avatar" : "http://****.jpg",	//用户头像
+                                                 "user_gender" : 2, 		//1是男，2是女
+                                                 "content" : "约了我的炮",
+                                                 "date_id" : 12,		//私信中活动的id，只针对系统发送的含有活动的私信
+                                                 "letter_status" : 1,	//私信状态，1 => 未读， 2 => 已读
+                                                 "user_date_status" : 2,	//用户和约会的状态,0 => 拒绝, 1 => 接受, 2 => 默认（未处理）
+                                             },
+                     "status":200,
+                     "info": "成功"                       
+                }
 ------------------------------------
 
 ###约会信息
@@ -305,8 +350,10 @@
 		url: http://106.184.7.12:8002/index.php/api/date/datelist
 		post:
 		{
+			"uid": "",
+			"token": "",
 			"date_type": 0, //默认为0, 即所有约会类型
-			"order": "", //.....
+			"order": "", //...
 		}	
 
 		return
@@ -389,8 +436,8 @@
 				"date_place": "约会地点",
 				"date_people": "限制人数",
 				"gender_limit": ""	//0不限, 1男, 2女, 有默认值, 不限的话可以不用传
-				"grade_limit": "2011", //年级限制 2011 2012 2013, 如果没有限制, grade_limit和grade_select_model就别传
-				"grade_select_model": "", //1正选(默认), 2反选,
+				"grade_limit": "[1,2]", //数组!!!年级限制 1 -> 2011 2 -> 2012 3 -> 2013, 如果没有限制, grade_limit和grade_select_model就别传
+				"grade_select_model": "", //1正选(默认), 2反选,如果有年级限制就必须有这个
 				"cost_model": "", int 看ER图
 				"uid": "",
 				"token": ""
@@ -430,18 +477,9 @@
                   "date_type": "3",
                   "type": "约炮",
                   "category_id": "3",
+                  "people_limit":"12",
                   "gender_limit": "1",
                   "cost_model": "1",
-                  "academy_limit": [
-                  {
-                  "selectmodel": "2",
-                  "name": "计算机"
-                  },
-                  {
-                  "selectmodel": "2",
-                  "name": "传媒"
-                  }
-                  ],
                   "grade_limit": [
                   {
                   "selectmodel": "1",

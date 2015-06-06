@@ -21,6 +21,22 @@ class LetterController extends BaseController {
         $this->ajaxReturn($data);
     }
 
+    //获取一条私信
+    public function getDetailLetter () {
+        $input = I('post.');
+        $letter = new LetterModel();
+        $info = $letter->detailLetter($input['uid'], $input['letter_id']);
+        $common = new CommonController();
+        $info['user_score'] = $common->credit($info['user_id']);
+        $data = [
+            'data' => $info,
+            'status' => 200,
+            'info' => '请求成功',
+        ];
+//        print_r($data);
+        $this->ajaxReturn($data);
+    }
+
     //检查是否有未读私信
     public function letterStatus () {
         $input = I('post.');

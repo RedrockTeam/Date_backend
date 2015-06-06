@@ -29,7 +29,7 @@ class CommonController extends BaseController{
         //检查约会人数
         if($date_row['sure_num'] >= $date_row['limit_num']){
             $data = [
-                "status" => 403,
+                "status" => 410,
                 "info" => "约会人数已满"
             ];
            return $data;
@@ -38,7 +38,7 @@ class CommonController extends BaseController{
         //检查约会是否超时
         if($date_row['date_time'] < time()){
             $data = [
-                "status" => 403,
+                "status" => 410,
                 "info" => "约会已过期"
             ];
             $map = [

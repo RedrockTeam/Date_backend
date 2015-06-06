@@ -51,9 +51,11 @@ return array(
         'letter/getletter' => 'Letter/getLetter',//获取私信
         'letter/letterstatus' => 'Letter/letterStatus',//查看未读私信数量
         'letter/dateaction' => 'Letter/dateAction',//私信中接受/拒绝约
+        'letter/detailletter' => 'Letter/getDetailLetter',//某条私信详情
 
         //个人信息模块
         'person/collect' => 'Personal/Collect',//收藏约会
+        'person/rmcollection' => 'Personal/rmCollection',//取消收藏约会
         'person/collection' => 'Personal/getCollection',//获取个人收藏
         'person/join' => 'Personal/getJoin',//获取参加的约会
         'person/create' => 'Personal/getCreate',//获取发起的约会
