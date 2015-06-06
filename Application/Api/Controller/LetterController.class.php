@@ -25,17 +25,15 @@ class LetterController extends BaseController {
     public function getDetailLetter () {
         $input = I('post.');
         $letter = new LetterModel();
-        $info = $letter->detailLetter($input['letter_id']);
+        $info = $letter->detailLetter($input['uid'], $input['letter_id']);
         $common = new CommonController();
-        foreach($info as $key => $v){
-            $info[$key]['user_score'] = $common->credit($v['user_id']);
-        }
+        $info['user_score'] = $common->credit($info['user_id']);
         $data = [
             'data' => $info,
             'status' => 200,
             'info' => '请求成功',
         ];
-
+//        print_r($data);
         $this->ajaxReturn($data);
     }
 
