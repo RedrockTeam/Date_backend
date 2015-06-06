@@ -77,7 +77,7 @@ class PersonalController extends BaseController {
             'date_id' => $input['date_id'],
             'user_id' => $input['uid']
         ];
-        $count = $collection->data($date)->count();
+        $count = $collection->where($date)->count();
         if($count > 0){
             $data = [
                 'info' => '你已收藏此条约会!',
