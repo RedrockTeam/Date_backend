@@ -92,6 +92,10 @@ class PersonalController extends BaseController {
         }
     }
 
+    //取消收藏
+    public function delCollection() {
+        $input = I('post.');
+    }
     //修改个人资料
     public function editPerson () {//todo 性别怎么办!
         $input = I('post.');
