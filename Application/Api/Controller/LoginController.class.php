@@ -55,15 +55,16 @@ class LoginController extends Controller {
                 return true;
             }
             else {
+                $default = 'http://106.184.7.12:8002/Public/default.jpg';
                 $new = [
                     'stu_num' => $username,
-                    'head' => 'http://106.184.7.12:8002/Public/default.jpg',
+                    'head' => $default,
                     'created_at' => time(),
                     'updated_at' => time(),
                     'token' => $token
                 ];
                 $info = $user->add($new);
-                session('head', 'http://106.184.7.12:8002/Public/default.jpg');
+                session('head', $default);
                 session('uid', $info['id']);
                 return true;
             }
