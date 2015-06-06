@@ -96,40 +96,56 @@ class PersonalController extends BaseController {
     public function editPerson () {//todo 性别怎么办!
         $input = I('post.');
         $uid = $input['uid'];
-        if(trim($input['nickname'] == null)) {
-            $data = [
+
+        if(isset($input['nickname']) && trim($input['nickname']) == null && strlen(trim($input['nickname'])) > 7) {
+            $info = [
                 'info' => '昵称不能为空',
                 'status' => 403
             ];
-            $this->ajaxReturn($data);
+            $this->ajaxReturn($info);
         }
-        if($input['qq'] == null && $input['telephone'] == null && $input['weixin'] == null) {
-            $data = [
-                'info' => '联系方式不能都为空',
-                'status' => 403
-            ];
-            $this->ajaxReturn($data);
+        else{
+            $data['nickname'] = $input['nickname'];
         }
+
+        if(isset($input['qq']) || isset($input['telephone']) || $input['weixin']){
+            if($input['qq'] == null && $input['telephone'] == null && $input['weixin'] == null) {
+                $info = [
+                    'info' => '联系方式不能都为空',
+                    'status' => 403
+                ];
+                $this->ajaxReturn($info);
+            }
+            else {
+                if(isset($input['qq']))
+                    $data['qq'] = $input['qq'];
+                if(isset($input['telephone']))
+                    $data['telephone'] = $input['telephone'];
+                if(isset($input['weixin']))
+                    $data['weixin'] = $input['weixin'];
+            }
+        }
+
+        if(isset($input['signature'])){
+            $data['signature'] = trim($input['signature']);
+        }
+
         $map = [
             'id' => $uid,
         ];
-        $data = [
-            'nickname' => $input['nickname'],
-            'signature' => trim($input['signature']),
-            'qq' => $input['qq'],
-            'telephone' => $input['telephone'],
-            'weixin' => $input['weixin'],
-        ];
+
         $gender = M('users')->where($map)->getField('gender');//检查性别是否已存在
+
         if($gender == null) {
             M('users')->where($map)->data(['gender' => $input['gender']])->save();
         }
+
         if(M('users')->where($map)->data($data)->save()) {
-            $data = [
+            $info = [
                 'info' => '成功',
                 'status' => 200
             ];
-            $this->ajaxReturn($data);
+            $this->ajaxReturn($info);
         }
     }
 
