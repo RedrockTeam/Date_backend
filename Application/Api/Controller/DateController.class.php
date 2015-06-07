@@ -366,6 +366,8 @@ class DateController extends BaseController {
             return false;
         if(!is_numeric($input['cost_model']))//花费模式
             return false;
+        if(!$input['cost_model'] == 1 && $input['cost_model'] == 2 && !$input['cost_model'] == 3)
+            return false;
         if($input['academy_select_model']){
             if($input['academy_limit'] == null)//学院限制
                 return false;
