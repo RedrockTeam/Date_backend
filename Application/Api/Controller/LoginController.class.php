@@ -64,7 +64,8 @@ class LoginController extends Controller {
                     'updated_at' => time(),
                     'token' => $token
                 ];
-                $info = $user->add($new);
+                $user->add($new);
+                $info = $user->where(['stu_num'=>$username])->find();
                 session('head', $default_head);
                 session('uid', $info['id']);
                 return true;
