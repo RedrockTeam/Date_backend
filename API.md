@@ -184,7 +184,7 @@
             			}
 7. 取消收藏约会
 
-		url:  http://106.184.7.12:8002/index.php/api/person/rmcollect
+		url:  http://106.184.7.12:8002/index.php/api/person/rmcollecttion
         
         		post:
         			{
