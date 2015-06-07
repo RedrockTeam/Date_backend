@@ -55,7 +55,18 @@ class LetterController extends BaseController {
     public function dateAction () {
         $input = I('post.');
         $common = new CommonController();
-        $result = $common->dateAction($input['to_id'], $input['date_id'], $input['action']);
+        $result = $common->dateAction($uid, $input['to_id'], $input['date_id'], $input['action']);
+        $status = $input['action'] == 1? '接受':'拒绝';
+        $letter = new LetterModel();
+        $data = [
+            'from' => $input['uid'],
+            'to'   => $input['to_id'],
+            'content'=> $status.'你的约',
+            'time' => time(),
+            'status' => 0,
+            'type' => $input['action']
+        ];
+        $letter->add($data);
         $this->ajaxReturn($result);
     }
 }
