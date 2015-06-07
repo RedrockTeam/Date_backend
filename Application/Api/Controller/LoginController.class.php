@@ -59,6 +59,13 @@ class LoginController extends Controller {
                 $new = [
                     'stu_num' => $username,
                     'head' => $default_head,
+                    'signature' => '',
+                    'gender' => '',
+                    'grade' => '',
+                    'academy' => '',
+                    'qq' => '',
+                    'weixin' => '',
+                    'telephone' => '',
                     'nickname' => $username,
                     'created_at' => time(),
                     'updated_at' => time(),

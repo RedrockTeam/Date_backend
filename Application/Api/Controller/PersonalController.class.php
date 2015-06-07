@@ -163,6 +163,26 @@ class PersonalController extends BaseController {
         if(isset($input['signature'])){
             $data['signature'] = trim($input['signature']);
         }
+        if(isset($input['grade'])&&is_numeric($input['grade'])){
+            $data['grade'] = trim($input['grade']);
+        }
+        else{
+             $info = [
+                    'info' => '年级错误',
+                    'status' => 403
+                ];
+                $this->ajaxReturn($info);
+        }
+        if(isset($input['academy'])&&is_numeric($input['academy'])){
+            $data['academy'] = trim($input['academy']);
+        }
+        else{
+             $info = [
+                    'info' => '学院错误',
+                    'status' => 403
+                ];
+                $this->ajaxReturn($info);
+        }
 
         $map = [
             'id' => $uid,
@@ -170,7 +190,7 @@ class PersonalController extends BaseController {
 
         $gender = M('users')->where($map)->getField('gender');//检查性别是否已存在
 
-        if($gender == null) {
+        if(strlen($gender )== 0) {
             M('users')->where($map)->data(['gender' => $input['gender']])->save();
         }
 
