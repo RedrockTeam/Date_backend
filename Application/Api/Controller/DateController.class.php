@@ -518,6 +518,11 @@ class DateController extends BaseController {
         $user = new UsersModel();
         $map = ['id' => $uid];
         $info = $user->where($map)->find();
+        if ($info['academy'] == null) 
+            return false;
+        if ($info['gender'] == null) 
+            return false;
+
         if($info['qq'] == null && $info['weixin'] == null && $info['telephone'] == null)
             return false;
         else
