@@ -78,6 +78,7 @@ class PersonalController extends BaseController {
             'user_id' => $input['uid']
         ];
         $count = $collection->where($date)->count();
+
         if($count > 0){
             $data = [
                 'info' => '你已收藏此条约会!',
@@ -85,6 +86,7 @@ class PersonalController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
+
         if($collection->data($date)->add()) {
             $data = [
                 'info' => '成功',
