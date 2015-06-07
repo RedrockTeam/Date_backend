@@ -17,6 +17,7 @@ class DateModel extends DataTmpModel {
 			'users'=>' date.user_id = users.id ',
 			'date_type'=>' date.date_type  =  date_type.id ',
 			'status_date'=>'date.status = status_date.id',
-		]
+		],
+		'undo'=>['user_id'],
 	];
 }

@@ -9,17 +9,16 @@ class ManagementController extends Controller {
 	private $pageTotal;
 	private $function;
 
-
-	private function setInfo(){//返回路由
+	public function _initialize(){//返回路由
 		$m = new \Home\Model\ManagementNav\ManagementNavModel();
 		$this->pageTotal = $m->returnTotalPage();//页数
 		$this->function=$m->returnNavigation();//导航
+
 	}
 	
 	public function index(){
 		$this->set_info();
 	}
-	
 	
 	/*设置主模版基本信息 >> $location:路径 $des:模块 $info:说明信息 */
     public function set_info($location='index',$des='控制台',$info='版本信息处理'){
@@ -106,7 +105,7 @@ class ManagementController extends Controller {
 
 		}
 
-		$this->setInfo();
+		//$this->setNavInfo();
 		$list = $User->field($field, $mod)->order($order)->page($nowPage. ',' . $this->pageTotal)->select();
 		$count = $User->field($field, $mod)->count();// 查询满足要求的总记录数
 		$dfield =  $list[0];
@@ -114,15 +113,6 @@ class ManagementController extends Controller {
 		$Page  = new \Think\Page($count,$this->pageTotal);// 实例化分页类 传入总记录数和每页显示的记录数
 		$show  = $Page->show();// 分页显示输出
 
-
-//		$fiedd =array();
-//		foreach($dfield as $key => $value){
-//			$fiedd["$value"] = $key;
-//		}
-////
-//		print_r($field);
-//		exit();
-//		if(!$field){$field='*';}
 
 		session("tableInfo",$tableInfo);
 		session("field",$field);
@@ -213,7 +203,16 @@ class ManagementController extends Controller {
 						}
 						$feResult["$k"]['option'] = $tdsTrans;
 						$feResult["$k"]['field'] = $tmp4[1];
-						$inputTmp[] = $tmp4[1];
+
+						/* undo */
+						$undoFalg = 0;
+						foreach($tableInfo['undo'] as $undo_value){
+							if($undo_value==$tmp4[1]){
+								$undoFalg=1;
+							}
+						}
+						if($undoFalg==0){$inputTmp[] = $tmp4[1];}
+
 						unset($tdsTrans);
 
 
@@ -222,7 +221,7 @@ class ManagementController extends Controller {
 				}
 			}
 		}
-//		echo "<pre>";print_r($tmpfFv);echo "<pre>";
+//		echo "<pre>";print_r($inputTmp);echo "<pre>";
 //		exit();
 
 		session('editField',$inputTmp);
@@ -234,9 +233,6 @@ class ManagementController extends Controller {
 	}
 
 	public function getSession($name){
-//		if($name=='field' || $name=='editField'){
-//			return session($name);
-//		}
 		if($return = session($name) )	return $return;
 		else{
 			//exit($name);

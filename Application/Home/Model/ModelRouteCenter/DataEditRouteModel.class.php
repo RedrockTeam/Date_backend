@@ -17,9 +17,13 @@ class DataEditRouteModel extends Model {
 
 	public function returnTableInfo($route){
 		$route = trim($route);
-		$model = '\\Home\\Model\\'.$this->dataModelArray["$route"];
-		$returnArr = new $model();
-		return $returnArr->returnTableInfo();
+		if(isset($this->dataModelArray["$route"])) {
+			$route = $this->dataModelArray["$route"];
+			$model     = '\\Home\\Model\\' . $route;
+			$returnArr = new $model();
+
+			return $returnArr->returnTableInfo();
+		}
 	}
 
 }

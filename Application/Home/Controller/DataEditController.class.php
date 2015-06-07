@@ -21,9 +21,10 @@ class DataEditController extends ManagementController {
 
 		public function editData(){
 			$table = session('tableInfo')['table'];
+			$undo = session('tableInfo')['undo'];
 			$mainValue=I('post.mainValue');
 			$mainKey = $this->getSession('mainKey');
-//			print_r($table);
+//			print_r($undo);
 //			exit();
 			$find = $this->packFind("$mainKey = '$mainValue'");
 
@@ -31,6 +32,7 @@ class DataEditController extends ManagementController {
 
 			$value = end(explode(".",$mainKey));
 			$this->assign('mainKey',$value);
+			$this->assign('undo',$undo);
 			$this->assign('EDIT_URL',U('Home:DataEdit/edit'));
 			$this->set_info('DataEdit:edit',"修改数据表($table)"," 主键(".$mainKey.') >> '.$mainValue);
 		}
