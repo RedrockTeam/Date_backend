@@ -60,8 +60,6 @@ class LoginController extends Controller {
                     'stu_num' => $username,
                     'head' => $default_head,
                     'signature' => '',
-                    'gender' => '',
-                    'grade' => '',
                     'academy' => '',
                     'qq' => '',
                     'weixin' => '',
