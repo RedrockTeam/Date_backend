@@ -18,7 +18,7 @@ class CommonController extends BaseController{
         //检查约会记录是否存在
         if(!$row){
             $data = [
-                "status" => 404,
+                "status" => 409,
 				"info" => "没有这条约会记录"
             ];
            return $data;
@@ -29,7 +29,7 @@ class CommonController extends BaseController{
         //检查约会人数
         if($date_row['sure_num'] >= $date_row['limit_num']){
             $data = [
-                "status" => 410,
+                "status" => 409,
                 "info" => "约会人数已满"
             ];
            return $data;
@@ -38,7 +38,7 @@ class CommonController extends BaseController{
         //检查约会是否超时
         if($date_row['date_time'] < time()){
             $data = [
-                "status" => 410,
+                "status" => 409,
                 "info" => "约会已过期"
             ];
             $map = [
@@ -56,7 +56,7 @@ class CommonController extends BaseController{
         if($row['status'] != 2){
             $status = $row['status'] == 1? '接受':'拒绝';
             $data = [
-                'status' => 403,
+                'status' => 409,
                 'info' => '你已'.$status.'此条约会信息'
             ];
            return $data;
