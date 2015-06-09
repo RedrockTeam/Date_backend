@@ -156,7 +156,7 @@ class PersonalController extends BaseController {
                 $partten = '/^1\d{10}/';
                 if(isset($input['telephone'])  && strlen($input['telephone']) == 11 && preg_match($partten, $input['telephone']))
                     $data['telephone'] = $input['telephone'];
-                elseif(isset($input['telephone']) && strlen($input['telephone']) != 11 && !preg_match($partten, $input['telephone'])){
+                elseif((isset($input['telephone']) && strlen($input['telephone']) != 11 ) || (isset($input['telephone']) && !preg_match($partten, $input['telephone']))){
                     $data = [
                         'status' => 409,
                         'info' => '电话号码格式错误!'

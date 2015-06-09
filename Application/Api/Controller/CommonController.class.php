@@ -12,7 +12,7 @@ use Api\Model\UserDateModel;
 use Think\Controller;
 class CommonController extends BaseController{
     // 接收/拒绝 约会
-    public function dateAction ($apply_user_id , $date_id, $operation) {
+    public function dateAction ($uid, $apply_user_id, $date_id, $operation) {
         $userdate = new UserDateModel();
         $row = $userdate->getRow($apply_user_id , $date_id);
         //检查约会记录是否存在
@@ -68,12 +68,12 @@ class CommonController extends BaseController{
             'user_id' => $apply_user_id,
             'date_id' => $date_id
         ];
-        $userdate->where($where)->save($op);
+        $result = $userdate->where($where)->save($op);
         $data = [
             'status' => 200,
             'info' => '成功'
         ];
-        return $data;
+        return $result;
     }
 
     //计算人的信誉度
