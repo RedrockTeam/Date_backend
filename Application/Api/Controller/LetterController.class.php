@@ -69,6 +69,10 @@ class LetterController extends BaseController {
             'type' => $input['action']
         ];
         $letter->add($data);
-        $this->ajaxReturn($result);
+        $info = [
+            'info' => 200,
+            'status' => '成功'
+        ];
+        $this->ajaxReturn($info);
     }
 }
