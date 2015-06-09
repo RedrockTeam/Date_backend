@@ -164,6 +164,16 @@ class PersonalController extends BaseController {
         if(isset($input['signature']) && mb_strlen($input['signature'], 'utf8')<=50){
             $data['signature'] = trim($input['signature']);
         }
+        elseif(isset($input['signature']) && mb_strlen($input['signature'], 'utf8') > 50) {
+            $info = [
+                'info' => '签名过长',
+                'status' => 409
+            ];
+            $this->ajaxReturn($info);
+        }
+        else {
+
+        }
         if(isset($input['grade'])&&is_numeric($input['grade'])){
             $data['grade'] = trim($input['grade']);
         }
