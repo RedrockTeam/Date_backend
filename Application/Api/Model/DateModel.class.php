@@ -15,10 +15,10 @@ class DateModel extends Model {
                 ->order($order)
                 ->buildSql();
         $b = $this->table($a.'as a')
-            ->join("JOIN users ON a.user_id = users.id")
+            ->join("LEFT JOIN users ON a.user_id = users.id")
             ->buildSql();
         $c = $this->table($b.'as b')
-            ->join("JOIN date_type ON b.date_type = date_type.id")
+            ->join("LEFT JOIN date_type ON b.date_type = date_type.id")
             ->field('b.nickname, b.head, b.gender, date_id, user_id, date_created_at as created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, cost_model, b.signature')
             ->select();
         foreach($c as $v){
