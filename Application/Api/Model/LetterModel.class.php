@@ -22,6 +22,7 @@ class LetterModel extends Model {
 //        ];
         $offset = $offset > 0 ? $offset:1;
         $offset = ($offset - 1) * $limit;
+        $this->where($map1)->limit($offset, $limit)->save(['status'=>1]);
         return $this->where($map1)
                     ->join('JOIN users ON letter.from = users.id')
                     ->join('JOIN user_date ON letter.date_id = user_date.date_id')
