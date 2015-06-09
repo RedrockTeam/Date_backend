@@ -39,6 +39,8 @@ class DateModel extends Model {
             }
             $data[] = $v;
         }
+        if($data == null)
+            $data = [];
         return $data;
     }
 
