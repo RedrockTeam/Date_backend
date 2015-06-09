@@ -74,7 +74,7 @@ class CommonController extends BaseController{
             'status' => 200,
             'info' => '成功'
         ];
-        return $result;
+        return $data;
     }
     private function insertAction($operation, $result, $uid, $apply_user_id) {
         $status = $operation == 1? '接受':'拒绝';
