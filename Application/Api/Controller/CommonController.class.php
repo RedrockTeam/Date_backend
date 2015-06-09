@@ -69,18 +69,20 @@ class CommonController extends BaseController{
             'user_id' => $apply_user_id,
             'date_id' => $date_id
         ];
-        $result = $userdate->where($where)->save($op);
+        $userdate->where($where)->save($op);
         $data = [
             'status' => 200,
             'info' => '成功'
         ];
         return $data;
     }
+
+    //增加私信
     private function insertAction($operation, $result, $uid, $apply_user_id) {
         $status = $operation == 1? '接受':'拒绝';
         $letter = new LetterModel();
         $data = [
-            'date_id' => $result['date_id'],
+            'date_id' => $result,
             'from' => $uid,
             'to'   => $apply_user_id,
             'content'=> $status.'你的约',
