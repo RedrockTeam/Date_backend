@@ -38,7 +38,7 @@
 
 2. 修改个人资料
         
-        //attention 性别只有第一次能修改!
+        //attention 性别, 年级, 学院只有第一次能修改!
 		url:  http://106.184.7.12:8002/index.php/api/person/editdata
 
 		post:
@@ -48,6 +48,8 @@
 				"signature":"xxxxxx",
 				"gender":"1", //1男, 2女
 				"telephone": "",
+				"grade":"",//1,2,3,4,100
+				"academy":"",//1,2,3....
 				"qq": "",
 				"weixin": "",
 				"token": ""
@@ -361,6 +363,8 @@
 			"uid": "",
 			"token": "",
 			"date_type": 0, //默认为0, 即所有约会类型
+			"page": , //可选参数 页码
+			"size": ,//可选参数 每页条数
 			"order": "", //...
 		}	
 
