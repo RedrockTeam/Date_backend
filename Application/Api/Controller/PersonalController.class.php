@@ -187,7 +187,7 @@ class PersonalController extends BaseController {
         else{
 
         }
-        if(isset($input['academy'])&&is_numeric($input['academy'])){
+        if(isset($input['academy'])&&is_numeric($input['academy'])) {
             $data['academy'] = trim($input['academy']);
         }
         elseif(isset($input['grade'])&&!is_numeric($input['grade'])) {
@@ -197,7 +197,7 @@ class PersonalController extends BaseController {
             ];
             $this->ajaxReturn($info);
         }
-        else{
+        else {
             //什么都不做
         }
 
@@ -220,8 +220,8 @@ class PersonalController extends BaseController {
         }
         else{
             $info = [
-                'info' => '网络错误',
-                'status' => 500
+                'info' => '你没有信息进行了修改',
+                'status' => 409
             ];
             $this->ajaxReturn($info);
         }
