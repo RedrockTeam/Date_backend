@@ -218,6 +218,13 @@ class PersonalController extends BaseController {
             ];
             $this->ajaxReturn($info);
         }
+        else{
+            $info = [
+                'info' => '网络错误',
+                'status' => 500
+            ];
+            $this->ajaxReturn($info);
+        }
     }
 
 }
