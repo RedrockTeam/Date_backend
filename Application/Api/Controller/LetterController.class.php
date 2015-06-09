@@ -8,7 +8,7 @@ class LetterController extends BaseController {
         $input = I('post.');
         $letter = new LetterModel();
         $input['page'] = $input['page']? $input['page']:1;
-        $input['size'] = $input['size']? $input['size']:5;
+        $input['size'] = $input['size']? $input['size']:50;
         $info = $letter->letter($input['uid'], $input['page'], $input['size']);
         $common = new CommonController();
         foreach($info as $key => $v){
