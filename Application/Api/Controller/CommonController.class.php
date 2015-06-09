@@ -47,8 +47,9 @@ class CommonController extends BaseController{
                 'status' => 2
             ];
             $update = ['status' => 0];
-            $userdate->where($map)->save($update);
-           return $data;
+            $result = $userdate->where($map)->save($update);
+            $this->insertAction($operation, $result, $uid, $apply_user_id);
+          return $data;
         }
         
         //检查是否已接受/拒绝
@@ -75,7 +76,20 @@ class CommonController extends BaseController{
         ];
         return $result;
     }
-
+    private function insertAction($operation, $result, $uid, $apply_user_id) {
+        $status = $operation == 1? '接受':'拒绝';
+        $letter = new LetterModel();
+        $data = [
+            'date_id' => $result['date_id'],
+            'from' => $uid,
+            'to'   => $apply_user_id,
+            'content'=> $status.'你的约',
+            'time' => time(),
+            'status' => 0,
+            'type' => $operation
+        ];
+        $letter->add($data);
+    }
     //计算人的信誉度
     public function credit ($uid = '') {
         $date = new DateModel();
