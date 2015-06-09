@@ -81,6 +81,13 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
+        if ($input['date_time'] < time()){
+            $data = [
+                'status' => '409',
+                'info' => '约会的时间不能小于当前时间'
+            ];
+            $this->ajaxReturn($data);
+        }
         //检查信息完整
         if(!$this->dataComplete($input['uid'])) {
             $data = [

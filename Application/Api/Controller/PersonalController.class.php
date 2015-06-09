@@ -131,7 +131,7 @@ class PersonalController extends BaseController {
         $input = I('post.');
         $uid = $input['uid'];
 
-        if(isset($input['nickname']) && trim($input['nickname']) == null && strlen(trim($input['nickname'])) > 7) {
+        if(isset($input['nickname']) && trim($input['nickname']) == null && mb_strlen(trim($input['nickname']), 'utf8') > 15) {
             $info = [
                 'info' => '昵称不能为空',
                 'status' => 403
@@ -160,7 +160,7 @@ class PersonalController extends BaseController {
             }
         }
 
-        if(isset($input['signature'])){
+        if(isset($input['signature']) && mb_strlen($input['signature'], 'utf8')>50){
             $data['signature'] = trim($input['signature']);
         }
         if(isset($input['grade'])&&is_numeric($input['grade'])){
