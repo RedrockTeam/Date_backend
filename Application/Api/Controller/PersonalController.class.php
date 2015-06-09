@@ -161,7 +161,7 @@ class PersonalController extends BaseController {
             }
         }
 
-        if(isset($input['signature']) && mb_strlen($input['signature'], 'utf8')>50){
+        if(isset($input['signature']) && mb_strlen($input['signature'], 'utf8')<=50){
             $data['signature'] = trim($input['signature']);
         }
         if(isset($input['grade'])&&is_numeric($input['grade'])){
