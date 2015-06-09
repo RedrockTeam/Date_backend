@@ -52,10 +52,10 @@ class DateModel extends Model {
             ->field('date.id as date_id, date.user_id, date.created_at as date_created_at, date_time as date_at, place, title, content, date_type, limit_num, gender_limit, cost_model')
             ->buildSql();
         $b = $this->table($a.'as a')
-            ->join("JOIN users ON a.user_id = users.id")
+            ->join("LEFT JOIN users ON a.user_id = users.id")
             ->buildSql();
         $c = $this->table($b.'as b')
-            ->join("JOIN date_type ON b.date_type = date_type.id")
+            ->join("LEFT JOIN date_type ON b.date_type = date_type.id")
             ->field('b.nickname, b.head, b.gender, date_id, user_id, date_created_at as created_at, date_at, place, title, content, date_type, date_type.type as type, date_type.id as category_id, limit_num as people_limit, gender_limit, cost_model, b.signature')
             ->select();
         foreach($c as $v){
