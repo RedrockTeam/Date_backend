@@ -13,7 +13,7 @@ class LetterModel extends Model {
         return $this->where($map)->count();
     }
     //获取已收到私信
-    public function letter($uid, $offset = 1, $limit = 5){
+    public function letter($uid, $offset = 1, $limit = 10){
         $map1 = [
             'letter.to' => $uid,
         ];
