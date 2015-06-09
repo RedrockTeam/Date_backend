@@ -221,7 +221,7 @@ class PersonalController extends BaseController {
         else{
             $info = [
                 'info' => '你没有信息进行了修改',
-                'status' => 409
+                'status' => 200
             ];
             $this->ajaxReturn($info);
         }
