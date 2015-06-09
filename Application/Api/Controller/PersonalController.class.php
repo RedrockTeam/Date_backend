@@ -166,22 +166,28 @@ class PersonalController extends BaseController {
         if(isset($input['grade'])&&is_numeric($input['grade'])){
             $data['grade'] = trim($input['grade']);
         }
+        elseif(isset($input['grade'])&&!is_numeric($input['grade'])){
+            $info = [
+                'info' => '年级错误',
+                'status' => 403
+            ];
+            $this->ajaxReturn($info);
+        }
         else{
-             $info = [
-                    'info' => '年级错误',
-                    'status' => 403
-                ];
-                $this->ajaxReturn($info);
+
         }
         if(isset($input['academy'])&&is_numeric($input['academy'])){
             $data['academy'] = trim($input['academy']);
         }
+        elseif(isset($input['grade'])&&!is_numeric($input['grade'])) {
+            $info = [
+                'info' => '学院错误',
+                'status' => 403
+            ];
+            $this->ajaxReturn($info);
+        }
         else{
-             $info = [
-                    'info' => '学院错误',
-                    'status' => 403
-                ];
-                $this->ajaxReturn($info);
+            //什么都不做
         }
 
         $map = [
