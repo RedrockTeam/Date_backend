@@ -47,7 +47,8 @@ class CommonController extends BaseController{
                 'status' => 2
             ];
             $update = ['status' => 0];
-            $result = $userdate->where($map)->save($update);
+            $userdate->where($map)->save($update);
+            $result = $userdate->where($map)->find();
             $this->insertAction($operation, $result, $uid, $apply_user_id);
           return $data;
         }
@@ -99,5 +100,9 @@ class CommonController extends BaseController{
         $map['user_id'] = $uid;
         $map['status'] = ['NEQ', 2];
         return $date->where($map)->avg('score');
+    }
+    public function test() {
+       $result =  M('users')->where("id = 1")->save(['nickname'=>'ddd']);
+        print_r($result);
     }
 }
