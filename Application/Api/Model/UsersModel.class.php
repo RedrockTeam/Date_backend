@@ -11,7 +11,7 @@ class UsersModel extends Model {
             'id' => $uid
         ];
         $data = $this->where($map)->getfield('token');
-        if($data == $token){
+        if($data === $token){
             $expire = time() - $data['updated_at'];
             if($expire > self::EXPIRE)
                 return true;
