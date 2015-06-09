@@ -48,8 +48,6 @@ class CommonController extends BaseController{
             ];
             $update = ['status' => 0];
             $userdate->where($map)->save($update);
-            $result = $userdate->where($map)->find();
-            $this->insertAction($operation, $result, $uid, $apply_user_id);
           return $data;
         }
         
@@ -75,10 +73,12 @@ class CommonController extends BaseController{
             'status' => 200,
             'info' => '成功'
         ];
+        $result = $userdate->where($where)->find();
+        $this->insertAction($operation, $result, $uid, $apply_user_id);//发起人向申请人发送私信
         return $data;
     }
 
-    //增加私信
+    //发起人向申请人发送私信
     private function insertAction($operation, $result, $uid, $apply_user_id) {
         $status = $operation == 1? '接受':'拒绝';
         $letter = new LetterModel();

@@ -10,7 +10,7 @@ class UserDateModel extends Model {
             'date_id' => $date_id,
             'user_id' => $uid
         ];
-        return $this->where($map)->find();
+        return $this->where($map)->count();
     }
 
     //获取某人约炮记录
