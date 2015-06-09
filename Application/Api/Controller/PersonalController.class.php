@@ -134,7 +134,7 @@ class PersonalController extends BaseController {
         if(isset($input['nickname']) && trim($input['nickname']) == null && mb_strlen(trim($input['nickname']), 'utf8') > 15) {
             $info = [
                 'info' => '昵称不能为空',
-                'status' => 403
+                'status' => 409
             ];
             $this->ajaxReturn($info);
         }
@@ -146,14 +146,15 @@ class PersonalController extends BaseController {
             if($input['qq'] == null && $input['telephone'] == null && $input['weixin'] == null) {
                 $info = [
                     'info' => '联系方式不能都为空',
-                    'status' => 403
+                    'status' => 409
                 ];
                 $this->ajaxReturn($info);
             }
             else {
                 if(isset($input['qq']))
                     $data['qq'] = $input['qq'];
-                if(isset($input['telephone']))
+                $partten = '/^1\d{10}/';
+                if(isset($input['telephone'])  && strlen($input['telephone']) == 11&& preg_match($partten, $input['telephone']))
                     $data['telephone'] = $input['telephone'];
                 if(isset($input['weixin']))
                     $data['weixin'] = $input['weixin'];
@@ -196,7 +197,7 @@ class PersonalController extends BaseController {
 
         $gender = M('users')->where($map)->getField('gender');//检查性别是否已存在
 
-        if(strlen($gender )== 0) {
+        if(strlen($gender) == 0) {
             M('users')->where($map)->data(['gender' => $input['gender']])->save();
         }
 
