@@ -75,6 +75,7 @@ class DateModel extends Model {
             }
             else{
                 $v['grade_limit'] = [];
+                $v['grade'] = [];
             }
             $data[] = $v;
         }
