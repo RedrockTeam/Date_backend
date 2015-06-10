@@ -85,7 +85,7 @@ class CommonController extends BaseController{
             'info' => '成功'
         ];
         $result = $userdate->where($where)->find();
-        $this->insertAction($operation, $result, $uid, $apply_user_id);//发起人向申请人发送私信
+        $this->insertAction($operation, $result['date_id'], $uid, $apply_user_id);//发起人向申请人发送私信
         return $data;
     }
 
