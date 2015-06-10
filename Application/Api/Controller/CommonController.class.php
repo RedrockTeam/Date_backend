@@ -8,6 +8,7 @@
 
 namespace Api\Controller;
 use Api\Model\DateModel;
+use Api\Model\LetterModel;
 use Api\Model\UserDateModel;
 use Think\Controller;
 class CommonController extends BaseController{
@@ -61,6 +62,16 @@ class CommonController extends BaseController{
            return $data;
         }
 
+        //更改letter表中的约会状态
+        $letter_where = [
+            'date_id' => $date_id,
+            'from' => $apply_user_id,
+            'to' => $uid
+        ];
+        $letter = new LetterModel();
+        $letter->where($letter_where)->save(['type' => $operation]);
+
+        //更改user_date表中的约会状态
         $op = [
             'status' => $operation
         ];
