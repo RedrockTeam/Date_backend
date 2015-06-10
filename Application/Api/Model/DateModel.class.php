@@ -6,8 +6,10 @@ class DateModel extends Model {
     protected $trueTableName  = 'date';
     //获取约会信息
     public function getInfo($type = '%', $order = 'date.created_at desc', $page = 1, $limit = 10){
-        $where['date.date_type'] = array('LIKE', $type);
-        $where['date.date_time'] = array('GT', time());
+        $where = [
+            'date.date_type' => ['LIKE', $type],
+            'date.date_time' => ['GT', time()],
+        ];
         $offset = ($page - 1) * $limit;
         $a = $this
                 ->where($where)
