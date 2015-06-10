@@ -8,17 +8,18 @@
 
 namespace Api\Controller;
 use Api\Model\DateModel;
+use Api\Model\LetterModel;
 use Api\Model\UserDateModel;
 use Think\Controller;
 class CommonController extends BaseController{
     // 接收/拒绝 约会
-    public function dateAction ($apply_user_id , $date_id, $operation) {
+    public function dateAction ($uid, $apply_user_id, $date_id, $operation) {
         $userdate = new UserDateModel();
         $row = $userdate->getRow($apply_user_id , $date_id);
         //检查约会记录是否存在
         if(!$row){
             $data = [
-                "status" => 404,
+                "status" => 409,
 				"info" => "没有这条约会记录"
             ];
            return $data;
@@ -29,7 +30,7 @@ class CommonController extends BaseController{
         //检查约会人数
         if($date_row['sure_num'] >= $date_row['limit_num']){
             $data = [
-                "status" => 410,
+                "status" => 409,
                 "info" => "约会人数已满"
             ];
            return $data;
@@ -38,7 +39,7 @@ class CommonController extends BaseController{
         //检查约会是否超时
         if($date_row['date_time'] < time()){
             $data = [
-                "status" => 410,
+                "status" => 409,
                 "info" => "约会已过期"
             ];
             $map = [
@@ -48,19 +49,29 @@ class CommonController extends BaseController{
             ];
             $update = ['status' => 0];
             $userdate->where($map)->save($update);
-           return $data;
+          return $data;
         }
         
         //检查是否已接受/拒绝
         if($row['status'] != 2){
             $status = $row['status'] == 1? '接受':'拒绝';
             $data = [
-                'status' => 403,
+                'status' => 409,
                 'info' => '你已'.$status.'此条约会信息'
             ];
            return $data;
         }
 
+        //更改letter表中的约会状态
+        $letter_where = [
+            'date_id' => $date_id,
+            'from' => $apply_user_id,
+            'to' => $uid
+        ];
+        $letter = new LetterModel();
+        $letter->where($letter_where)->save(['type' => $operation]);
+
+        //更改user_date表中的约会状态
         $op = [
             'status' => $operation
         ];
@@ -73,9 +84,26 @@ class CommonController extends BaseController{
             'status' => 200,
             'info' => '成功'
         ];
+        $result = $userdate->where($where)->find();
+        $this->insertAction($operation, $result['date_id'], $uid, $apply_user_id);//发起人向申请人发送私信
         return $data;
     }
 
+    //发起人向申请人发送私信
+    private function insertAction($operation, $result, $uid, $apply_user_id) {
+        $status = $operation == 1? '接受':'拒绝';
+        $letter = new LetterModel();
+        $data = [
+            'date_id' => $result,
+            'from' => $uid,
+            'to'   => $apply_user_id,
+            'content'=> $status.'你的约',
+            'time' => time(),
+            'status' => 0,
+            'type' => $operation
+        ];
+        $letter->add($data);
+    }
     //计算人的信誉度
     public function credit ($uid = '') {
         $date = new DateModel();
@@ -83,5 +111,9 @@ class CommonController extends BaseController{
         $map['user_id'] = $uid;
         $map['status'] = ['NEQ', 2];
         return $date->where($map)->avg('score');
+    }
+    public function test() {
+       $result =  M('users')->where("id = 1")->save(['nickname'=>'ddd']);
+        print_r($result);
     }
 }

@@ -19,7 +19,7 @@
 		return 
 				错误:
 					{
-						"status": "403",
+						"status": "401",
 						"info": "权限不够"
 					}
 				成功:
@@ -38,7 +38,7 @@
 
 2. 修改个人资料
         
-        //attention 性别只有第一次能修改!
+        //attention 性别, 年级, 学院只有第一次能修改!
 		url:  http://106.184.7.12:8002/index.php/api/person/editdata
 
 		post:
@@ -48,6 +48,8 @@
 				"signature":"xxxxxx",
 				"gender":"1", //1男, 2女
 				"telephone": "",
+				"grade":"",//1,2,3,4,100
+				"academy":"",//1,2,3....
 				"qq": "",
 				"weixin": "",
 				"token": ""
@@ -182,9 +184,17 @@
             				"status": 200,
             				"info":"成功"
             			}
+            			{
+            			    status:409
+            			    info: 你已经收藏过了
+            			}
+            			{
+            			    status:403
+            			    info: 没有这条约会记录
+            			}
 7. 取消收藏约会
 
-		url:  http://106.184.7.12:8002/index.php/api/person/rmcollect
+		url:  http://106.184.7.12:8002/index.php/api/person/rmcollecttion
         
         		post:
         			{
@@ -353,6 +363,8 @@
 			"uid": "",
 			"token": "",
 			"date_type": 0, //默认为0, 即所有约会类型
+			"page": , //可选参数 页码
+			"size": ,//可选参数 每页条数
 			"order": "", //...
 		}	
 

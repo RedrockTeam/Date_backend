@@ -78,6 +78,7 @@ class PersonalController extends BaseController {
             'user_id' => $input['uid']
         ];
         $count = $collection->where($date)->count();
+
         if($count > 0){
             $data = [
                 'info' => '你已收藏此条约会!',
@@ -85,6 +86,7 @@ class PersonalController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
+
         if($collection->data($date)->add()) {
             $data = [
                 'info' => '成功',
@@ -129,10 +131,10 @@ class PersonalController extends BaseController {
         $input = I('post.');
         $uid = $input['uid'];
 
-        if(isset($input['nickname']) && trim($input['nickname']) == null && strlen(trim($input['nickname'])) > 7) {
+        if(isset($input['nickname']) && trim($input['nickname']) == null && mb_strlen(trim($input['nickname']), 'utf8') > 15) {
             $info = [
                 'info' => '昵称不能为空',
-                'status' => 403
+                'status' => 409
             ];
             $this->ajaxReturn($info);
         }
@@ -144,22 +146,66 @@ class PersonalController extends BaseController {
             if($input['qq'] == null && $input['telephone'] == null && $input['weixin'] == null) {
                 $info = [
                     'info' => '联系方式不能都为空',
-                    'status' => 403
+                    'status' => 409
                 ];
                 $this->ajaxReturn($info);
             }
             else {
                 if(isset($input['qq']))
                     $data['qq'] = $input['qq'];
-                if(isset($input['telephone']))
+                $partten = '/^1\d{10}/';
+                if(isset($input['telephone']) && $input['telephone'] != null && strlen($input['telephone']) == 11 && preg_match($partten, $input['telephone']))
                     $data['telephone'] = $input['telephone'];
+                elseif((isset($input['telephone']) && $input['telephone'] != null && strlen($input['telephone']) != 11 ) || (isset($input['telephone']) && $input['telephone'] != null && !preg_match($partten, $input['telephone']))){
+                    $data = [
+                        'status' => 409,
+                        'info' => '电话号码格式错误!'
+                    ];
+                    $this->ajaxReturn($data);
+                }
                 if(isset($input['weixin']))
                     $data['weixin'] = $input['weixin'];
             }
         }
 
-        if(isset($input['signature'])){
+        if(isset($input['signature']) && mb_strlen($input['signature'], 'utf8')<=50){
             $data['signature'] = trim($input['signature']);
+        }
+        elseif(isset($input['signature']) && mb_strlen($input['signature'], 'utf8') > 50) {
+            $info = [
+                'info' => '签名过长',
+                'status' => 409
+            ];
+            $this->ajaxReturn($info);
+        }
+        else {
+
+        }
+        if(isset($input['grade'])&&is_numeric($input['grade'])){
+            $data['grade'] = trim($input['grade']);
+        }
+        elseif(isset($input['grade'])&&!is_numeric($input['grade'])){
+            $info = [
+                'info' => '年级错误',
+                'status' => 403
+            ];
+            $this->ajaxReturn($info);
+        }
+        else{
+
+        }
+        if(isset($input['academy'])&&is_numeric($input['academy'])) {
+            $data['academy'] = trim($input['academy']);
+        }
+        elseif(isset($input['grade'])&&!is_numeric($input['grade'])) {
+            $info = [
+                'info' => '学院错误',
+                'status' => 403
+            ];
+            $this->ajaxReturn($info);
+        }
+        else {
+            //什么都不做
         }
 
         $map = [
@@ -168,13 +214,20 @@ class PersonalController extends BaseController {
 
         $gender = M('users')->where($map)->getField('gender');//检查性别是否已存在
 
-        if($gender == null) {
+        if(strlen($gender) == 0) {
             M('users')->where($map)->data(['gender' => $input['gender']])->save();
         }
 
         if(M('users')->where($map)->data($data)->save()) {
             $info = [
                 'info' => '成功',
+                'status' => 200
+            ];
+            $this->ajaxReturn($info);
+        }
+        else{
+            $info = [
+                'info' => '你没有信息进行了修改',
                 'status' => 200
             ];
             $this->ajaxReturn($info);

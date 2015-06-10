@@ -81,6 +81,13 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
+        if ($input['date_time'] < time()){
+            $data = [
+                'status' => '409',
+                'info' => '约会的时间不能小于当前时间'
+            ];
+            $this->ajaxReturn($data);
+        }
         //检查信息完整
         if(!$this->dataComplete($input['uid'])) {
             $data = [
@@ -116,7 +123,7 @@ class DateController extends BaseController {
         ];
         $date = new DateModel();
         $id = $date->add($dateInfo);
-        if($input['grade_limit'] && $input['grade_select_model']){
+        if($input['grade_limit'] && $input['grade_select_model'] && $input['grade_limit']!=0){
             $limit = new DateLimitModel();
             $date_id = $id;
 //            ($input['academy_limit'] && $input['academy_select_model']) ||
@@ -366,6 +373,8 @@ class DateController extends BaseController {
             return false;
         if(!is_numeric($input['cost_model']))//花费模式
             return false;
+        if(!$input['cost_model'] == 1 && $input['cost_model'] == 2 && !$input['cost_model'] == 3)
+            return false;
         if($input['academy_select_model']){
             if($input['academy_limit'] == null)//学院限制
                 return false;
@@ -516,6 +525,11 @@ class DateController extends BaseController {
         $user = new UsersModel();
         $map = ['id' => $uid];
         $info = $user->where($map)->find();
+        if ($info['academy'] == null) 
+            return false;
+        if ($info['gender'] == null) 
+            return false;
+
         if($info['qq'] == null && $info['weixin'] == null && $info['telephone'] == null)
             return false;
         else
