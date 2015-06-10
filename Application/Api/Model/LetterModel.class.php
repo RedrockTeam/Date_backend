@@ -40,8 +40,9 @@ class LetterModel extends Model {
             'letter.id' => $letter_id,
             'letter.to' => $uid
         ];
+        $temp = $this->where($map)->find();
         $map2 = [
-            'user_date.user_id' => $uid,
+            'user_date.user_id' => $temp['to'],
         ];
         $data = $this->where($map)
                      ->join('JOIN users ON letter.from = users.id')
