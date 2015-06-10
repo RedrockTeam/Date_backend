@@ -7,6 +7,7 @@ class DateModel extends Model {
     //获取约会信息
     public function getInfo($type = '%', $order = 'date.created_at desc', $page = 1, $limit = 10){
         $where['date.date_type'] = array('LIKE', $type);
+        $where['date.date_time'] = array('GT', time());
         $offset = ($page - 1) * $limit;
         $a = $this
                 ->where($where)
