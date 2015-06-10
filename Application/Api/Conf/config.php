@@ -64,7 +64,7 @@ return array(
         'person/editdata' => 'Personal/editPerson', //修改个人资料
 
         //不服打我啊
-        'advice/advice' => 'AdviceController/getAdvice'//投诉
+        'advice/advice' => 'Advice/getAdvice'//投诉
 
     ],
 );
