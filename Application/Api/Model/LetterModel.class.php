@@ -24,6 +24,7 @@ class LetterModel extends Model {
                     ->join('JOIN users ON letter.from = users.id')
                     ->join('JOIN user_date ON letter.date_id = user_date.date_id')
                     ->join('JOIN date ON letter.date_id = date.id')
+                    ->group('letter.id')
                     ->limit($offset, $limit)
                     ->field('letter.id as letter_id, users.id as user_id, users.nickname as user_name, users.signature as user_signature, users.head as user_avatar, users.gender as user_gender, letter.content as content, letter.date_id as date_id, letter.status as letter_status, user_date.status as user_date_status, date.title')
                     ->select();
