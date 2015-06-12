@@ -13,6 +13,11 @@ use Api\Model\UserDateModel;
 use Think\Controller;
 class CommonController extends BaseController{
     //todo 做个检测约会过期的函数, 更新date和user_date和letter表中的状态
+    private function updateDate() {
+        $condition = ['date_time' => ['']];
+        $result = [];
+    }
+
 
     // 接收/拒绝 约会
     public function dateAction ($uid, $apply_user_id, $date_id, $operation) {

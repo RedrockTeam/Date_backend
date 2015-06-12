@@ -22,6 +22,7 @@ class UserDateModel extends Model {
             ->join("JOIN users ON user_date.user_id = users.id")
             ->join("JOIN date ON user_date.date_id = date.id")
             ->field('date_id, date.user_id, time, user_date.status as user_status, date.status as date_status, head, signature, nickname, gender, title, date_time, date.created_at, cost_model, content, place, score')
+            ->order('user_date.id desc')
             ->select();
     }
     //检查是否已经约过
