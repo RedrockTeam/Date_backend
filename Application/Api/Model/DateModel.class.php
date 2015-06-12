@@ -124,7 +124,7 @@ class DateModel extends Model {
         return $this->where($map)
             ->join("JOIN users ON date.user_id = users.id")
             ->order('date.id desc')
-            ->field('users.nickname, users.head, date.id as date_id, title, place, date_time, date.created_at, cost_model, status as date_status')
+            ->field('users.nickname, users.head, gender,date.id as date_id, title, place, date_time, date.created_at, cost_model, status as date_status')
             ->select();
     }
 }
