@@ -111,16 +111,13 @@ class CommonController extends BaseController{
         ];
         $letter->add($data);
     }
+
     //计算人的信誉度
-    public function credit ($uid = '') {
+    public function credit ($uid = null) {
         $date = new DateModel();
         $uid = $uid != null ? $uid : I('post.search_uid');
         $map['user_id'] = $uid;
         $map['status'] = ['NEQ', 2];
         return $date->where($map)->avg('score');
-    }
-    public function test() {
-       $result =  M('users')->where("id = 1")->save(['nickname'=>'ddd']);
-        print_r($result);
     }
 }

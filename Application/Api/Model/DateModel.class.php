@@ -11,12 +11,47 @@ class DateModel extends Model {
             'date.date_time' => ['GT', time()],
         ];
         $offset = ($page - 1) * $limit;
-        $a = $this
-                ->where($where)
-                ->field('date.id as date_id, date.user_id, date.created_at as date_created_at, date_time as date_at, place, title, date_type, cost_model')
-                ->limit($offset, $limit)
-                ->order($order)
-                ->buildSql();
+        $sql = 'SELECT
+	*, (@timescore := c.date_time) AS timescore,
+	(
+		@datepercent := CASE
+		WHEN c.limit_num = 0 THEN
+			0
+		ELSE
+			(c.sure_num / c.limit_num)
+		END
+	) AS datepercent
+FROM
+	(
+		SELECT
+			date.id, date.user_id, date.created_at, date.date_time, date.place, date.title, date.date_type, date.cost_model, userscore, date.limit_num, date.sure_num
+		FROM
+			date
+		JOIN (
+			SELECT
+				date.user_id,
+				AVG(date.score) AS userscore
+			FROM
+				date
+			GROUP BY
+				date.user_id
+		) AS tmp ON date.user_id = tmp.user_id
+	) c,
+	(SELECT(@timescore := 0)) a,
+	(SELECT(@datepercent := 0)) b';
+//        $a = $this
+//            ->where($where)
+//            ->field('date.id as date_id, date.user_id, date.created_at as date_created_at, date_time as date_at, place, title, date_type, cost_model')
+//            ->limit($offset, $limit)
+//            ->order($order)
+//            ->buildSql();
+        $a = $this->table($sql.'as sql')
+                  ->where($where)
+//                  ->field()
+                  ->limit($offset, $limit)
+                  ->order($order)
+                  ->select();
+        return $a;
         $b = $this->table($a.'as a')
             ->join("LEFT JOIN users ON a.user_id = users.id")
             ->buildSql();
