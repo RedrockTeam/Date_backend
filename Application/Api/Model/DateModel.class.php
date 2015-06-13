@@ -1,6 +1,35 @@
 <?php
 namespace Api\Model;
 use Think\Model;
+//该算法原生sql, 效率不错, 赞个, by Lich
+//$sql = 'SELECT
+//	*, (@timescore := c.date_time) AS timescore,
+//	(
+//		@datepercent := CASE
+//		WHEN c.limit_num = 0 THEN
+//			0
+//		ELSE
+//			(c.sure_num / c.limit_num)
+//		END
+//	) AS datepercent
+//FROM
+//	(
+//		SELECT
+//			date.id, date.user_id, date.created_at, date.date_time, date.place, date.title, date.date_type, date.cost_model, userscore, date.limit_num, date.sure_num
+//		FROM
+//			date
+//		JOIN (
+//			SELECT
+//				date.user_id,
+//				AVG(date.score) AS userscore
+//			FROM
+//				date
+//			GROUP BY
+//				date.user_id
+//		) AS tmp ON date.user_id = tmp.user_id
+//	) c,
+//	(SELECT(@timescore := 0)) a,
+//	(SELECT(@datepercent := 0)) b';
 
 class DateModel extends Model {
     protected $trueTableName  = 'date';
@@ -11,34 +40,26 @@ class DateModel extends Model {
             'date.date_time' => ['GT', time()],
         ];
         $offset = ($page - 1) * $limit;
-        $sql = 'SELECT
-	*, (@timescore := c.date_time) AS timescore,
-	(
-		@datepercent := CASE
-		WHEN c.limit_num = 0 THEN
-			0
-		ELSE
-			(c.sure_num / c.limit_num)
-		END
-	) AS datepercent
-FROM
-	(
-		SELECT
-			date.id, date.user_id, date.created_at, date.date_time, date.place, date.title, date.date_type, date.cost_model, userscore, date.limit_num, date.sure_num
-		FROM
-			date
-		JOIN (
-			SELECT
-				date.user_id,
-				AVG(date.score) AS userscore
-			FROM
-				date
-			GROUP BY
-				date.user_id
-		) AS tmp ON date.user_id = tmp.user_id
-	) c,
-	(SELECT(@timescore := 0)) a,
-	(SELECT(@datepercent := 0)) b';
+        $first = $this
+                ->group('date.user_id')
+                ->field('date.user_id, AVG(date.score) AS userscore')
+                ->buildSql();
+        $second = $this
+                ->join("$first as tmp ON date.user_id = tmp.user_id")
+                ->where($where)
+                ->field('date.id, date.user_id, date.created_at, date.date_time, date.place, date.title, date.date_type, date.cost_model, userscore, date.limit_num, date.sure_num')
+                ->buildSql();
+//        return $second;
+        $time = time();//此处用php生成时间戳放进mysql效率较高
+        $third = $this
+                ->table($second.'as c, (SELECT(@timescore := 0)) as a, (SELECT(@datepercent := 0)) as b, (SELECT(@total := 0)) as d')
+                ->field("*, (@timescore := c.date_time - $time) AS timescore, (@datepercent := CASE WHEN c.limit_num = 0 THEN 0 ELSE (c.sure_num / c.limit_num) END) AS datepercent")
+                ->order($order)
+                ->limit($offset, $limit)
+                ->buildSql();
+return $third;
+
+
 //        $a = $this
 //            ->where($where)
 //            ->field('date.id as date_id, date.user_id, date.created_at as date_created_at, date_time as date_at, place, title, date_type, cost_model')
