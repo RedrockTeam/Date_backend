@@ -475,7 +475,7 @@
                   "date_id": "1",
                   "user_id": "1",
                   "created_at": "1429446317",
-                  "date_at": "1529456317",
+                  "date_time": "1529456317",
                   "place": "重邮宾馆",
                   "title": "来约炮!",
                   "date_type": "3",
@@ -483,19 +483,15 @@
                   "category_id": "3",
                   "people_limit":"12",
                   "gender_limit": "1",
+                  "apply_status": 0,// 是否报名, 0 未, 1 已
                   "cost_model": "1",
+                  "date_status":"1", //0已结束(未成功的约), 1成功, 2受理中
                   "grade_limit": [
-                  {
-                  "selectmodel": "1",
-                  "name": "大一"
-                  },
-                  {
-                  "selectmodel": "1",
-                  "name": "大二"
-                  }
+                    '3','4'
                   ],
                   "user_score": null //int, null暂无评分记录
-                  }
+                  },
+                  "grade":["2013级", "2014级"]
 5. 报名约会
              
              url: http://106.184.7.12:8002/index.php/api/date/report
