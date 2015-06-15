@@ -2,34 +2,88 @@
 namespace Api\Model;
 use Think\Model;
 //该算法原生sql, 效率不错, 赞个, by Lich
-//$sql = 'SELECT
-//	*, (@timescore := c.date_time) AS timescore,
-//	(
-//		@datepercent := CASE
-//		WHEN c.limit_num = 0 THEN
-//			0
-//		ELSE
-//			(c.sure_num / c.limit_num)
-//		END
-//	) AS datepercent
+//SELECT
+//	date_id AS date_id,
+//	`user_id`,
+//	`head`,
+//	f.created_at,
+//	date_time AS date_time,
+//	`place`,
+//	`title`,
+//	`date_type`,
+//	`cost_model`,
+//	`nickname`,
+//	`gender`,
+//	date_type.id AS category_id,
+//	`signature`,
+//	`total`
 //FROM
-//	(
-//		SELECT
-//			date.id, date.user_id, date.created_at, date.date_time, date.place, date.title, date.date_type, date.cost_model, userscore, date.limit_num, date.sure_num
+//(
+//    SELECT
+//    *, (
+//@total := userscore/5*30 + timescore + datepercent
+//			) AS total
 //		FROM
-//			date
-//		JOIN (
-//			SELECT
-//				date.user_id,
-//				AVG(date.score) AS userscore
-//			FROM
-//				date
-//			GROUP BY
-//				date.user_id
-//		) AS tmp ON date.user_id = tmp.user_id
-//	) c,
-//	(SELECT(@timescore := 0)) a,
-//	(SELECT(@datepercent := 0)) b';
+//        (
+//            SELECT
+//            *, (
+//        @timescore := CASE
+//						WHEN c.date_time - 1434370292 > 43200 THEN
+//							30
+//						ELSE
+//							30 + (
+//                                1434370292 + 43200 - c.date_time
+//                            ) / 43200 * 20
+//						END
+//					) AS timescore,
+//					(
+//                    @datepercent := CASE
+//						WHEN c.limit_num = 0 THEN
+//							0
+//						ELSE
+//							c.sure_num / c.limit_num * 30
+//						END
+//					) AS datepercent
+//				FROM
+//                (
+//                    SELECT
+//							date.id AS date_id,
+//							date.user_id,
+//							date.created_at,
+//							date.date_time,
+//							date.place,
+//							date.title,
+//							date.date_type,
+//							date.cost_model,
+//							`userscore`,
+//							date.limit_num,
+//							date.sure_num
+//						FROM
+//							`date`
+//						INNER JOIN (
+//    SELECT
+//								date.user_id,
+//								AVG(date.score) AS userscore
+//							FROM
+//								`date`
+//							GROUP BY
+//								date.user_id
+//						) AS tmp ON date.user_id = tmp.user_id
+//						WHERE
+//							date.date_type LIKE '%'
+//AND date.date_time > 1434370292
+//					) AS c,
+//					(SELECT(@timescore := 0)) AS a,
+//					(SELECT(@datepercent := 0)) AS b
+//			) AS e,
+//			(SELECT(@total := 0)) AS d
+//		ORDER BY
+//			created_at DESC
+//		LIMIT 0,
+//		10
+//	) AS f
+//LEFT JOIN users ON f.user_id = users.id
+//LEFT JOIN date_type ON f.date_type = date_type.id
 
 class DateModel extends Model {
     protected $trueTableName  = 'date';
@@ -47,48 +101,29 @@ class DateModel extends Model {
         $second = $this
                 ->join("$first as tmp ON date.user_id = tmp.user_id")
                 ->where($where)
-                ->field('date.id, date.user_id, date.created_at, date.date_time, date.place, date.title, date.date_type, date.cost_model, userscore, date.limit_num, date.sure_num')
+                ->field('date.id as date_id, date.user_id, date.created_at, date.date_time, date.place, date.title, date.date_type, date.cost_model, userscore, date.limit_num, date.sure_num')
                 ->buildSql();
-//        return $second;
         $time = time();//此处用php生成时间戳放进mysql效率较高
         $third = $this
-                ->table($second.'as c, (SELECT(@timescore := 0)) as a, (SELECT(@datepercent := 0)) as b, (SELECT(@total := 0)) as d')
-                ->field("*, (@timescore := c.date_time - $time) AS timescore, (@datepercent := CASE WHEN c.limit_num = 0 THEN 0 ELSE (c.sure_num / c.limit_num) END) AS datepercent")
+                ->table($second.'as c, (SELECT(@timescore := 0)) as a, (SELECT(@datepercent := 0)) as b')
+                ->field("*, (@timescore := CASE WHEN c.date_time - $time > 43200 THEN 30 ELSE 30 + ($time + 43200-c.date_time) / 43200 * 20 END) AS timescore, (@datepercent := CASE WHEN c.limit_num = 0 THEN 0 ELSE c.sure_num / c.limit_num * 30 END) AS datepercent ")
+                ->buildSql();
+        $forth = $this
+                ->table($third.'as e, (SELECT(@total := 0)) as d')
+                ->field('*, (@total := userscore/5*30 + timescore + datepercent) AS total')
                 ->order($order)
                 ->limit($offset, $limit)
                 ->buildSql();
-return $third;
-
-
-//        $a = $this
-//            ->where($where)
-//            ->field('date.id as date_id, date.user_id, date.created_at as date_created_at, date_time as date_at, place, title, date_type, cost_model')
-//            ->limit($offset, $limit)
-//            ->order($order)
-//            ->buildSql();
-        $a = $this->table($sql.'as sql')
-                  ->where($where)
-//                  ->field()
-                  ->limit($offset, $limit)
-                  ->order($order)
-                  ->select();
-        return $a;
-        $b = $this->table($a.'as a')
-            ->join("LEFT JOIN users ON a.user_id = users.id")
-            ->buildSql();
-        $c = $this->table($b.'as b')
-            ->join("LEFT JOIN date_type ON b.date_type = date_type.id")
-            ->field('b.nickname, b.head, b.gender, date_id, user_id, date_created_at as created_at, date_at, place, title, date_type, date_type.type as type, date_type.id as category_id, cost_model, b.signature')
+        $final = $this
+            ->table($forth.'as f')
+            ->join("LEFT JOIN users ON f.user_id = users.id")
+            ->join("LEFT JOIN date_type ON f.date_type = date_type.id")
+            ->field('date_id as date_id, user_id, head, f.created_at, date_time as date_time, place, title, date_type, cost_model, nickname, gender, date_type.id as category_id, signature, timescore, userscore, datepercent, total')
             ->select();
-        foreach($c as $v){
+        foreach($final as $v){
             $map1['date_id'] = $v['date_id'];
             $map1['condition'] = 1;
             $grade_limit = M('date_limit')->where($map1)->join("JOIN grade ON date_limit.limit = grade.id")->field('selectmodel, grade.id')->select();
-//            $map2['date_id'] = $v['date_id'];
-//            $map2['condition'] = 2;
-//            $academy_limit = M('date_limit')->where($map2)->join("JOIN academy ON date_limit.limit = academy.id")->field('selectmodel, name')->select();
-//            foreach($academy_limit as $va)
-//            $v['academy_limit'][] = $va;
             if($grade_limit != null) {
                 foreach ($grade_limit as $va)
                     $v['grade_limit'][] = $va['id'];

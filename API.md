@@ -375,50 +375,42 @@
 				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446315",
-				        "date_at": "1429456315",
+				        "date_time": "1429456315",
 				        "place": "重邮宾馆",
 				        "title": "来约炮!",
 				        "date_type": "1",
 				        "category_id": "1",
 				        "gender_limit": "1",
 				        "academy_limit": [],
-				        "grade_limit": []
+				        "grade_limit": [],
+				        "signature": "今天晚上我请客!",
 				    },
 				    {
 				        "date_id": "2",
 				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446316",
-				        "date_at": "1429456316",
+				        "date_time": "1429456316",
 				        "place": "重邮宾馆",
 				        "title": "来约炮!",
 				        "date_type": "2",
 				        "category_id": "2",
 				        "gender_limit": "1",
 				        "academy_limit": [],
-				        "grade_limit": []
+				        "grade_limit": [],
+				        "signature": "今天晚上我请客!",
 				    },
 				    {
 				        "date_id": "1",
 				        "head": "xxxxxxxxxx",
 				        "user_id": "1",
 				        "created_at": "1429446317",
-				        "date_at": "1429456317",
+				        "date_time": "1429456317",
 				        "place": "重邮宾馆",
 				        "title": "来约炮!",
 				        "date_type": "3",
 				        "category_id": "3",
 				        "gender_limit": "1",
-				        "academy_limit": [
-				            {
-				                "selectmodel": "2",
-				                "name": "计算机"
-				            },
-				            {
-				                "selectmodel": "2",
-				                "name": "传媒"
-				            }
-				        ],
 				        "grade_limit": [
 				            {
 				                "selectmodel": "1",
