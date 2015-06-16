@@ -150,8 +150,9 @@ class CommonController extends BaseController{
             $save = ['head' => $path];
             M('users')->where($map)->save($save);
             $data = [
-                'info' =>  '成功' ,
-                'status' => 409,
+                'info' => '成功',
+                'path' => $path,
+                'status' => 200,
             ];
             $this->ajaxReturn($data);
         }

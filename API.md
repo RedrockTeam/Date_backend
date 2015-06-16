@@ -209,6 +209,24 @@
             				"status": 200,//409
             				"info":"成功"//没有这条收藏记录
             			}
+            			
+#上传头像
+    
+        url: http://106.184.7.12:8002/index.php/api/person/userinfo
+        
+        post(form-data): 
+        {
+            "uid": "",
+            "token": "",
+            "photo": xxxxxx,
+        }
+        
+        return: 
+        {
+             'info' => '成功',
+             "path": "http:\\/\\/106.184.7.12:8002\\/Public\\/uploads\\/2015-06-16\\/557fc3496b002.png",
+              'status' => 200,
+        }
         
 --------------
 
