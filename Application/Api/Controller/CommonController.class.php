@@ -12,6 +12,13 @@ use Api\Model\LetterModel;
 use Api\Model\UserDateModel;
 use Think\Controller;
 class CommonController extends BaseController{
+    //todo 做个检测约会过期的函数, 更新date和user_date和letter表中的状态
+    private function updateDate() {
+        $condition = ['date_time' => ['']];
+        $result = [];
+    }
+
+
     // 接收/拒绝 约会
     public function dateAction ($uid, $apply_user_id, $date_id, $operation) {
         $userdate = new UserDateModel();
@@ -80,6 +87,9 @@ class CommonController extends BaseController{
             'date_id' => $date_id
         ];
         $userdate->where($where)->save($op);
+        $map1 = ['id' => $date_id];
+        if($operation == 1)
+            $date->where($map1)->setInc('sure_num');
         $data = [
             'status' => 200,
             'info' => '成功'
@@ -104,16 +114,50 @@ class CommonController extends BaseController{
         ];
         $letter->add($data);
     }
+
     //计算人的信誉度
-    public function credit ($uid = '') {
+    public function credit ($uid = null) {
         $date = new DateModel();
         $uid = $uid != null ? $uid : I('post.search_uid');
         $map['user_id'] = $uid;
         $map['status'] = ['NEQ', 2];
         return $date->where($map)->avg('score');
     }
-    public function test() {
-       $result =  M('users')->where("id = 1")->save(['nickname'=>'ddd']);
-        print_r($result);
+
+    public function uploadImg() {
+//        if($stream = fopen("php://input", 'r')) {
+//          $img = stream_get_contents($stream);
+//            fclose($stream);
+//
+//        }//流
+
+        $input = I('post.');//为前端上传做准备
+        $upload = new \Think\Upload();// 实例化上传类
+        $upload->maxSize   =     3145728 ;// 设置附件上传大小
+        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+        $upload->rootPath  =     'Public/uploads/'; // 设置附件上传根目录
+        // 上传文件
+        $info   =   $upload->upload();
+        if(! $info) {// 上传错误提示错误信息
+            $data = [
+                'info' =>  $upload->getError(),
+                'status' => 409,
+            ];
+            $this->ajaxReturn($data);
+        }
+        else {// 上传成功
+            foreach($info as $file) {
+                $path = UPLOAD_PATH . $file['savepath'] . $file['savename'];
+            }
+            $map = ['id' => $input['uid']];
+            $save = ['head' => $path];
+            M('users')->where($map)->save($save);
+            $data = [
+                'info' => '成功',
+                'path' => $path,
+                'status' => 200,
+            ];
+            $this->ajaxReturn($data);
+        }
     }
 }

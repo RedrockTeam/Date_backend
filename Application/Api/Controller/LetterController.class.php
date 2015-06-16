@@ -27,6 +27,18 @@ class LetterController extends BaseController {
     public function getDetailLetter () {
         $input = I('post.');
         $letter = new LetterModel();
+        if($input['user_agent'] == 'Android') {
+            $map1 = [
+                'letter.to' => $input['uid'],
+                'letter.id' => $input['letter_id']
+            ];
+            $letter->where($map1)->save(['status'=>1]);
+            $data = [
+                'status' => 200,
+                'info' => '请求成功',
+            ];
+            $this->ajaxReturn($data);
+        }
         $info = $letter->detailLetter($input['uid'], $input['letter_id']);
         $common = new CommonController();
         $info['user_score'] = $common->credit($info['user_id']);
@@ -35,7 +47,6 @@ class LetterController extends BaseController {
             'status' => 200,
             'info' => '请求成功',
         ];
-//        print_r($data);
         $this->ajaxReturn($data);
     }
 
@@ -45,6 +56,7 @@ class LetterController extends BaseController {
         $letter = new LetterModel();
         $data = [
             'status' => 200,
+            'info' => '成功',
             'letter' => $letter->letterStatus($input['uid']),
         ];
         $this->ajaxReturn($data);

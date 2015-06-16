@@ -36,13 +36,22 @@ class DateController extends BaseController {
         }
         switch($input['order']) {
             case 0:
-                $order = 'created_at desc';
+                $order = 'total desc';
                 break;
             case 1:
                 $order = 'created_at desc';
                 break;
+            case 2:
+                $order = 'timescore desc';
+                break;
+            case 3:
+                $order = 'datepercent desc';
+                break;
+            case 4:
+                $order = 'userscore desc';
+                break;
             default:
-                $order = 'created_at desc';
+                $order = 'total desc';
         }
         if($type == 0)
             $type = '%';
@@ -514,6 +523,8 @@ class DateController extends BaseController {
     }
     //插入报名约炮记录
     private function insertPao ($data) {
+        $map = ['id'=>$data['date_id']];
+        M('date')->where($map)->setInc('apply_num');
         $userDate = new UserDateModel();
         if($userDate->data($data)->add())
             return true;

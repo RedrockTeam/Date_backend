@@ -3,8 +3,8 @@ return array(
 	//'配置项'=>'配置值'
     'URL_CASE_INSENSITIVE' => true,
     'SESSION_AUTO_START' => true,
-    'SHOW_PAGE_TRACE'=>true,
-    'URL_MODEL'          => '3',
+    'SHOW_PAGE_TRACE'=>false,
+    'URL_MODEL'          => '2',
     'DEFAULT_CHARSET'    =>  'utf-8',
     //'SESSION_PREFIX'        =>  'date_', // session 前缀
     'COOKIE_EXPIRE'         =>  0,    // Cookie有效期
@@ -62,6 +62,7 @@ return array(
         'person/userinfo' => 'Personal/getInfo',//获取用户信息
         'person/score' => 'Common/credit', //获取用户信用
         'person/editdata' => 'Personal/editPerson', //修改个人资料
+        'person/uploadimg' => 'Common/uploadimg', //修改个人资料
 
         //不服打我啊
         'advice/advice' => 'Advice/getAdvice'//投诉
