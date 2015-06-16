@@ -634,6 +634,7 @@
     return
                     {
                         "status": 200,
+                        "nickname": "",
                         "info": "登录成功, 可以开始约炮→_→",
                         "token": "1f2a034e1fdafad894f5799e2e20c3dd",
                         "uid": "5"
