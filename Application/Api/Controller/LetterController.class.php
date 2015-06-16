@@ -45,6 +45,7 @@ class LetterController extends BaseController {
         $letter = new LetterModel();
         $data = [
             'status' => 200,
+            'info' => '成功',
             'letter' => $letter->letterStatus($input['uid']),
         ];
         $this->ajaxReturn($data);
