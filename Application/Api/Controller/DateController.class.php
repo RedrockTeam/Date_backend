@@ -523,6 +523,8 @@ class DateController extends BaseController {
     }
     //插入报名约炮记录
     private function insertPao ($data) {
+        $map = ['id'=>$data['date_id']];
+        M('date')->where($map)->setInc('apply_num');
         $userDate = new UserDateModel();
         if($userDate->data($data)->add())
             return true;

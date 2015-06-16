@@ -87,6 +87,9 @@ class CommonController extends BaseController{
             'date_id' => $date_id
         ];
         $userdate->where($where)->save($op);
+        $map1 = ['id' => $date_id];
+        if($operation == 1)
+            $date->where($map1)->setInc('sure_num');
         $data = [
             'status' => 200,
             'info' => '成功'
