@@ -308,15 +308,21 @@
 
         url: http://106.184.7.12:8002/index.php/api/letter/detailletter
         post:
-                {
+               web: {
                     "uid": "",
                     "token": "",
                     "letter_id":""
                 }
+                Android: {
+                    "uid": "",
+                    "token": "",
+                    "letter_id":"",
+                    "user_agent":"Android"
+                }
                 
         return:
         
-                {
+               web: {
                     data:{
                                                  "letter" : 2,
                                                  "user_id" : 123,
@@ -332,6 +338,11 @@
                      "status":200,
                      "info": "成功"                       
                 }
+                Android:
+                        {
+                          "status":200,
+                          "info": "成功"  
+                        }
 ------------------------------------
 
 ###约会信息
