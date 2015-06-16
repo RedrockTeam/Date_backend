@@ -4,7 +4,7 @@ return array(
     'URL_CASE_INSENSITIVE' => true,
     'SESSION_AUTO_START' => true,
     'SHOW_PAGE_TRACE'=>false,
-    'URL_MODEL'          => '3',
+    'URL_MODEL'          => '2',
     'DEFAULT_CHARSET'    =>  'utf-8',
     //'SESSION_PREFIX'        =>  'date_', // session 前缀
     'COOKIE_EXPIRE'         =>  0,    // Cookie有效期

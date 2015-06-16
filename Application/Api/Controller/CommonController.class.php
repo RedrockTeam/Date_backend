@@ -128,7 +128,7 @@ class CommonController extends BaseController{
 //
 //        }//流
 
-//        $input = I('post.');//为前端上传做准备
+        $input = I('post.');//为前端上传做准备
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize   =     3145728 ;// 设置附件上传大小
         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
@@ -143,8 +143,14 @@ class CommonController extends BaseController{
             $this->ajaxReturn($data);
         }
         else {// 上传成功
+            foreach($info as $file) {
+                $path = UPLOAD_PATH . $file['savepath'] . $file['savename'];
+            }
+            $map = ['id' => $input['uid']];
+            $save = ['head' => $path];
+            M('users')->where($map)->save($save);
             $data = [
-                'info' =>  '成功',
+                'info' =>  '成功' ,
                 'status' => 409,
             ];
             $this->ajaxReturn($data);
