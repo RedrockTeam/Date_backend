@@ -36,13 +36,22 @@ class DateController extends BaseController {
         }
         switch($input['order']) {
             case 0:
-                $order = 'created_at desc';
+                $order = 'total desc';
                 break;
             case 1:
                 $order = 'created_at desc';
                 break;
+            case 2:
+                $order = 'timescore desc';
+                break;
+            case 3:
+                $order = 'datepercent desc';
+                break;
+            case 4:
+                $order = 'userscore desc';
+                break;
             default:
-                $order = 'created_at desc';
+                $order = 'total desc';
         }
         if($type == 0)
             $type = '%';

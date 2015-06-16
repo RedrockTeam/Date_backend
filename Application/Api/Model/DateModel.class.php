@@ -88,7 +88,7 @@ use Think\Model;
 class DateModel extends Model {
     protected $trueTableName  = 'date';
     //获取约会信息
-    public function getInfo($type = '%', $order = 'date.created_at desc', $page = 1, $limit = 10){
+    public function getInfo($type = '%', $order = 'created_at desc', $page = 1, $limit = 10){
         $where = [
             'date.date_type' => ['LIKE', $type],
             'date.date_time' => ['GT', time()],
