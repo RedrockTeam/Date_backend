@@ -3,8 +3,8 @@ return array(
 	//'配置项'=>'配置值'
     'URL_CASE_INSENSITIVE' => true,
     'SESSION_AUTO_START' => true,
-    'SHOW_PAGE_TRACE'=>true,
-    'URL_MODEL'          => '3',
+    'SHOW_PAGE_TRACE'=>false,
+    'URL_MODEL'          => '2',
     'DEFAULT_CHARSET'    =>  'utf-8',
     //'SESSION_PREFIX'        =>  'date_', // session 前缀
     'COOKIE_EXPIRE'         =>  0,    // Cookie有效期
@@ -51,18 +51,21 @@ return array(
         'letter/getletter' => 'Letter/getLetter',//获取私信
         'letter/letterstatus' => 'Letter/letterStatus',//查看未读私信数量
         'letter/dateaction' => 'Letter/dateAction',//私信中接受/拒绝约
+        'letter/detailletter' => 'Letter/getDetailLetter',//某条私信详情
 
         //个人信息模块
         'person/collect' => 'Personal/Collect',//收藏约会
+        'person/rmcollection' => 'Personal/rmCollection',//取消收藏约会
         'person/collection' => 'Personal/getCollection',//获取个人收藏
         'person/join' => 'Personal/getJoin',//获取参加的约会
         'person/create' => 'Personal/getCreate',//获取发起的约会
         'person/userinfo' => 'Personal/getInfo',//获取用户信息
         'person/score' => 'Common/credit', //获取用户信用
         'person/editdata' => 'Personal/editPerson', //修改个人资料
+        'person/uploadimg' => 'Common/uploadimg', //修改个人资料
 
         //不服打我啊
-        'advice/advice' => 'AdviceController/getAdvice'//投诉
+        'advice/advice' => 'Advice/getAdvice'//投诉
 
     ],
 );

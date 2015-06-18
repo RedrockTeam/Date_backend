@@ -3,7 +3,7 @@ namespace Api\Controller;
 use Think\Controller;
 
 class AdviceController extends BaseController {
-    //获取广告位广告
+    //提意见
     public function getAdvice (){
       $input = I('post.');
         $advice = [

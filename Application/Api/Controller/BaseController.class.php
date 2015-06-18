@@ -7,7 +7,7 @@ class BaseController extends Controller {
         if (!IS_POST) {
             $data = [
                 'info' => '获取方式错误',
-                'status' => 403
+                'status' => 405
             ];
             $this->ajaxReturn($data);
         }
@@ -25,7 +25,7 @@ class BaseController extends Controller {
             if(!$this->auth($uid, $token)){
                 $data = [
                     'info' => '你未登录或登录超时',
-                    'status' => 403
+                    'status' => 401
                 ];
                 $this->ajaxReturn($data);
             }

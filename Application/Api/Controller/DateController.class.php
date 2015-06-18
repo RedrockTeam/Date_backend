@@ -13,10 +13,10 @@ class DateController extends BaseController {
         $input = I('post.');
         $type = $input['date_type'];
 
-        if(!is_numeric($input['page'])) {
+        if(isset($input['page']) && !is_numeric($input['page'])) {
             $data = [
                 'status' => 403,
-                'info' => '参数错误1'
+                'info' => '页码必须为数字'
             ];
             $this->ajaxReturn($data);
         }
@@ -24,10 +24,10 @@ class DateController extends BaseController {
             $page = $input['page']>0 ? $input['page']:1;
         }
 
-        if(!is_numeric($input['size'])) {
+        if(isset($input['size']) && !is_numeric($input['size'])) {
             $data = [
                 'status' => 403,
-                'info' => '参数错误2'
+                'info' => '每页长度必须为数字'
             ];
             $this->ajaxReturn($data);
         }
@@ -36,13 +36,22 @@ class DateController extends BaseController {
         }
         switch($input['order']) {
             case 0:
-                $order = 'created_at desc';
+                $order = 'total desc';
                 break;
             case 1:
                 $order = 'created_at desc';
                 break;
+            case 2:
+                $order = 'timescore desc';
+                break;
+            case 3:
+                $order = 'datepercent desc';
+                break;
+            case 4:
+                $order = 'userscore desc';
+                break;
             default:
-                $order = 'created_at desc';
+                $order = 'total desc';
         }
         if($type == 0)
             $type = '%';
@@ -81,6 +90,13 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
+        if ($input['date_time'] < time()){
+            $data = [
+                'status' => '409',
+                'info' => '约会的时间不能小于当前时间'
+            ];
+            $this->ajaxReturn($data);
+        }
         //检查信息完整
         if(!$this->dataComplete($input['uid'])) {
             $data = [
@@ -116,7 +132,7 @@ class DateController extends BaseController {
         ];
         $date = new DateModel();
         $id = $date->add($dateInfo);
-        if($input['grade_limit'] && $input['grade_select_model']){
+        if($input['grade_limit'] && $input['grade_select_model'] && $input['grade_limit']!=0){
             $limit = new DateLimitModel();
             $date_id = $id;
 //            ($input['academy_limit'] && $input['academy_select_model']) ||
@@ -137,7 +153,7 @@ class DateController extends BaseController {
                     $grade = [
                         'date_id' => $date_id,
                         'selectmodel' => $input['grade_select_model'],
-                        'condition' => 2,
+                        'condition' => 1,
                         'limit' => $v,
                     ];
                     $limit->data($grade)->add();
@@ -147,7 +163,7 @@ class DateController extends BaseController {
                 $grade = [
                     'date_id' => $date_id,
                     'selectmodel' => $input['grade_select_model'],
-                    'condition' => 2,
+                    'condition' => 1,
                     'limit' => $input['grade_limit'],
                 ];
                 $limit->data($grade)->add();
@@ -366,6 +382,8 @@ class DateController extends BaseController {
             return false;
         if(!is_numeric($input['cost_model']))//花费模式
             return false;
+        if(!$input['cost_model'] == 1 && $input['cost_model'] == 2 && !$input['cost_model'] == 3)
+            return false;
         if($input['academy_select_model']){
             if($input['academy_limit'] == null)//学院限制
                 return false;
@@ -407,7 +425,7 @@ class DateController extends BaseController {
             'status' => 2
         ];
         $num = $userDate->where($map)->count();
-        if($num > 10)
+        if($num > 1000)//todo 生产环境里记得改10
             return false;
         return true;
     }
@@ -505,6 +523,8 @@ class DateController extends BaseController {
     }
     //插入报名约炮记录
     private function insertPao ($data) {
+        $map = ['id'=>$data['date_id']];
+        M('date')->where($map)->setInc('apply_num');
         $userDate = new UserDateModel();
         if($userDate->data($data)->add())
             return true;
@@ -516,6 +536,11 @@ class DateController extends BaseController {
         $user = new UsersModel();
         $map = ['id' => $uid];
         $info = $user->where($map)->find();
+        if ($info['academy'] == null) 
+            return false;
+        if ($info['gender'] == null) 
+            return false;
+
         if($info['qq'] == null && $info['weixin'] == null && $info['telephone'] == null)
             return false;
         else
