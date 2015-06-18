@@ -9,18 +9,20 @@ class ManagementController extends Controller {
 	private $pageTotal;
 	private $function;
 
+	/**
+	 * @For  初始配置
+     */
 	public function _initialize(){//返回路由
 		$m = new \Home\Model\ManagementNav\ManagementNavModel();
 		$this->pageTotal = $m->returnTotalPage();//页数
 		$this->function=$m->returnNavigation();//导航
-
 	}
 	
 	public function index(){
 		$this->set_info();
 	}
 	
-	/*设置主模版基本信息 >> $location:路径 $des:模块 $info:说明信息 */
+	/** 设置主模版基本信息 >> $location:路径 $des:模块 $info:说明信息 **/
     public function set_info($location='index',$des='控制台',$info='版本信息处理'){
 		$loginUser =  checkLogin();
 		checkLevel(1);
@@ -84,20 +86,21 @@ class ManagementController extends Controller {
 	 */
 	public function packPage($tableInfo){
 		$nowPage = I('get.p','1');
+		/** 必要参数 */
 		if(!$tableInfo['table'] || !$tableInfo['order'] ||  !$tableInfo['field'] ){$this->ajaxReturn(['info'=>'model 配置参数错误','status'=>'407']);}
+		/** 初始配置 **/
 		$table =  $tableInfo['table'];
 		$order = $tableInfo['order'];
 
+		/** 可选项 **/
 		if($tableInfo['where'] && $where=$tableInfo['where']);
-		if($tableInfo['antiField'] && $mod=$tableInfo['antiField']);
 		if($tableInfo['join'] && $join=$tableInfo['join']);
-
+		/** field 字段限制 **/
 		$field = $tableInfo['field'];
-
 		$User = D($table); // 实例化User对象
 
+		/** 配置可选项 **/
 		if($where!=null) $User = $User->where($where);
-
 		if(isset($join)){
 			foreach($tableInfo['join'] as $k => $v){
 				$User = $User->join(" `$k` ON $v ");
@@ -105,20 +108,22 @@ class ManagementController extends Controller {
 
 		}
 
-		//$this->setNavInfo();
-		$list = $User->field($field, $mod)->order($order)->page($nowPage. ',' . $this->pageTotal)->select();
-		$count = $User->field($field, $mod)->count();// 查询满足要求的总记录数
+		/** 分页 **/
+		$list = $User->field($field)->order($order)->page($nowPage. ',' . $this->pageTotal)->select();
+		$count = $User->field($field)->count();// 查询满足要求的总记录数
 		$dfield =  $list[0];
 
 		$Page  = new \Think\Page($count,$this->pageTotal);// 实例化分页类 传入总记录数和每页显示的记录数
 		$show  = $Page->show();// 分页显示输出
 
-
+		/** 赋值 **/
 		session("tableInfo",$tableInfo);
 		session("field",$field);
 		session("mainKey",$order);
 		session("backUrl",__SELF__);
 
+//		echo "<pre>".print_r($value)."</pre>";
+//		exit();
 		$value = end(explode(".",$order));
 		$this->assign('table_head',$dfield);
 		$this->assign('main_key',$value);
@@ -126,13 +131,21 @@ class ManagementController extends Controller {
 		$this->assign('table_data',$list);// 赋值数据集*/
 	}
 
+	/**
+	 * @param $where 主键(只支持单主键)
+	 * @return mixed
+	 * @For  配置修改数据表单(联合model)
+	 * !需要分解函数重构
+     */
 	public function packFind($where){
+		/** 初始配置 **/
 		$tableInfo = $this->getSession('tableInfo');
 		$table = $tableInfo['table'];
 
 		$field = $this->getSession('field');
 
 		$User = D("$table");
+		/** join 处理 **/
 		if(isset($tableInfo['join'])){
 			foreach($tableInfo['join'] as $k => $v){
 				$User = $User->join(" `$k` ON $v ");
@@ -140,9 +153,9 @@ class ManagementController extends Controller {
 			}
 		}
 		$data = $User->fetchSql(false)->field($field)->where($where)->find();
+		/** end **/
 
-		/*join*/
-
+		/** 切割 join **/
 		$tmpField='';
 		foreach($tableInfo['join'] as $k => $v){
 			$tmp2 = (explode("=", str_replace(' ','',$v)));
@@ -151,11 +164,13 @@ class ManagementController extends Controller {
 		}
 		$tmpField = substr($tmpField,0,strlen($tmpField)-1);
 
-		/**/
+//		echo "<pre>";print_r($tableInfo['join']);echo "<pre>";
+//		exit();
+		/** 切割分解限制字段,配置成 input 的 name **/
 		$tmp1 = explode(",", $field);
 		//$dataRegist=array();
 		foreach($tmp1 as $k => $v){
-			$tmp2 = (explode("as", $v));
+			$tmp2 = (explode("as", trim($v)));
 			if(count($tmp2) == 2) {
 				$dataRegist[] = trim($tmp2[0]);
 				$tmp3 = explode(".", $tmp2[0]);
@@ -166,9 +181,9 @@ class ManagementController extends Controller {
 			}
 		}
 
-//		echo "<pre>";print_r($inputTmp);echo "<pre>";
+//		echo "<pre>";print_r($fieldTmp);echo "<pre>";
 //		exit();
-
+		/** 再次配置join(之前的会无效) **/
 		$fUser = D($tableInfo['table']);
 		if(isset($tableInfo['join'])){
 			foreach($tableInfo['join'] as $k => $v){
@@ -181,7 +196,7 @@ class ManagementController extends Controller {
 		$fv = $fUser->fetchSql(false)->field($tmpField)->where($where)->find();
 //		print_r($fv);
 //		exit();
-
+		/** 配置select的个表 optional 值 **/
 		foreach($fieldTmp as $k => $tmpF){
 			foreach($fv as $k2 => $tmpfFv){
 
@@ -204,7 +219,7 @@ class ManagementController extends Controller {
 						$feResult["$k"]['option'] = $tdsTrans;
 						$feResult["$k"]['field'] = $tmp4[1];
 
-						/* undo */
+						/** undo 字段 **/
 						$undoFalg = 0;
 						foreach($tableInfo['undo'] as $undo_value){
 							if($undo_value==$tmp4[1]){
@@ -212,26 +227,30 @@ class ManagementController extends Controller {
 							}
 						}
 						if($undoFalg==0){$inputTmp[] = $tmp4[1];}
-
 						unset($tdsTrans);
-
 
 					}
 					$feResult["$k"]['value'] = $tmpfFv;
 				}
 			}
 		}
+
 //		echo "<pre>";print_r($inputTmp);echo "<pre>";
 //		exit();
 
+		/** 赋值 **/
 		session('editField',$inputTmp);
-
 		$this->assign('fieldTmp',$feResult);
 		$this->assign('inputField',$inputTmp);
 		$this->assign('field',$field);
 		return $data;
 	}
 
+	/**
+	 * @param $name
+	 * @return mixed
+	 * @For  验证 session
+     */
 	public function getSession($name){
 		if($return = session($name) )	return $return;
 		else{

@@ -8,7 +8,10 @@ use Home\Controller\ManagementController;
 
 class DataEditController extends ManagementController {
 
-		public function index(){
+	/**
+	 * @For  主页
+     */
+	public function index(){
 			$table = I('get.table','用户信息');
 			$model = new \Home\Model\ModelRouteCenter\DataEditRouteModel();
 			$modelCenter = $model->returnTableInfo($table);
@@ -19,14 +22,18 @@ class DataEditController extends ManagementController {
 			$this->set_info('DataEdit:tables',$info['title'],$info['detail']);
 		}
 
-		public function editData(){
+	/**
+	 * @For  数据列表页
+     */
+	public function editData(){
 			$table = session('tableInfo')['table'];
 			$undo = session('tableInfo')['undo'];
 			$mainValue=I('post.mainValue');
 			$mainKey = $this->getSession('mainKey');
-//			print_r($undo);
-//			exit();
+
 			$find = $this->packFind("$mainKey = '$mainValue'");
+//			print_r($find);
+//			exit();
 
 			$this->assign('data',$find);
 
@@ -35,9 +42,12 @@ class DataEditController extends ManagementController {
 			$this->assign('undo',$undo);
 			$this->assign('EDIT_URL',U('Home:DataEdit/edit'));
 			$this->set_info('DataEdit:edit',"修改数据表($table)"," 主键(".$mainKey.') >> '.$mainValue);
-		}
+	}
 
-		public function edit(){
+	/**
+	 * @For  修改数据操作
+     */
+	public function edit(){
 			$mainKey = $this->getSession('mainKey');
 			$mainKey = end(explode(".",$mainKey));
 			$backUrl = $this->getSession('backUrl');
@@ -47,8 +57,7 @@ class DataEditController extends ManagementController {
 			$tableInfo = $this->getSession('tableInfo');
 			$table = $tableInfo['table'];
 			$data = $this->checkPost($editField);
-//			print_r($editField);
-//			EXIT();
+
 			if($data["$mainKey"] == -1){
 				$do='add';
 				$info = '添加';
@@ -59,10 +68,11 @@ class DataEditController extends ManagementController {
 			}
 
 			if($r = D("$table")->$do($data)){
-				//数据联动处理,暂未添加
+				/** 数据联动处理,暂未添加 */
+				/** 联动 end **/
 				$this->success("$info 成功",$backUrl);
 			}else{$this->error("$info 失败:<br>未修改原值");}
 
-		}
+	}
 }
 
