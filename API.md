@@ -212,7 +212,7 @@
             			
 #上传头像
     
-        url: http://106.184.7.12:8002/index.php/api/person/userinfo
+        url: http://106.184.7.12:8002/index.php/api/person/uploadimg
         
         post(form-data): 
         {
@@ -557,7 +557,7 @@
                             
 7. 评价约会
 
-                url: http://106.184.7.12:8002/index.php/api/date/report
+                url: http://106.184.7.12:8002/index.php/api/date/scoredate
                             
                             post:
                             {
