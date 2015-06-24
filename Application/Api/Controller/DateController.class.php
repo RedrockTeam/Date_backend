@@ -52,6 +52,7 @@ class DateController extends BaseController {
                 break;
             default:
                 $order = 'total desc';
+                break;
         }
         if($type == 0)
             $type = '%';
