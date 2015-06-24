@@ -97,6 +97,13 @@ class DateController extends BaseController {
             ];
             $this->ajaxReturn($data);
         }
+        if ($input['date_time'] > time() + 7776000){
+            $data = [
+                'status' => '409',
+                'info' => '约会的时间不能超过三个月'
+            ];
+            $this->ajaxReturn($data);
+        }
         //检查信息完整
         if(!$this->dataComplete($input['uid'])) {
             $data = [
