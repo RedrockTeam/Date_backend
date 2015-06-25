@@ -13,6 +13,7 @@ use Api\Model\UserDateModel;
 use Think\Controller;
 class CommonController extends BaseController{
     //todo 做个检测约会过期的函数, 更新date和user_date和letter表中的状态
+    //todo Linux corn
     public function updateDate() {
         $condition1 = [
                         'date_time' => ['LT', time()],
