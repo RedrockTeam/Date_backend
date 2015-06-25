@@ -52,6 +52,7 @@ class DateController extends BaseController {
                 break;
             default:
                 $order = 'total desc';
+                break;
         }
         if($type == 0)
             $type = '%';
@@ -94,6 +95,13 @@ class DateController extends BaseController {
             $data = [
                 'status' => '409',
                 'info' => '约会的时间不能小于当前时间'
+            ];
+            $this->ajaxReturn($data);
+        }
+        if ($input['date_time'] > time() + 7776000){
+            $data = [
+                'status' => '409',
+                'info' => '约会的时间不能超过三个月'
             ];
             $this->ajaxReturn($data);
         }

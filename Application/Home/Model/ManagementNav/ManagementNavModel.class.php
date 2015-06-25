@@ -7,12 +7,17 @@ namespace Home\Model\ManagementNav;
 
 class ManagementNavModel  {
 	protected $autoCheckFields = false;
-	private $pageTotal=15;
+	private $pageTotal=15;//数据分页页数
 
 	public function returnTotalPage(){
 		return $this->pageTotal;
 	}
 
+
+	/**
+	 * @return mixed
+	 * @For  侧导航栏路由表
+     */
 	public function returnNavigation(){//功能路由
 		$Navigation['function_info']=array(
 			0=>array(
@@ -31,6 +36,19 @@ class ManagementNavModel  {
 						'src'=> U('home/DataEdit/index?table=约会信息'),
 						'name'=> '约会信息',
 					),
+					/*2=>array(
+						'src'=> U('home/DataEdit/index?table=约会限制'),
+						'name'=> '约会限制',
+					),*/
+					3=>array(
+						'src'=> U('home/DataEdit/index?table=约会好评'),
+						'name'=> '约会好评',
+					),//m->m
+					4=>array(
+						'src'=> U('home/DataEdit/index?table=私信管理'),
+						'name'=> '私信管理',
+					),
+
 				),
 			),
 			9=>array(

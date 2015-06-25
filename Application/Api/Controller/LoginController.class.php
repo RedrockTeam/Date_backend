@@ -25,6 +25,7 @@ class LoginController extends Controller {
             $data = [
                     'status' => 200,
                     'info' => '登录成功, 可以开始约炮→_→',
+                    'nickname' => session('nickname'),
                     'head' => session('head'),
                     'token' => session('token'),
                     'uid' => session('uid')
@@ -52,6 +53,7 @@ class LoginController extends Controller {
                 $info = $user->where($map)->find();
                 session('uid', $info['id']);
                 session('head', $info['head']);
+                session('nickname', $info['nickname']);
                 return true;
             }
             else {
@@ -72,6 +74,7 @@ class LoginController extends Controller {
                 $user->add($new);
                 $info = $user->where(['stu_num'=>$username])->find();
                 session('head', $default_head);
+                session('nickname', $info['nickname']);
                 session('uid', $info['id']);
                 return true;
             }

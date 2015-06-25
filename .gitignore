@@ -1,3 +1,4 @@
 .idea/
 Application/Runtime/
 Application/Common/Conf/config.php
+Public/uploads/*

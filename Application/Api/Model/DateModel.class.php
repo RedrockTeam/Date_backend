@@ -28,11 +28,11 @@ use Think\Model;
 //            SELECT
 //            *, (
 //        @timescore := CASE
-//						WHEN c.date_time - 1434370292 > 43200 THEN
+//						WHEN c.date_time - 1434979513 > 43200 THEN
 //							30
 //						ELSE
 //							30 + (
-//                                1434370292 + 43200 - c.date_time
+//                                1434979513 + 43200 - c.date_time
 //                            ) / 43200 * 20
 //						END
 //					) AS timescore,
@@ -71,7 +71,7 @@ use Think\Model;
 //						) AS tmp ON date.user_id = tmp.user_id
 //						WHERE
 //							date.date_type LIKE '%'
-//AND date.date_time > 1434370292
+//AND date.date_time > 1434979513
 //					) AS c,
 //					(SELECT(@timescore := 0)) AS a,
 //					(SELECT(@datepercent := 0)) AS b

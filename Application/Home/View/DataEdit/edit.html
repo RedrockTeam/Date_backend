@@ -8,20 +8,25 @@
 			<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> {$key}</label>
 
 			<div class="col-sm-9">
-				<if  condition="$key eq $mainKey">
+				<if  condition="($key eq $mainKey)">
 					<div style="font-size: 20px;color:darkorange;">{$value}</div>
-					<input type="text" name="{$mainKey}" id="form-field-1" class="col-xs-10 col-sm-5" style="display: none;" value="{$value}"/>
+					<input type="text" name="{$key}" id="form-field-1" class="col-xs-10 col-sm-5" style="display: none;" value="{$value}"/>
 				<else/>
 					<php>
-						if((isset($fieldTmp[$count]))){
+						if(( isset($fieldTmp[$count]) ) ){
 					</php>
+						<php>if(in_array($fieldTmp[$count]['field'],$undo)){</php>
+								<div style="font-size: 15px;color:lightgreen;">{$value}</div>
+					    <php>}else{</php>
 
-						<select name="{$fieldTmp[$count]['field']}">
-							<option value="{$fieldTmp[$count]['value']}">{$value}(当前)</option>
-							<foreach name="fieldTmp[$count]['option']" item='fieldV'  key="k">
-								<option value="{$k}">{$fieldV}</option>
-							</foreach>
-						</select>
+							<select name="{$fieldTmp[$count]['field']}">
+								<option value="{$fieldTmp[$count]['value']}">{$value}(当前)</option>
+								<foreach name="fieldTmp[$count]['option']" item='fieldV'  key="k">
+									<option value="{$k}">{$fieldV}</option>
+								</foreach>
+							</select>
+
+						<php>}</php>
 					<php>
 						}else{
 					</php>
