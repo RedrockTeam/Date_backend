@@ -127,7 +127,7 @@ class PersonalController extends BaseController {
         }
     }
     //修改个人资料
-    public function editPerson () {//todo 性别怎么办!
+    public function editPerson () {//todo 性别只许改一次
         $input = I('post.');
         $uid = $input['uid'];
 
