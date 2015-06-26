@@ -18,12 +18,12 @@ class CommonController extends BaseController{
         $condition1 = [
                         'date_time' => ['LT', time()],
                         'status' => 2,
-                        'sure_num' => ['LT', 'limit_num']
+                        'sure_num' => ['exp', '< `limit_num`']
                      ];
         $condition2 = [
             'date_time' => ['LT', time()],
             'status' => 2,
-            'sure_num' => ['EQ', 'limit_num']
+            'sure_num' => ['exp', '= `limit_num`']
         ];
 
         $date = new DateModel();
@@ -37,11 +37,12 @@ class CommonController extends BaseController{
         $result2 = ['status' => 1];
         $date->where($condition1)->save($result1);
         $date->where($condition2)->save($result2);
-
+        if($date_id != null) {
         $userDate = new UserDateModel();
         $userDate->where(['date_id'=>['IN', $date_id], 'status'=>['NEQ', 0]])->save(['status'=>0]);
         $letter = new LetterModel();
         $letter->where(['date_id'=>['IN', $date_id], 'type'=>['NEQ', 0]])->save(['type'=>0]);
+        }
     }
 
 
