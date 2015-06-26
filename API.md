@@ -6,6 +6,8 @@
 		uid: 1 -> token:   nasdfnldssdaf  ;
 		uid: 2 -> token:  cdsagrebvfra ;
 
+		注意: `106.184.7.12:8002`可改为`106.184.7.12/date`
+
 ###个人信息模块
 
 1. 获取个人(或他人)信息
