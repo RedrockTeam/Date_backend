@@ -41,7 +41,7 @@ class BannerController extends Controller {
         $date->where($condition1)->save($result1);
         $date->where($condition2)->save($result2);
         if($date_id != null) {
-            $userDate = new UserDateModel()
+            $userDate = new UserDateModel();
             $userDate->where(['date_id'=>['IN', $date_id], 'status'=>['NEQ', 0]])->save(['status'=>0]);
             $letter = new LetterModel();
             $letter->where(['date_id'=>['IN', $date_id], 'type'=>['NEQ', 0]])->save(['type'=>0]);
