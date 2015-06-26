@@ -403,6 +403,21 @@ class DateController extends BaseController {
                 return false;
             if ($input['grade_select_model'] != null && !is_numeric($input['grade_select_model']))//年级限制的选择模式
                 return false;
+            if(is_array($input['grade_limit'])) {
+                foreach($input['grade_limit'] as $v) {
+                    $grade = ['id' => $v];
+                    $num = M('grade')->where($grade)->count();
+                    if($num!=1) {
+                        return false;
+                    }
+                }
+            }else {
+                $grade = ['id' => $input['grade_limit']];
+                $num = M('grade')->where($grade)->count();
+                if($num!=1) {
+                    return false;
+                }
+            }
         }
         return true;
     }
