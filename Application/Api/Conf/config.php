@@ -37,6 +37,7 @@ return array(
         'public/academy' => 'Category/academy',//学院列表
         'public/grade' => 'Category/grade',//年级列表
         'public/login'  => 'Login/login',//login
+        'public/update' => 'Banner/updateDate',//更新约会的状态
 
         //约会信息
         'date/datelist' => 'Date/getList',//约会列表
