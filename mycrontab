@@ -1,0 +1,3 @@
+# 自动更新约会状态脚本
+# 命令 crontab mycrontab
+* * * * * curl http://lich2013.com/date/api/public/update
